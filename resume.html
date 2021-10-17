@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Arden's Corner</title>
+	<base href="https://shipzkun.github.io">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://shipzkun.github.io/assets/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://shipzkun.github.io/assets/css/darkly.min.css"/>
+	<link rel="stylesheet" href="https://shipzkun.github.io/assets/css/custom.css"/>
+
+	<!-- JS -->
+	<script src="https://shipzkun.github.io/assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://shipzkun.github.io/assets/js/bootstrap.min.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<script>
+	$(document).ready(function() {
+		init_showhide_sidebar();
+
+		$(window).resize(init_showhide_sidebar);
+
+		function init_showhide_sidebar() {
+			let width_limit_px = 768;
+			// console.log(window.innerWidth);
+			if (window.innerWidth <= width_limit_px) {
+				$("#sidebar").removeClass('show');
+				$("#rightbar").hide();
+			} else {
+				$("#sidebar").addClass('show');
+				$("#rightbar").show();
+			}
+		}
+	});
+	</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<!-- Header navbar-expand-lg -->
+	<div id="topbar" class="navbar navbar-dark bg-primary">
+	<div class="float-left">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="https://shipzkun.github.io/index.php/">🏠 Arden's Corner</a>
+	</div>
+	</div>
+
+	<div id="container">
+		<!-- Sidebar -->
+		<div class="navbar-collapse collapse navbar-toggleable-md navbar navbar-dark bg-secondary" id="sidebar" >
+
+			<div>
+			
+				<span class='links-header'>🖦 Apps</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://shipzkun.github.io/amazfitbip_watchface" title="">Amazfit Bip Watch Faces</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>🎉 Fun Stuff</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://shipzkun.github.io/faq" title="">Q&A</a></li>
+						
+					
+						
+							<li><a href="https://shipzkun.github.io/resume" title="">Résumé</a></li>
+						
+					
+						
+							<li><a href="https://www.deviantart.com/shippou-dvart" title="Embrace the cringe">DeviantArt</a></li>
+						
+					
+						
+							<li><a href="https://quintophilosophy.wordpress.com" title="Cringe novella">Blog</a></li>
+						
+					
+						
+							<li><a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ" title="Cringe TV">Youtube</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>➹ External Links</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://ko-fi.com/Z8Z133PAX" title=""><img height='36' style='border:0px;height:2em' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' alt='Buy Me a Coffee at ko-fi.com' /></a></li>
+						
+					
+						
+							<li><a href="https://unicode.org/resources/fonts.html" title="You might need this if you cannot see all characters or words properly">Unicode Fonts</a></li>
+						
+					
+				</ul>
+			
+			</div>
+		</div>
+
+
+
+		<div id="content" class="container-fluid">
+			<div id="rightbar" class="navbar navbar-dark bg-dark float-right"><span class="links-header">📌 In this page:</span>
+<ul class="list-unstyled components">
+	<li><a href="https://shipzkun.github.io/resume#about_me">About Me</a></li>
+	<li><a href="https://shipzkun.github.io/resume#-experience">Experience</a></li>
+	<li><a href="https://shipzkun.github.io/resume#-education">Education</a></li>
+	<li><a href="https://shipzkun.github.io/resume#-skills">Skills</a></li>
+</ul>
+</div>
+
+<div id="top" class="alert alert-info">A more detailed résumé can be provided <a href="mailto:lets-talk@arden-chan.ml" title="email">on request</a>.</div>
+
+<section class="p-5 mb-4 bg-dark text-white rounded-3" id="about_me">
+  <div class="container-fluid">
+	<h1 class="display-5 fw-bold">Arden Chan</h1>
+	<p class="col-md-8 fs-5">An experienced developer of web-based applications mainly intended for information systems.</p>
+
+    <address>
+		📬 Cavite, Philippines <br />
+		📧 <a href="mailto:lets-talk@arden-chan.ml">lets-talk@arden-chan.ml</a>
+	</address>
+  </div>
+</section>
+
+<h2 id="-experience">🏗 Experience</h2>
+<ul>
+  <li>
+    <p><span class="largetext text-info">Metro East Technology Resources, Inc.</span> <span class="smalltext">(July 2014 - present)</span><br />
+  Various information systems intended for telecommunication companies.<br /></p>
+
+    <p>Positions Held:</p>
+    <ul>
+      <li><strong>Web Team Lead</strong>, January 2019 - present</li>
+      <li><strong>Senior Lead Developer I</strong>, January 2017 - December, 2019</li>
+      <li><strong>Junior Web Developer I</strong>, July 2014 - December, 2016</li>
+    </ul>
+  </li>
+  <li>
+    <p><a class="largetext text-info" href="https://upd.edu.ph/">University of the Philippines - Diliman</a></p>
+    <ul>
+      <li>
+        <p><a href="https://crs.upd.edu.ph/">Computerized Registration System (CRS)</a> <span class="smalltext">(June 2011 - June 2014, November 2014 - June 2015)</span><br /></p>
+
+        <p>The academic information system used to facilitate student admission, registration, records, and other administrative activities.
+  Positions Held:</p>
+        <ul>
+          <li><strong>System Developer</strong>, November 2014 - June 2015</li>
+          <li><strong>Lead Developer I</strong>, January 2013 - June 2014</li>
+          <li><strong>Junior Lead Developer I</strong>, January - December, 2012</li>
+          <li><strong>Software Developer I</strong>, June - December, 2011</li>
+        </ul>
+      </li>
+      <li>
+        <p><span class="text-info">Internship (Summer 2010)</span><br />
+  Made a Facebook web application allowing users to create surveys.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="-education">🏫 Education</h2>
+<ul>
+  <li>
+    <p><span class="largetext text-info">Bachelor of Science in Computer Science</span><br />
+    <a href="https://coe.upd.edu.ph/">College of Engineering</a>, <a href="https://upd.edu.ph/">University of the Philippines - Diliman</a><br />
+    2007 - 2011</p>
+  </li>
+  <li>
+    <p><a href="https://ushs.clsu.edu.ph/">University Science High School</a>, <a href="https://clsu.edu.ph/">Central Luzon State University</a><br />
+  2003 - 2007</p>
+  </li>
+</ul>
+
+<h2 id="-skills">🎯 Skills</h2>
+<ul>
+  <li>Programming Languages
+    <ul>
+      <li>Main: PHP, HTML, CSS, Javascript, SQL, Bash</li>
+      <li>Occasional: Go, Python</li>
+    </ul>
+  </li>
+  <li>Frameworks: CodeIgniter, jQuery, Bootstrap</li>
+  <li>Databases: MySQL, PostgreSQL, SQLite</li>
+  <li>Source Control: SVN, Git</li>
+  <li>AWS: EC2, S3</li>
+  <li>General Linux server administration</li>
+</ul>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
