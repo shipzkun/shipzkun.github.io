@@ -12,32 +12,13 @@
 	<!-- JS -->
 	<script src="https://arden-chan.ml/assets/js/jquery-3.6.0.min.js"></script>
 	<script src="https://arden-chan.ml/assets/js/bootstrap.min.js"></script>
+	<script src="https://arden-chan.ml/assets/js/custom.js"></script>
 
 	<!-- Adsense -->
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7794761151687634" crossorigin="anonymous"></script>
 	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<script>
-	$(document).ready(function() {
-		init_showhide_sidebar();
-
-		$(window).resize(init_showhide_sidebar);
-
-		function init_showhide_sidebar() {
-			let width_limit_px = 768;
-			// console.log(window.innerWidth);
-			if (window.innerWidth <= width_limit_px) {
-				$("#sidebar").removeClass('show');
-				$("#rightbar").hide();
-			} else {
-				$("#sidebar").addClass('show');
-				$("#rightbar").show();
-			}
-		}
-	});
-	</script>
 </head>
 
 <body>
@@ -58,7 +39,16 @@
 
 			<div>
 			
-				<span class='links-header'>🖦 Apps</span>
+				<span class='links-header'>🖦 IlokoSoft</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.ml/ilo_agsao" title="Passphrase Generator">Agsao</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>📋 Other Projects</span>
 				<ul class='list-unstyled components'>
 					
 						
@@ -123,15 +113,15 @@
 </tr>
 
     
-        <tr><td>₱</td><td>Philippine Peso</td></tr>
+        <tr><td class="can-copy">₱</td><td>Philippine Peso</td></tr>
     
 
     
-        <tr><td>ñ</td><td>N with tilde (aka "enye"), lowercase</td></tr>
+        <tr><td class="can-copy">ñ</td><td>N with tilde (aka "enye"), lowercase</td></tr>
     
 
     
-        <tr><td>Ñ</td><td>N with tilde (aka "enye"), uppercase</td></tr>
+        <tr><td class="can-copy">Ñ</td><td>N with tilde (aka "enye"), uppercase</td></tr>
     
 
 </table>
