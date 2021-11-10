@@ -109,26 +109,48 @@
 
 
 		<div id="content" class="container-fluid">
-			<h1 id="common-unicode-characters">Common Unicode Characters</h1>
-<table class="table table-striped">
-<tr>
-    <th>Character</th>
-    <th>Description</th>
-</tr>
+			<script src="https://arden-chan.ml/assets/js/clock.js"></script>
 
-    
-        <tr><td class="can-copy">₱</td><td>Philippine Peso</td></tr>
-    
+<div class="row min-vh-50">
+    <div style="width: 70%">
+        <div class="div_clock"></div>
+    </div>
+    <div style="width: 30%">
+        <ul>
+            <li>Number of dashes in pier: Day (1-31)</li>
+            <li>Number of clouds: Day of week (0: Sunday, ... 6: Saturday)</li>
+            <li>Number of birds/stars: Month (1: January, ... 12: December)</li>
+            <li>Water height: Hour (01-12: increase by 5% every hour; 13-00: decrease by 5% every hour)</li>
+            <li>Distance of boat to pier: Minute (first 30 minutes: move to the left; last 30 minutes: move to the right)</li>
+            <li>Day/night effects:
+                <ul>
+                    <li>Morning: show birds</li>
+                    <li>Evening: show stars</li>
+                    <li>Background color may also change</li>
+                </ul>
+            </li>
+            <li>Position of birds and clouds also update every minute.</li>
+        </ul>
+    </div>
 
-    
-        <tr><td class="can-copy">ñ</td><td>N with tilde (aka "enye"), lowercase</td></tr>
-    
+</div>
+<div class="clear"></div>
 
-    
-        <tr><td class="can-copy">Ñ</td><td>N with tilde (aka "enye"), uppercase</td></tr>
-    
+<hr />
+<p><strong>What is this?</strong></p>
 
-</table>
+<p>This is a response to this code golf challenge: <a href="https://codegolf.stackexchange.com/questions/36109/ascii-art-calendar">ASCII Art Calendar</a>. Definitely my solution is not code golf, but the idea intrigued me so I gave it a go.</p>
+
+<p>I remember doing this sometime around 2015, but it’s such a long time ago so that might be very inaccurate. I’ve rediscovered my code and posted it here with a few modifications.</p>
+
+<p>I also remember doing this to challenge myself to implement something in pure JS. I did manage to do that, but that code was sadly lost. What was left is the jQuery version, but as you can see (feel free to peruse the code!) the majority is still implemented using vanilla JS.</p>
+
+<p>Hope this brings you joy, dear viewer.</p>
+
+<hr />
+<h6 id="whats-with-the-name">What’s with the name?</h6>
+
+<p><em>Relo</em> <code>[ɾɛ.'lo]</code> means <em>clock</em> in Ilocano. As you might have guessed, it is a loanword from Spanish.</p>
 
 		</div>
 	</div>
