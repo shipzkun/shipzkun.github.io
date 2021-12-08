@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Arden's Corner</title>
+	<base href="https://arden-chan.ml">
+
+	<link rel="shortcut icon" href="/assets/images/favicon.png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://arden-chan.ml/assets/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://arden-chan.ml/assets/css/darkly.min.css"/>
+	<link rel="stylesheet" href="https://arden-chan.ml/assets/css/custom.css"/>
+
+	<!-- JS -->
+	<script src="https://arden-chan.ml/assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://arden-chan.ml/assets/js/bootstrap.min.js"></script>
+	<script src="https://arden-chan.ml/assets/js/custom.js"></script>
+
+	<!-- Adsense -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7794761151687634" crossorigin="anonymous"></script>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+<div class="wrapper">
+	<!-- Header navbar-expand-lg -->
+	<div id="topbar" class="navbar navbar-dark bg-primary">
+	<div class="float-left">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="https://arden-chan.ml">🏠 Arden's Corner</a>
+	</div>
+	</div>
+
+	<div id="container">
+		<!-- Sidebar -->
+		<div class="navbar-collapse collapse navbar-toggleable-md navbar navbar-dark bg-secondary" id="sidebar" >
+
+			<div>
+			
+				<span class='links-header'>🖦 IlokoSoft</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.ml/ilo_agsao" title="Passphrase Generator">Agsao</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.ml/ilo_relos" title="Picture Clock">Relos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>📋 Other Projects</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.ml/amazfitbip_watchface" title="">Amazfit Bip Watch Faces</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.ml/common_unicode_chars" title="">Common Unicode Characters</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>🎉 Fun Stuff</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.ml/faq" title="">Q&A</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.ml/resume" title="">Résumé</a></li>
+						
+					
+						
+							<li><a href="https://www.deviantart.com/shippou-dvart" title="Embrace the cringe">DeviantArt</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.ml/blog" title="Cringe novella">Blog</a></li>
+						
+					
+						
+							<li><a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ" title="Cringe TV">Youtube</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>➹ External Links</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://ko-fi.com/Z8Z133PAX" title=""><img height='36' style='border:0px;height:2em' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' alt='Buy Me a Coffee at ko-fi.com' /></a></li>
+						
+					
+						
+							<li><a href="https://unicode.org/resources/fonts.html" title="You might need this if you cannot see all characters or words properly">Unicode Fonts</a></li>
+						
+					
+				</ul>
+			
+			</div>
+		</div>
+
+
+
+		<div id="content" class="container-fluid">
+			<h2>Lotto Statistics, Part I</h2>
+<div style="font-size: x-small;">Posted on: 17 Sep, 2011 00:00:00 PST</div>
+<div style="font-size: x-small;">Categories: 
+	
+	<span class="badge bg-secondary">Lotto</span>
+	
+	<span class="badge bg-secondary">Statistics</span>
+	
+</div>
+<div style="font-size: x-small;">Tags: 
+	
+	<span class="badge bg-secondary">Games</span>
+	
+	<span class="badge bg-secondary">lotto</span>
+	
+	<span class="badge bg-secondary">Probability</span>
+	
+	<span class="badge bg-secondary">statistics</span>
+	
+</div>
+<br/>
+
+<p><strong>DISCLAIMER: Hinihikayat ko ang lahat, lalo na ang mga <em>Stat majors</em>, na i-<em>verify</em> ang lahat ng mga sasabihin ko rito, lalo na ang <em>math</em>. (Oo may <em>math</em>; hayaan mo, madali lang naman.) Higit sa lahat, made-<em>depress</em> ka sa paskil na ito. (Pero basahin mo pa rin, para <em>informed</em> ka.)</strong>Bored ako, so magsa-Stat tayo. :)</p>
+
+<p>Isa sa mga pinagkakaguluhan ng mga Pilipino, lalo na kung mataas ang <em>jackpot</em>, ay ang Lotto ng PCSO. Dala ang pangako ng panandaliang pagyaman, hinihikayat nila ang mga mahihirap na masang Pilipino na pumili ng ilang numero at magbayad ng (sa ngayon) <em>minimum</em> na ₱10 kapalit ang ilang libo hanggaang ilang milyon na piso na maaaring mapanalunan sa loob lamang ng isang gabi.</p>
+
+<p>Ang tanong ng marami: gaano ba ako ka-swerte pagdating sa laro na ito? O mas tumpak: gaano ba kalaki ang tsansang mananalo ako rito?</p>
+
+<p>Ang mga tanong sa itaas ang balak kong sagutin ngayong gabi. Ngunit bago ang lahat, kailangan nating gumawa ng dalawang napakahalagang <em>assumptions</em>:</p>
+
+<ol>
+  <li>
+    <p><em>Fair</em> ang laro. <em>Statistics-wise</em>, <em>fair</em> ang isang laro kung ito hindi ito <em>biased</em>. Halimbawa, sa konteksto ng <em>dice roll</em>, hindi <a href="http://en.wikipedia.org/wiki/Dice#Loaded_dice" title="Dice - Wikipedia, the free encyclopedia"><em>loaded</em></a> ang <em>die</em>; sa isang <em><a href="http://en.wikipedia.org/wiki/Coin_flipping" title="Coin flipping">coin toss</a></em>, hindi mas mabigat ang isang gilid kumpara sa kabila. Sa konteksto ng lotto, mukhang <em>valid</em> naman, dahil sinisigurado naman nila na pare-parehas ang timbang ng bawat bola. (Pero malay natin; ang alam lang natin ay kung ano ang pinapakita nila sa telebisyon.)</p>
+  </li>
+  <li>
+    <p><em>Equally-likely</em> ang <em>outcome</em> ng <strong>bawat kombinasyon<em>.</em></strong> Pansining hindi ang bawat numero, kung hindi ang isang kombinasyon ng bawat numero.</p>
+  </li>
+</ol>
+
+<p>Kung mapatunayan na hindi <em>fair</em> at hindi <em>equally-likely</em> ang bawat kombinasyon sa lotto, wala na; sabog na ang mga <em>analyses</em> na gagawin natin sa mga susunod na pangungusap.Sa tinagal-tagal ng <em>existence</em> ng lotto sa buhay ng mga Pilipino, marami na ring nagbago: nagdagdag sila ng mga bagong laro, at in-<em>upgrade</em> naman ang mga luma na. Dahil dito, kailangan nating limitahan ang mga ia-<em>analyze</em> natin, dahil walang mangyayaring matino kapag isang bagsakan lahat (pansinin ang pamagat ng paskil na ito: <em>Part I</em>. <em>So</em>, may karugtong pa; huwag maging atat.):</p>
+
+<ol>
+  <li>
+    <p>Hindi natin isasama ang mga susunod na <em>features</em>:</p>
+
+    <ul>
+      <li>
+        <p><em>System play</em></p>
+      </li>
+      <li>
+        <p><em>Advanced play</em></p>
+      </li>
+      <li>
+        <p><em>Rambolito play</em></p>
+      </li>
+      <li>
+        <p><em>Power roll</em></p>
+      </li>
+    </ul>
+
+    <p>Sa makatuwid, yung pinakasimple munang <em>scenario</em>: mamimili ka ng mga numero, magbabayad, at (sa awa ng Diyos,) mananalo.</p>
+  </li>
+  <li>
+    <p>Isang laro lang bawat <em>ticket</em>. Sa ngayon, wala muna iyong mga <em>ticket</em> na pang-<em>multiple plays</em> (pero sa totoo lang, wala naman talagang kaso iyon, pero ganoon na muna para mas madaling intindihin).</p>
+  </li>
+  <li>
+    <p>Isang kombinasyon lamang ng mga numero kada ticket. Ito rin ang rason kung bakit walang <em>advanced play, system play, 5-roll at power roll</em>.</p>
+  </li>
+  <li>
+    <p><em>Unique</em> ang bawat kombinasyon kada <em>ticket</em>. Samakatuwid, bawal umulit ng kombinasyon.</p>
+  </li>
+  <li>
+    <p>At ang pinakamahalagang <em>restriction</em> sa lahat: <strong><em>jackpot</em> lang ang aanalisahin<em>.</em></strong> Sa ibang salita, wala munang “paano kung <em>three out of five numbers</em> lang ang nakuha ko?” Sa ibang araw na iyon.</p>
+  </li>
+</ol>
+
+<p>Ngayong naka-<em>set</em> na ang mga <em>restrictions</em> at <em>assumptions</em> natin, simulan na natin ang pag-aanalisa.Ayon sa <a href="http://www.pcso.gov.ph/games.html#" title="Official Website of the Philippine Charity Sweepstakes Office">PCSO</a>, mayroong siyam (9) na laro ang lotto, na maaari nating hatiin sa dalawang pangkat:</p>
+
+<ol>
+  <li>
+    <p><em>Permutation lotto</em></p>
+
+    <ul>
+      <li>
+        <p><em>6-Digit Game</em></p>
+      </li>
+      <li>
+        <p><em>4-Digit Game</em></p>
+      </li>
+      <li>
+        <p><em>Suertres Lotto</em></p>
+      </li>
+      <li>
+        <p><em>EZ2 Lotto</em></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><em>Combination lotto</em></p>
+
+    <ul>
+      <li>
+        <p><em>Grand Lotto 6/55</em></p>
+      </li>
+      <li>
+        <p><em>Power Lotto 5/55 +1</em></p>
+      </li>
+      <li>
+        <p><em>Super <a href="http://en.wikipedia.org/wiki/Lotto_6/49" title="Lotto 6/49">Lotto 6/49</a></em></p>
+      </li>
+      <li>
+        <p><em>Mega Lotto 6/45</em></p>
+      </li>
+      <li>
+        <p><em>Lotto 6/42</em></p>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>Mga paliwanag:</p>
+<ol>
+  <li>
+    <p><em>Permutation lotto</em> - mga uri ng lotto na kung saan kailangan mo ng <em>exact order</em> para mapanalunan ang <em>jackpot</em>.</p>
+  </li>
+  <li>
+    <p><em>Combination lotto</em> - mga uri ng lotto na hindi kinakailangan ng <em>exact</em> order para mapanalunan ang <em>jackpot</em>.</p>
+  </li>
+</ol>
+
+<p>Ngayon, ang <em>stat part</em>.Ayon sa <em>classical rule of statistics</em>, makukuha ang <em><a href="http://en.wikipedia.org/wiki/Probability" title="Probability">probability</a></em> ng pangyayari ng isang bagay batay sa *formula:</p>
+
+<p>[caption id=”attachment_433” align=”aligncenter” width=”416” caption=”Classical Rule of Probability”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/prob.png"><img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/prob.png" alt="Classical Rule of Probability" title="prob" /></a>[/caption]</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Halimbawa, sa <em>die roll</em>, may anim na numero sa isang <em>die</em>, kaya</td>
+      <td>S</td>
+      <td>= 6. Kaya ang <em>probability</em> na makakakuha ka ng 6 sa bawat <em>roll</em> ay 1/6, dahil isa lang naman ang ‘6’ at anim ang posibleng numero sa isang die. Siyempre kapag dinagdagan ang <em>die</em>, halimbawa gawin mong dalawa, iba na. (Para sa <em>probability</em> ng <em>die rolls</em>, may <a href="http://www.edcollins.com/backgammon/diceprob.htm" title="Dice and the Laws of Probability">magandang </a><em><a href="http://www.edcollins.com/backgammon/diceprob.htm" title="Dice and the Laws of Probability">website</a></em> para rito.)</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Ngayon, dahil sa alam naman natin na <strong>isa lang na kombinasyon ang makakapanalo ng <em>jackpot</em></strong>, para sa ating problema, **</td>
+      <td>E</td>
+      <td>= 1**.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Ngayon, para sa</td>
+      <td>S</td>
+      <td>. Dito na papasok ngayon ang rason kung bakit natin hinati sa dalawang uri ang iba’t ibang klase ng lotto, at kung bakit iyon ang mga pangalan ng mga klasipikasyon nila.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ayon sa <em>combinatorics</em>, <a href="http://en.wikipedia.org/wiki/Combination" title="Combination - Wikipedia, the free encyclopedia"><strong><em>combination</em></strong></a> ang tawag kung kukuha ka ng <em>n elements from a m-element set, where <strong>order</strong> <strong>does not matter</strong></em>. Kung <strong>importante ang pagkakasunod-sunod ng mga bagay, <em><a href="http://en.wikipedia.org/wiki/Permutation" title="Permutation">permutation</a></em></strong> ang tawag roon.  Samakatuwid, kung kukuha ka ng, halimbawa, anim (6) na numero mula sa <em>set</em> na 1 hanggang 50, at wala kang paki sa pagkakasunod-sunod nila, <em>combination iyon</em>; kung nakapila ka naman at iniisip kung ilan lahat ang posibleng <em>configuration</em> ng bawat tao sa pila (at siyempre, kada ayos ay mahalaga ang pagkakasunod-sunod), <em>permutation problem</em> iyon.</p>
+
+<p>Ang <em>formula</em> ng <em>combination (<strong>repetition not allowed</strong>)</em> ay:</p>
+
+<p>[caption id=”attachment_434” align=”aligncenter” width=”305” caption=”Combination Formula”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/combination.png"><img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/combination.png" alt="Combination Formula" title="combination" /></a>[/caption]</p>
+
+<p>At ang sa <em>permutation</em> <em>(<strong>repetition not allowed</strong>)</em>:</p>
+
+<p>[caption id=”attachment_435” align=”aligncenter” width=”294” caption=”Permutation Formula”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/permutation.png"><img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/permutation.png" alt="Permutation Formula" title="permutation" /></a>[/caption]</p>
+
+<p>(Para sa mga interesado sa <em>permutation vs combination</em>: punta lang <a href="http://www.mathsisfun.com/combinatorics/combinations-permutations.html" title="Combinations and Permutations">dito</a> para sumaya ka.)</p>
+
+<p>Kaya naman,</p>
+
+<p>[caption id=”attachment_436” align=”aligncenter” width=”235” caption=”Probabilities”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/probs.png"><img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/probs.png" alt="Probabilities" title="probs" /></a>[/caption]</p>
+
+<p>Mapapansin natin na <em>given m and n</em>, mas mataas ang <em>value</em> ng <em>permutation</em> kaysa sa <em>combination</em>. Dito pa lang, malalaman nating mas mahirap manalo sa <em>permutation lotto</em> kaysa sa <em>combination lotto</em>.</p>
+
+<p>Sa kasalukuyan, na-<em>establish</em> na natin ang mga <em>formula</em> na gagamitin natin para malaman ang <em>probability</em> na mananalo tayo ayon sa kung anong klase ng lotto. Ngayon, alamin naman natin ang mga <em>values</em> na ipapalit sa <em>n</em> at <em>m</em>.</p>
+
+<p>Ayon sa PCSO,</p>
+
+<p>[caption id=”attachment_437” align=”aligncenter” width=”430” caption=”Lotto Types Mechanics”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/lotto.png"><img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/lotto.png" alt="Lotto Types Mechanics" title="lotto" /></a>[/caption]</p>
+
+<p>Napansin niyo siguro na walang Suertres Lotto, EZ2 Lotto at Power Lotto +1. Bago natin isali sa <em>table</em> na iyan ang mga nabanggit, kailangan muna nating alalahanin ang tinatawag na <a href="http://www.wtamu.edu/academic/anns/mps/math/mathlab/col_algebra/col_alg_tut55_count.htm"><em>rule of product of combinatorics</em></a>:</p>
+
+<blockquote>
+  <p>Suppose that a task involves a sequence of <em>k</em> choices. Let <img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/col_alg_tut55n1.gif" alt="number 1" /> be the number of ways the first stage or event can occur and <img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/col_alg_tut55n2.gif" alt="number 2" /> be the number of ways the second stage or event can occur after the first stage has occurred. Continuing in this way, let <img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/col_alg_tut55nk.gif" alt="kth term" /> be the number of ways the <em>k</em>th stage or event can occur after the first <em>k</em> - 1 stages or events have occurred. <strong>Then the total number of different ways the task can occur is:</strong></p>
+
+  <p><img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/col_alg_tut55count.gif" alt="counting principle" /></p>
+</blockquote>
+
+<p>Halimbawa, kung mayroon kang dalawang <em>die</em>, mayroon kang suma total na 6*6 = 12 na posibleng pares ng mga numero: (1,1), (1,2), (1,3), … (6,5), (6,6).<a href="http://www.pcso.gov.ph/lotto-powerlotto.html" title="Official Website of the Philippine Charity Sweepstakes Office">Ayon sa PCSO</a>,</p>
+
+<blockquote>
+  <p>The Powerlotto Game is a combination of Lotto and Digit games. <strong>The player selects five (5) numbers from a set of numbers ranging from 1 to 55 plus one (1) number from a set of power numbers ranging from 1 to 10.</strong></p>
+</blockquote>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Kung <em>x</em> = (1, 2, …, 55), at <em>y</em> = (1, 2, …, 10), mayroon kang *n =</td>
+      <td>x</td>
+      <td>*</td>
+      <td>y</td>
+      <td>* = 55*10 = 510 na posibleng kombinasyon para sa Power Lotto + 1.Para naman sa <a href="http://www.pcso.gov.ph/lotto-3digit.html" title="Official Website of the Philippine Charity Sweepstakes Office">Suertres Lotto</a>,</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Using Suertres play slip, mark with a vertical line your chosen 3-number combination in range of 000 to 999 in the game panel.</p>
+</blockquote>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Kung <em>x = y = z = (0, 1, …, 9)</em>, mayroong *n =</td>
+      <td>x</td>
+      <td>*</td>
+      <td>y</td>
+      <td>*</td>
+      <td>z</td>
+      <td>* = 10*10*10 = 1000 na posibleng kombinasyon. Pero dahil indibidwal ang pagpili ng bawat numero, sa bawat numero, mayroon kang 1/10 <em>chance</em> na makuha ang isang numero. Kaya naman, ang <em>probability</em> na makuha mo ang isang tamang kombinasyon (gagamitan natin ngayon ng <a href="http://en.wikipedia.org/wiki/Independence_%28probability_theory%29" title="Independence (probability theory) - Wikipedia, the free encyclopedia"><em>independence rule of probability</em></a>) ay (1/10)*(1/10)*(1/10) = 1/1000. (Sabagay, <em>obvious</em> naman ito sa <em>description</em> ng Suertres Lotto; nililinaw ko lang kung paano nakuha iyon.)Para naman sa EZ2 Lotto,</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Using the EZ2 play slip, mark two (2) numbers from the two number (2) sets ranging from 1 to 31.</p>
+</blockquote>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Tulad ng sa mga nakaraan, kung x = y = (1, 2, …, 31), mayroon kang *n =</td>
+      <td>x</td>
+      <td>*</td>
+      <td>y</td>
+      <td>* = 31*31 = 961 na posibleng mga kombinasyon.Kapag isasaksak natin ito sa ating talaan kanina,</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>[caption id=”attachment_440” align=”aligncenter” width=”446” caption=”Complete Lotto Mechanics”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/lotto21.png"><img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/lotto21.png" alt="Complete Lotto Mechanics" title="lotto2" /></a>[/caption]</p>
+
+<p>Sa ngayon, handa na tayong sagutin ang katanungan na ito: gaano ba kalaki ang tsansang mananalo ako rito?</p>
+
+<p>Gamit ang aking <em>scientific calculator</em>, narito ang mga resulta:</p>
+
+<p>[caption id=”attachment_444” align=”aligncenter” width=”769” caption=”Lotto Probabilities”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/lottoprobs1.png"><img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/lottoprobs1.png" alt="Lotto Probabilities" title="lottoprobs" /></a>[/caption]</p>
+
+<p>Ang una nating mapapansin ay BAKIT SOBRANG LIIT NG <em>PROBABILITIES</em>?! Ganyan talaga. Kaya nga umaabot ng 200+ <em>million</em> ang premyo sa Grand Lotto. <em>At least</em> ngayon, alam mo na.</p>
+
+<p>Isa sa mga medyo pang gago lang na resulta ay <strong>mas mataas ang <em>probability</em> na manalo ka sa Suertres kaysa sa EZ2</strong>. Kahit nga ako nagtaka. Pero tama naman yung <em>math</em>, kaya sa tingin ko baka talagang ganyan siya.</p>
+
+<p>Isang magandang tanong: kung tatayaan ko ang lahat ng mga posibleng kombinasyon, magkano ang gagastusin ko? Sa tulong ng PCSO <em>website</em> at ng aking <em>trusty old scientific calculator</em>, narito ang mga resulta:</p>
+
+<p>[caption id=”attachment_445” align=”aligncenter” width=”641” caption=”Lotto Cost for all outcomes”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/lottocost.png"><img src="https://arden-chan.ml/assets/images/2011-09-17-18-33-51-Lotto_Statistics_Part_I/lottocost.png" alt="Lotto Cost for all outcomes" title="lottocost" /></a>[/caption]</p>
+
+<p>(Ang mga presyo ay kung kailan ito isinulat; siyempre puwede pang magbago iyan.)</p>
+
+<p>Good luck naman sa pagbili ng lahat ng posibleng <em>ticket</em> ng Power Lotto + 1.</p>
+
+<p>Bale ayan, isang <em>guide</em> sa pagpili ng kung saan pupusta. Sa mga umaasang mananalo sila sa larong ito (tutal may nananalo naman; matagal nga lang), <em>good luck</em> na lang sa inyo.</p>
+
+<p>Siyanga pala: dahil mukhang <em>fair</em> naman ang laro, walang <em>sense</em> ang ginagawa ng iba na umaasa sa mga tinatawag nilang <em>lucky numbers</em>. Dahil sa <em>fairness</em> ng laro, ang kombinasyon na, halimbawa, 1-2-3-4-5-6 ay kasing-<em>probable</em> lang na lumabas ng iyong <em>lucky numbers</em> na, halimbawa, 3-6-12-41-25-49. Ang punto, walang kwenta ang <em>lucky numbers</em> kung hindi pampalubag-loob.</p>
+
+<p>Para sa mga manlalaro, lalo na sa mga adik na rito, <em>good luck</em> na lang sa inyo. <em>Happy playing!</em></p>
+
+<p><em>UPDATE</em>: May mali po sa <em>computation</em> ng <em>probabilities</em> ng EZ2 Lotto at PowerLotto. <a href="https://arden-chan.ml/2011/09/25/lotto-statistics-part-ii-errata-ez2-lotto-at-powerlotto/" title="Lotto Statistics, Part II: Errata: EZ2 Lotto at PowerLotto">Narito po ang tama</a>. Pasensya na po. Siyanga pala, iyon lang ang mali; tama pa rin iyong iba.</p>
+
+<p><br /></p>
+
+<hr />
+<h3 id="comments">Comments</h3>
+<p>None.</p>
+
+
+
+Want to comment? <a href="mailto:lets-talk@arden-chan.ml" title="email">Send an email.</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
