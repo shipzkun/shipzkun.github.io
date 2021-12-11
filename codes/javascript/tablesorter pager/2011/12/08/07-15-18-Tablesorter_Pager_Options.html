@@ -137,97 +137,121 @@
 
 <h2 id="configuration">Configuration</h2>
 
-<p>Tablesorter pager is configured by passing values in its constructor in JSON format.<br />
-<code class="language-plaintext highlighter-rouge">&lt;br&gt;&lt;/br&gt;$('table').tablesorter().tablesorterPager({option:"value"});&lt;br&gt;&lt;/br&gt;</code><br />
-The most commonly used option in Tablesorter Pager is the <code class="language-plaintext highlighter-rouge">container</code> option, which defines where the Pager would be rendered. In fact, it is required to show the pager itself.<br />
-Configuration Options
-———————</p>
+<h2 id="tablesorter-pager-is-configured-by-passing-values-in-its-constructor-in-json-format-tabletablesortertablesorterpageroptionvaluethe-most-commonly-used-option-in-tablesorter-pager-is-the-container-option-which-defines-where-the-pager-would-be-rendered-in-fact-it-is-required-to-show-the-pager-itself-configuration-options">Tablesorter pager is configured by passing values in its constructor in JSON format. <code class="language-plaintext highlighter-rouge">$('table').tablesorter().tablesorterPager({option:"value"});</code>The most commonly used option in Tablesorter Pager is the <code class="language-plaintext highlighter-rouge">container</code> option, which defines where the Pager would be rendered. In fact, it is required to show the pager itself. Configuration Options</h2>
 
-<p>The following are all the available options used by Tablesorter Pager, as written in its source code.<br />
-| Option <br />
-| Description <br />
-| Default <br />
-|
-|—|—|—|
-| size <br />
-| Defines the number of rows to display per page. <br />
-| 10 <br />
-|
-| offset <br />
-| – <br />
-| 0 <br />
-|
-| page <br />
-| Defines the offset of the table “page” shown by default. <code class="language-plaintext highlighter-rouge">(currentpage+page)</code> <br />
-| 0 <br />
-|
-| totalRows <br />
-| – <br />
-| 0 <br />
-|
-| totalPages <br />
-| – <br />
-| 0 <br />
-|
-| container <br />
-| Defines where the pager would be displayed. <br />
-| null <br />
-|
-| cssNext <br />
-| Defines the CSS class of the ‘next’ image. <br />
-| .next <br />
-|
-| cssPrev <br />
-| Defines the CSS class of the ‘prev’ image. <br />
-| .prev <br />
-|
-| cssFirst <br />
-| Defines the CSS class of the ‘first image. <br />
-| .first <br />
-|
-| cssLast <br />
-| Defines the CSS class of the ‘last’ image. <br />
-| .last <br />
-|
-| cssPageDisplay <br />
-| Defines the CSS class of the page display. <br />
-| .pagedisplay <br />
-|
-| cssPageSize <br />
-| Defines the CSS class of the ‘prev’ image. <br />
-| .pagesize <br />
-|
-| seperator <br />
-| Defines the separator for the current page and total number of pages. <br />
-| / <br />
-|
-| positionFixed <br />
-| Determines if position of pager is fixed or relative to the table to which it is attached. <br />
-| true <br />
-|
-| appender <br />
-| Defines the appender function for the pager. <br />
-| this.pager <br />
-|</p>
+<table>
+  <thead>
+    <tr>
+      <th>The following are all the available options used by Tablesorter Pager, as written in its source code.</th>
+      <th>Option</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>size</td>
+      <td>Defines the number of rows to display per page.</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>offset</td>
+      <td>–</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>page</td>
+      <td>Defines the offset of the table “page” shown by default. <code class="language-plaintext highlighter-rouge">(currentpage+page)</code></td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>totalRows</td>
+      <td>–</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>totalPages</td>
+      <td>–</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>container</td>
+      <td>Defines where the pager would be displayed.</td>
+      <td>null</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>cssNext</td>
+      <td>Defines the CSS class of the ‘next’ image.</td>
+      <td>.next</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>cssPrev</td>
+      <td>Defines the CSS class of the ‘prev’ image.</td>
+      <td>.prev</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>cssFirst</td>
+      <td>Defines the CSS class of the ‘first image.</td>
+      <td>.first</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>cssLast</td>
+      <td>Defines the CSS class of the ‘last’ image.</td>
+      <td>.last</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>cssPageDisplay</td>
+      <td>Defines the CSS class of the page display.</td>
+      <td>.pagedisplay</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>cssPageSize</td>
+      <td>Defines the CSS class of the ‘prev’ image.</td>
+      <td>.pagesize</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>seperator</td>
+      <td>Defines the separator for the current page and total number of pages.</td>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>positionFixed</td>
+      <td>Determines if position of pager is fixed or relative to the table to which it is attached.</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>appender</td>
+      <td>Defines the appender function for the pager.</td>
+      <td>this.pager</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Some notes:</p>
+<p>Some notes: - I really don’t know what the options <code class="language-plaintext highlighter-rouge">offset</code>, <code class="language-plaintext highlighter-rouge">totalRows</code> and <code class="language-plaintext highlighter-rouge">totalPages</code> are for. If someone discovers their use, please post it in the comments section.</p>
 <ul>
-  <li>
-    <p>I really don’t know what the options <code class="language-plaintext highlighter-rouge">offset</code>, <code class="language-plaintext highlighter-rouge">totalRows</code> and <code class="language-plaintext highlighter-rouge">totalPages</code> are for. If someone discovers their use, please post it in the comments section.</p>
-  </li>
-  <li>
-    <p>Notice that <code class="language-plaintext highlighter-rouge">seperator</code> is spelled with an ‘e’.</p>
-  </li>
+  <li>Notice that <code class="language-plaintext highlighter-rouge">seperator</code> is spelled with an ‘e’.</li>
 </ul>
 
-<p>These are the only options Tablesorter Pager uses. In the next entries, I will post on how to apply your styles to the pager, among other things.</p>
-<h6 id="related-articles">Related articles</h6>
+<p>These are the only options Tablesorter Pager uses. In the next entries, I will post on how to apply your styles to the pager, among other things. ###### Related articles</p>
 
 <ul>
   <li><a href="https://arden-chan.ml/2011/12/06/tablesorter-pager-acquisition-and-initialization/">Tablesorter Pager: Acquisition and Initialization</a> (quintophilosophy.wordpress.com)</li>
 </ul>
-
-<p><br /></p>
 
 <hr />
 <h3 id="comments">Comments</h3>

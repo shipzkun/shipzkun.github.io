@@ -133,30 +133,15 @@
 
 <h3 id="drag-and-drop--behind-the-scenes">Drag and Drop — Behind the Scenes</h3>
 
-<p>Let us say there is a user named Rollo, who is running a Java application. He wants to drag some text from a list and deposit it into a text field. (Note that the process is the same when dragging from a native application to a Java application.) In a nutshell, the drag and drop process works like this:</p>
+<p>Let us say there is a user named Rollo, who is running a Java application. He wants to drag some text from a list and deposit it into a text field. (Note that the process is the same when dragging from a native application to a Java application.) In a nutshell, the drag and drop process works like this: &gt; - Rollo has selected a row of text in the <em>source</em> component: the list. While holding the mouse button Rollo begins to drag the text — this initiates the <em>drag gesture</em>.</p>
 <blockquote>
   <ul>
-    <li>
-      <p>Rollo has selected a row of text in the <em>source</em> component: the list. While holding the mouse button Rollo begins to drag the text — this initiates the <em>drag gesture</em>.</p>
-    </li>
-    <li>
-      <p>When the drag begins, the list packages up the data for <em>export</em> and declares what <em>source actions</em> it supports, such as <code class="language-plaintext highlighter-rouge">COPY</code>, <code class="language-plaintext highlighter-rouge">MOVE</code>, or <code class="language-plaintext highlighter-rouge">LINK</code>.</p>
-    </li>
-    <li>
-      <p>As Rollo drags the data, Swing continuously calculates the location and handles the rendering.</p>
-    </li>
-    <li>
-      <p>If Rollo simultaneously holds the Shift and/or Control key during the drag, this <em>user action</em> is also part of the drag gesture. Typically, an ordinary drag requests the <code class="language-plaintext highlighter-rouge">MOVE</code> action. Holding the Control key while dragging requests the <code class="language-plaintext highlighter-rouge">COPY</code> action, and holding both Shift and Control requests the <code class="language-plaintext highlighter-rouge">LINK</code> action.</p>
-    </li>
-    <li>
-      <p>Once Rollo drags the text over the bounds of a text field component, the <em>target</em> is continually polled to see if it will accept or reject the potential drop. As he drags, the target provides feedback by showing the <em>drop location</em>, perhaps an insertion cursor or a highlighted selection. In this case, the text field (the current target) allows both replacement of selected text and insertion of new text.</p>
-    </li>
-    <li>
-      <p>When Rollo releases the mouse button, the text component inspects the declared source actions and any user action and then it chooses what it wants out of the available options. In this case, the text field chooses to insert the new text at the point of the drop.</p>
-    </li>
-    <li>
-      <p>Finally, the text field <em>imports</em> the data.</p>
-    </li>
+    <li>When the drag begins, the list packages up the data for <em>export</em> and declares what <em>source actions</em> it supports, such as <code class="language-plaintext highlighter-rouge">COPY</code>, <code class="language-plaintext highlighter-rouge">MOVE</code>, or <code class="language-plaintext highlighter-rouge">LINK</code>.</li>
+    <li>As Rollo drags the data, Swing continuously calculates the location and handles the rendering.</li>
+    <li>If Rollo simultaneously holds the Shift and/or Control key during the drag, this <em>user action</em> is also part of the drag gesture. Typically, an ordinary drag requests the <code class="language-plaintext highlighter-rouge">MOVE</code> action. Holding the Control key while dragging requests the <code class="language-plaintext highlighter-rouge">COPY</code> action, and holding both Shift and Control requests the <code class="language-plaintext highlighter-rouge">LINK</code> action.</li>
+    <li>Once Rollo drags the text over the bounds of a text field component, the <em>target</em> is continually polled to see if it will accept or reject the potential drop. As he drags, the target provides feedback by showing the <em>drop location</em>, perhaps an insertion cursor or a highlighted selection. In this case, the text field (the current target) allows both replacement of selected text and insertion of new text.</li>
+    <li>When Rollo releases the mouse button, the text component inspects the declared source actions and any user action and then it chooses what it wants out of the available options. In this case, the text field chooses to insert the new text at the point of the drop.</li>
+    <li>Finally, the text field <em>imports</em> the data.</li>
   </ul>
 </blockquote>
 
@@ -171,8 +156,6 @@
 <p>P.S. What I’m writing now is a program that will receive directories as an input and compressed files of the input’s subdirectories and/or files as an output. Not a single compressed file but compressed files equal to the number of subdirectories and/or files the input directory contains. (e.g. 1 directory with 558 subfolders will output 558 compressed version of the 558 subdirectories) This is a semestral break project (not as a school requirement but as a hobby project) and I plan to distribute it as open-source. So far, I am in the progress of writing a Linux version.</p>
 
 <p>Any help with the said project will be appreciated and duly rewarded.</p>
-
-<p><br /></p>
 
 <hr />
 <h3 id="comments">Comments</h3>

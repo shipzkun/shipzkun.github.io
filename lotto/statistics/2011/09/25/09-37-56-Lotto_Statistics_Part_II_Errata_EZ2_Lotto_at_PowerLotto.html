@@ -141,7 +141,8 @@
 
 <p>Noong nakaraang linggo, inalam natin kung <a href="https://arden-chan.ml/2011/09/18/lotto-statistics-part-i/" title="Lotto Statistics, Part I">ano ang <em>probability</em> na manalo ng <em>jackpot</em> sa iba’t ibang klase ng lotto sa Pilipinas</a>. Nakuha natin ang mga sumusunod na numero gamit ang iba’t ibang <em>laws</em> ng <em>probability:</em></p>
 
-<p>[caption id=”attachment_444” align=”aligncenter” width=”500” caption=”Lotto Probabilities”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/lottoprobs1.png"><img src="https://arden-chan.ml/assets/images/2011-09-25-09-37-56-Lotto_Statistics_Part_II_Errata_EZ2_Lotto_at_PowerLotto/lottoprobs1.png" alt="Lotto Probabilities" title="lottoprobs" /></a>[/caption]</p>
+<p><a href="http://quintophilosophy.files.wordpress.com/2011/09/lottoprobs1.png"><img src="https://arden-chan.ml/assets/images/2011-09-25-09-37-56-Lotto_Statistics_Part_II_Errata_EZ2_Lotto_at_PowerLotto/lottoprobs1.png" alt="Lotto Probabilities" title="lottoprobs" /></a><br />
+Lotto Probabilities</p>
 
 <p>Tama naman ang mga <em>analysis</em> at <em>math computations</em> natin, kaso nga lang, nagkamali ako sa dalawa: ang EZ2 Lotto at PowerLotto. Ngayon, aalamin natin kung saan ako nagkamali (at siyempre, itatama natin ang mga maling iyon).</p>
 
@@ -150,15 +151,9 @@
 <p>Ano ba ang mga <em>hints</em> ko kung bakit nasabi kong may mali sa <em>analysis</em> ko?</p>
 
 <ol>
-  <li>
-    <p>Hindi ako kampante sa mga sagot ko.</p>
-  </li>
-  <li>
-    <p>Mas maliit ang <em>probability</em> na manalo ka sa EZ2 lotto kaysa sa Suertres Lotto.</p>
-  </li>
-  <li>
-    <p>Sobrang dami ng <em>combinations</em> ng PowerLotto.</p>
-  </li>
+  <li>Hindi ako kampante sa mga sagot ko.</li>
+  <li>Mas maliit ang <em>probability</em> na manalo ka sa EZ2 lotto kaysa sa Suertres Lotto.</li>
+  <li>Sobrang dami ng <em>combinations</em> ng PowerLotto.</li>
 </ol>
 
 <p>Kaya ngayon, alamin na natin ang mga mali.Mayroong konsepto sa Statistics na tinatawag na <a href="http://en.wikipedia.org/wiki/Independence_%28probability_theory%29" title="Independence (probability theory) - Wikipedia, the free encyclopedia"><em>independence</em></a>.</p>
@@ -169,55 +164,53 @@
 
 <p>Halimbawa, <em>independent</em> ang bawat <em><a href="http://en.wikipedia.org/wiki/Coin_flipping" title="Coin flipping">coin toss</a></em> sa isa’t isa, dahil hindi naman naaapektuhan ng nakaraang <em>toss</em> ang mga susunod. Ganoon din ang sa <em>dice roll</em>.Kapag <em>independent</em> ang bawat <em>events</em> A at B, ang pag-<em>compute</em> ng <em>probability</em> na sabay silang mangyayari ay ibinibigay ng <em>formula</em> na ito:</p>
 
-<p>[caption id=”attachment_503” align=”aligncenter” width=”369” caption=”Independence rule”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/independence.png"><img src="https://arden-chan.ml/assets/images/2011-09-25-09-37-56-Lotto_Statistics_Part_II_Errata_EZ2_Lotto_at_PowerLotto/independence.png" alt="Independence rule" title="independence" /></a>[/caption]</p>
+<p><a href="http://quintophilosophy.files.wordpress.com/2011/09/independence.png"><img src="https://arden-chan.ml/assets/images/2011-09-25-09-37-56-Lotto_Statistics_Part_II_Errata_EZ2_Lotto_at_PowerLotto/independence.png" alt="Independence rule" title="independence" /></a><br />
+Independence rule</p>
 
 <p>Halimbawa, may dalawang <em>dice</em>. <em>Assuming</em> na walang daya yung bawat <em>die</em>, ang <em>probability</em> na makakuha ka ng numero sa isang <em>die</em> ay 1/6. Halimbawa, gusto mong ma-<em>compute</em> ang <em>probability</em> na makakuha ng 1 sa bawat <em>die</em>.</p>
 
-<p>[caption id=”attachment_504” align=”aligncenter” width=”500” caption=”Die probabilities”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/dieprobs.png"><img src="https://arden-chan.ml/assets/images/2011-09-25-09-37-56-Lotto_Statistics_Part_II_Errata_EZ2_Lotto_at_PowerLotto/dieprobs.png" alt="Die probabilities" title="dieprobs" /></a>[/caption]</p>
+<p><a href="http://quintophilosophy.files.wordpress.com/2011/09/dieprobs.png"><img src="https://arden-chan.ml/assets/images/2011-09-25-09-37-56-Lotto_Statistics_Part_II_Errata_EZ2_Lotto_at_PowerLotto/dieprobs.png" alt="Die probabilities" title="dieprobs" /></a><br />
+Die probabilities</p>
 
 <p>Ngayon, ikokonekta natin ang konseptiong iyan sa mga nabanggit na uri ng lotto.</p>
 
 <ol>
-  <li>Suertres Lotto. Sa totoo lang, ginamitan ko ng <em>independence rule</em> ang pagkuha ng <em>probability</em> nito sa nauna ko nang paskil. Tulad ng nasabi ko na:
-    <blockquote>
-      <table>
-        <tbody>
-          <tr>
-            <td>Kung <em>x = y = z = (0, 1, …, 9)</em>, mayroong *n =</td>
-            <td>x</td>
-            <td>*</td>
-            <td>y</td>
-            <td>*</td>
-            <td>z</td>
-            <td>* = 10*10*10 = 1000 na posibleng kombinasyon. Pero dahil indibidwal ang pagpili ng bawat numero, sa bawat numero, mayroon kang 1/10 <em>chance</em> na makuha ang isang numero. Kaya naman, ang <em>probability</em> na makuha mo ang isang tamang kombinasyon (gagamitan natin ngayon ng <a href="http://en.wikipedia.org/wiki/Independence_%28probability_theory%29" title="Independence (probability theory) - Wikipedia, the free encyclopedia"><em>independence rule of probability</em></a>) ay (1/10)*(1/10)*(1/10) = 1/1000. (Sabagay, <em>obvious</em> naman ito sa <em>description</em> ng Suertres Lotto; nililinaw ko lang kung paano nakuha iyon.)</td>
-          </tr>
-        </tbody>
-      </table>
-    </blockquote>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Suertres Lotto. Sa totoo lang, ginamitan ko ng <em>independence rule</em> ang pagkuha ng <em>probability</em> nito sa nauna ko nang paskil. Tulad ng nasabi ko na: &gt; Kung <em>x = y = z = (0, 1, …, 9)</em>, mayroong *n =</td>
+          <td>x</td>
+          <td>*</td>
+          <td>y</td>
+          <td>*</td>
+          <td>z</td>
+          <td>* = 10*10*10 = 1000 na posibleng kombinasyon. Pero dahil indibidwal ang pagpili ng bawat numero, sa bawat numero, mayroon kang 1/10 <em>chance</em> na makuha ang isang numero. Kaya naman, ang <em>probability</em> na makuha mo ang isang tamang kombinasyon (gagamitan natin ngayon ng <a href="http://en.wikipedia.org/wiki/Independence_%28probability_theory%29" title="Independence (probability theory) - Wikipedia, the free encyclopedia"><em>independence rule of probability</em></a>) ay (1/10)*(1/10)*(1/10) = 1/1000. (Sabagay, <em>obvious</em> naman ito sa <em>description</em> ng Suertres Lotto; nililinaw ko lang kung paano nakuha iyon.)</td>
+        </tr>
+      </tbody>
+    </table>
   </li>
-  <li>Muli, <a href="http://www.pcso.gov.ph/lotto-2digit.html" title="Official Website of the Philippine Charity Sweepstakes Office">ayon sa PCSO</a>,
-    <blockquote>
-      <p>Using the EZ2 play slip, mark two (2) numbers from the two number (2) sets ranging from 1 to 31.</p>
-    </blockquote>
+  <li>
+    <p>Muli, <a href="http://www.pcso.gov.ph/lotto-2digit.html" title="Official Website of the Philippine Charity Sweepstakes Office">ayon sa PCSO</a>, &gt; Using the EZ2 play slip, mark two (2) numbers from the two number (2) sets ranging from 1 to 31.</p>
 
     <p>Alam nating <em>permutation lotto</em> ang EZ2, dahil kailangan na <em>exact order</em> ang mga numero upang manalo ng <em>jackpot</em>. Ang bawat numero ay pipiliin mula sa 31 na numero. <em>Assuming</em> na <em>fair</em> ang laro, ang <em>probability</em> na makakuha ng isang numero ay 1/31. Gamit ang <em>independence rule</em>, ang <em>probability</em> na manalo ka sa laro na ito ng <em>jackpot</em> ay (1/31)(1/31) = 1/961.</p>
   </li>
-  <li>Para naman sa <a href="http://www.pcso.gov.ph/lotto-powerlotto.html" title="Official Website of the Philippine Charity Sweepstakes Office">Powerlotto</a>,
-    <blockquote>
-      <p>The Powerlotto Game is a combination of Lotto and Digit games. The player selects five (5) numbers from a set of numbers ranging from 1 to 55 plus one (1) number from a set of power numbers ranging from 1 to 10.</p>
-    </blockquote>
+  <li>
+    <p>Para naman sa <a href="http://www.pcso.gov.ph/lotto-powerlotto.html" title="Official Website of the Philippine Charity Sweepstakes Office">Powerlotto</a>, &gt; The Powerlotto Game is a combination of Lotto and Digit games. The player selects five (5) numbers from a set of numbers ranging from 1 to 55 plus one (1) number from a set of power numbers ranging from 1 to 10.</p>
 
     <p>Dito natin ngayon mas maiintindihan kung bakit mali ang nauna kong <em>analysis</em>. Sabi sa taas, mamimili ka muna ng limang numero sa 55 na numero mula 1 hanggang 55. Dahil <em>combination lotto</em> ang PowerLotto, mayroon kang 55C5 = 3 478 761 na posibleng kombinasyon, at ang <em>probability</em> na makuha mo ang isa sa mga kombinasyong ito ay 1/3 478 761. Tapos, kailangan mong mamili ng isang numero mula 1 hanggang 10, at ang <em>probability</em> na makuha mo ang isa sa sampung numerong ito ay 1/10 (<em>obviously</em>). Para manalo ng <em>jackpot</em>, kailangang makuha mo ang limang numero nang tama, kasama ang isang dagdag na numero. Kaya naman, ang <em>probability</em> na manalo ka ng <em>jackpot</em> ay: (1/3 478 761)*(1/10) = 1/34 787 610.</p>
   </li>
 </ol>
 
-<p>Ngayong nakuha na natin ang tamang <em>probabilities</em>, i-<em>update</em> na natin ngayon ang ating talaan.[caption id=”attachment_508” align=”aligncenter” width=”500” caption=”Lotto Probabilities, updated”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/lottoprobs21.png"><img src="https://arden-chan.ml/assets/images/2011-09-25-09-37-56-Lotto_Statistics_Part_II_Errata_EZ2_Lotto_at_PowerLotto/lottoprobs21.png" alt="Lotto Probabilities, updated" title="lottoprobs2" /></a>[/caption]</p>
+<p>Ngayong nakuha na natin ang tamang <em>probabilities</em>, i-<em>update</em> na natin ngayon ang ating talaan.<a href="http://quintophilosophy.files.wordpress.com/2011/09/lottoprobs21.png"><img src="https://arden-chan.ml/assets/images/2011-09-25-09-37-56-Lotto_Statistics_Part_II_Errata_EZ2_Lotto_at_PowerLotto/lottoprobs21.png" alt="Lotto Probabilities, updated" title="lottoprobs2" /></a><br />
+Lotto Probabilities, updated</p>
 
 <p>Inihiwalay ko na ang mga itinama nating <em>probabilities</em> para mas malinaw. Naka-<em>dash</em> na rin ang <em>number required to win</em> <em>column</em> para hindi nakakalito.</p>
 
 <p>Dahil diyan, kailangan din nating i-<em>update</em> ang ating isa pang talaan:</p>
 
-<p>[caption id=”attachment_509” align=”aligncenter” width=”500” caption=”Lotto costs, updated”]<a href="http://quintophilosophy.files.wordpress.com/2011/09/lottocost21.png"><img src="https://arden-chan.ml/assets/images/2011-09-25-09-37-56-Lotto_Statistics_Part_II_Errata_EZ2_Lotto_at_PowerLotto/lottocost21.png" alt="Lotto costs, updated" title="lottocost2" /></a>[/caption]</p>
+<p><a href="http://quintophilosophy.files.wordpress.com/2011/09/lottocost21.png"><img src="https://arden-chan.ml/assets/images/2011-09-25-09-37-56-Lotto_Statistics_Part_II_Errata_EZ2_Lotto_at_PowerLotto/lottocost21.png" alt="Lotto costs, updated" title="lottocost2" /></a><br />
+Lotto costs, updated</p>
 
 <p>Ayan, mas kapani-paniwala na ang resulta ng PowerLotto + 1 at EZ2 Lotto. Kahit papaano’y tumaas naman ang <em>probability</em> na manalo (at ang kailangang pera kung gusto mong tayaan lahat ng posibleng kombinasyon ng mga numero), ngunit mababa pa rin talaga.</p>
 
@@ -226,24 +219,12 @@
 <h6 id="related-articles">Related articles</h6>
 
 <ul>
-  <li>
-    <p><a href="http://wiki.answers.com/Q/What_is_the_experimental_probability_of_rolling_one_die_100_times_and_getting_a_1_or_a_2_39_times">What is the experimental probability of rolling one die 100 times and getting a 1 or a 2 39 times</a> (wiki.answers.com)</p>
-  </li>
-  <li>
-    <p><a href="http://r.zemanta.com/?u=http%3A//abcnews.go.com/blogs/business/2011/09/mans-same-lotto-numbers-for-9-years-pay-off/&amp;a=55805737&amp;rid=000000d1-8d12-000F-0000-0000000001f6&amp;e=f67bd6387cb037ef61edefda6bacd60e">Man’s Same Lotto Numbers For 9 Years Pay Off</a> (abcnews.go.com)</p>
-  </li>
-  <li>
-    <p><a href="http://wiki.answers.com/Q/What_is_the_probability_that_you_will_get_10_heads_in_a_row_when_you_toss_a_fair_coin">What is the probability that you will get 10 heads in a row when you toss a fair coin</a> (wiki.answers.com)</p>
-  </li>
-  <li>
-    <p><a href="http://wiki.answers.com/Q/What_is_the_probability_of_flipping_a_coin_and_getting_four_heads_in_a_row">What is the probability of flipping a coin and getting four heads in a row</a> (wiki.answers.com)</p>
-  </li>
-  <li>
-    <p><a href="http://wiki.answers.com/Q/What_is_the_probability_of_flipping_91_coins_and_getting_a_head_91_times_in_a_row">What is the probability of flipping 91 coins and getting a head 91 times in a row</a> (wiki.answers.com)</p>
-  </li>
+  <li><a href="http://wiki.answers.com/Q/What_is_the_experimental_probability_of_rolling_one_die_100_times_and_getting_a_1_or_a_2_39_times">What is the experimental probability of rolling one die 100 times and getting a 1 or a 2 39 times</a> (wiki.answers.com)</li>
+  <li><a href="http://r.zemanta.com/?u=http%3A//abcnews.go.com/blogs/business/2011/09/mans-same-lotto-numbers-for-9-years-pay-off/&amp;a=55805737&amp;rid=000000d1-8d12-000F-0000-0000000001f6&amp;e=f67bd6387cb037ef61edefda6bacd60e">Man’s Same Lotto Numbers For 9 Years Pay Off</a> (abcnews.go.com)</li>
+  <li><a href="http://wiki.answers.com/Q/What_is_the_probability_that_you_will_get_10_heads_in_a_row_when_you_toss_a_fair_coin">What is the probability that you will get 10 heads in a row when you toss a fair coin</a> (wiki.answers.com)</li>
+  <li><a href="http://wiki.answers.com/Q/What_is_the_probability_of_flipping_a_coin_and_getting_four_heads_in_a_row">What is the probability of flipping a coin and getting four heads in a row</a> (wiki.answers.com)</li>
+  <li><a href="http://wiki.answers.com/Q/What_is_the_probability_of_flipping_91_coins_and_getting_a_head_91_times_in_a_row">What is the probability of flipping 91 coins and getting a head 91 times in a row</a> (wiki.answers.com)</li>
 </ul>
-
-<p><br /></p>
 
 <hr />
 <h3 id="comments">Comments</h3>

@@ -155,7 +155,7 @@
 
 <h2 id="initialization">Initialization</h2>
 
-<p>To include the script in your HTML file, you can copy-paste the following codes in the head section of your HTML file:<code class="language-plaintext highlighter-rouge">&lt;link rel='stylesheet' href='path/to/jqueryfile.min.js' type='text/css' /&gt;&lt;br&gt;&lt;/br&gt;&lt;link rel='stylesheet' href='path/to/jquery.tablesorter.min.js' type='text/css' /&gt;&lt;br&gt;&lt;/br&gt;&lt;link rel='stylesheet' href='path/to/jquery.tablesorter.pager.js' type='text/css' /&gt;</code></p>
+<p>To include the script in your HTML file, you can copy-paste the following codes in the head section of your HTML file:<code class="language-plaintext highlighter-rouge">&lt;link rel='stylesheet' href='path/to/jqueryfile.min.js' type='text/css' /&gt;&lt;link rel='stylesheet' href='path/to/jquery.tablesorter.min.js' type='text/css' /&gt;&lt;link rel='stylesheet' href='path/to/jquery.tablesorter.pager.js' type='text/css' /&gt;</code></p>
 
 <p>Next, attach the Tablesorter to a table:</p>
 
@@ -173,38 +173,22 @@
 
 <p>You can use the following template to define your “rendering” area:</p>
 
-<p><code class="language-plaintext highlighter-rouge">&lt;div class="pager"&gt;&lt;br&gt;&lt;/br&gt;&lt;img src="path/to/images/firstarr.png"/&gt;&lt;br&gt;&lt;/br&gt;&lt;img src="path/to/images/prevarr.png"/&gt;&lt;br&gt;&lt;/br&gt;&lt;input type="text"/&gt;&lt;br&gt;&lt;/br&gt;&lt;img src="path/to/images/nextarr.png"/&gt;&lt;br&gt;&lt;/br&gt;&lt;img src="path/to/images/lastarr.png"/&gt;&lt;br&gt;&lt;/br&gt;&lt;select&gt;&lt;br&gt;&lt;/br&gt;&lt;option value="10"&gt;10 per page&lt;/option&gt;&lt;br&gt;&lt;/br&gt;&lt;option value="25"&gt;25 per page&lt;/option&gt;&lt;br&gt;&lt;/br&gt;&lt;option value="50"&gt;50 per page&lt;/option&gt;&lt;br&gt;&lt;/br&gt;&lt;/select&gt;&lt;br&gt;&lt;/br&gt;&lt;/div&gt;</code></p>
+<p><code class="language-plaintext highlighter-rouge">&lt;div class="pager"&gt;&lt;img src="path/to/images/firstarr.png"/&gt;&lt;img src="path/to/images/prevarr.png"/&gt;&lt;input type="text"/&gt;&lt;img src="path/to/images/nextarr.png"/&gt;&lt;img src="path/to/images/lastarr.png"/&gt;&lt;select&gt;&lt;option value="10"&gt;10 per page&lt;/option&gt;&lt;option value="25"&gt;25 per page&lt;/option&gt;&lt;option value="50"&gt;50 per page&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;</code></p>
 
 <p>Where:</p>
 
 <ul>
-  <li>
-    <p>firstarr.png: image to be clicked to get the first “page” of the table</p>
-  </li>
-  <li>
-    <p>prevarr.png: image to be clicked to go back a “page” of the table</p>
-  </li>
-  <li>
-    <p>nextarr.png: image to be clicked to go to the next “page” of the table</p>
-  </li>
-  <li>
-    <p>lastarr.png: image to be clicked to get the last “page” of the table</p>
-  </li>
-  <li>
-    <p>input field: where the “page number” of the table will be displayed</p>
-  </li>
-  <li>
-    <p>options: number of fields to be displayed “per page”<br />
-  Format:<br />
-  &lt;option value=”pagesize”&gt;Description&lt;/option&gt;</p>
-  </li>
+  <li>firstarr.png: image to be clicked to get the first “page” of the table</li>
+  <li>prevarr.png: image to be clicked to go back a “page” of the table</li>
+  <li>nextarr.png: image to be clicked to go to the next “page” of the table</li>
+  <li>lastarr.png: image to be clicked to get the last “page” of the table</li>
+  <li>input field: where the “page number” of the table will be displayed</li>
+  <li>options: number of fields to be displayed “per page” Format: &lt;option value=”pagesize”&gt;Description&lt;/option&gt;</li>
 </ul>
 
 <p>Of course, you may insert other elements as you wish inside the div. You may even change the container type of the pager (e.g., div to form tag). However, the bulleted elements above MUST be present in order for the pager to work as expected.Now, when you render the page, you will now see the plugin like the one demonstrated in the docs.</p>
 
 <p>In the next entry, we will talk about how to configure the tablesorter plugin, and what options are available that we can manipulate to do certain interesting things.</p>
-
-<p><br /></p>
 
 <hr />
 <h3 id="comments">Comments</h3>

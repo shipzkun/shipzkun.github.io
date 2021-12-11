@@ -143,38 +143,11 @@
 
 <p>For starters:</p>
 
-<p><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01">[img 404]</a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a><br />
-This picture is from Digimon Adventure 01 (the anime I am currently watching). For those who do not know, this code is the one translated from symbols by Koushiro (Tentomon’s owner). At first glance, it is just a BASIC code (please correct me if I’m wrong) that does mathematical computations (notice the square root functions) and does further processing via the fractal function (which then calls itself recursively).</p>
+<p><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01">[img 404]</a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a>This picture is from Digimon Adventure 01 (the anime I am currently watching). For those who do not know, this code is the one translated from symbols by Koushiro (Tentomon’s owner). At first glance, it is just a BASIC code (please correct me if I’m wrong) that does mathematical computations (notice the square root functions) and does further processing via the fractal function (which then calls itself recursively).</p>
 
 <p>I’ll just type the code here:</p>
 
-<p>100 /* func sample, coast creation */<br />
-110 float s<br />
-120 while s&lt;1 or s&gt;2<br />
-130 input “ratio 1 to 2”; s<br />
-140 endwhile<br />
-150 s = (s-1)/10+1<br />
-160 screen 1,2,1,1<br />
-170 s=sqr(s*s-1)<br />
-180 float x0=100, x1=41<a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a>2, y0=0, y1=0<br />
-190 fractal(x0,x1,y0,y1,1)<a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"></a><br />
-200 line(100, 50, 412, 50, 255, 65535)<br />
-210 end<a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a><br />
-220 func fractal(x0;float,x1;float,y0;float,y1;float,sp;int)<br />
-230 float l, r, x2, y2<br />
-240 l=sqr[(x1-x0)*(x1-x0)+(y1-y0)*(y1-y0)]<br />
-250 if l&lt;2 or sp&gt;=9 then (<br />
-260 line(x0,y0/3+50,x1,y1/3+50,255,65535) ; return()<br />
-270 )<br />
-280 r=rnd()+rnd()+rnd()-2<br />
-290 x2=(x0+x1)/2+s*(y1-y0)*r<br />
-300 y2=(y0+y1)/2+s(x0+x1)*r<br />
-310 sp = sp + 1<br />
-320 fractal(x0,x2,y0,y2,sp)<br />
-330 fractal(x2,x1,y2,y1,sp)<br />
-340 endfunc<br />
-<a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"></a><br />
-There! Done typing! :)</p>
+<p>100 /* func sample, coast creation */ 110 float s 120 while s&lt;1 or s&gt;2 130 input “ratio 1 to 2”; s 140 endwhile 150 s = (s-1)/10+1 160 screen 1,2,1,1 170 s=sqr(s*s-1) 180 float x0=100, x1=41<a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a>2, y0=0, y1=0 190 fractal(x0,x1,y0,y1,1)<a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"></a>200 line(100, 50, 412, 50, 255, 65535) 210 end<a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a>220 func fractal(x0;float,x1;float,y0;float,y1;float,sp;int) 230 float l, r, x2, y2 240 l=sqr[(x1-x0)*(x1-x0)+(y1-y0)*(y1-y0)] 250 if l&lt;2 or sp&gt;=9 then ( 260 line(x0,y0/3+50,x1,y1/3+50,255,65535) ; return() 270 ) 280 r=rnd()+rnd()+rnd()-2 290 x2=(x0+x1)/2+s*(y1-y0)*r 300 y2=(y0+y1)/2+s(x0+x1)*r 310 sp = sp + 1 320 fractal(x0,x2,y0,y2,sp) 330 fractal(x2,x1,y2,y1,sp) 340 endfunc <a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"></a>There! Done typing! :)</p>
 
 <p>What’s notable with this is that this code segment seem to do nothing but churn numbers (with the distance formula appearing at line 240 and the midpoint fla at lines 290 and 300), then call fractal again recurs<a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a>ively two times (at lines 320 and 330). The program gets input at line 130 via a while loop. When input is either less than 1 or greater than 2, the program again prompts the user to enter a number (displaying the message “ratio 1 to 2”). As you can see, the valid inputs are from the interval (1,2) (1 and 2 not included).</p>
 
@@ -184,32 +157,21 @@ There! Done typing! :)</p>
 
 <p>What interests me so much is that this code segment made the following transformation possible:</p>
 
-<p><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"><img src="http://images.thegenuisishere.multiply.com/image/1/photos/upload/300x300/SXsEWQoKCIYAAFljK9w1/snapshot20090110004455.jpg?et=ZhrtN6chwqyv2IAFuFwn8Q&amp;nmid=0" alt="" /></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"></a><br />
-<a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1">[img 404]</a></p>
+<p><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"><img src="http://images.thegenuisishere.multiply.com/image/1/photos/upload/300x300/SXsEWQoKCIYAAFljK9w1/snapshot20090110004455.jpg?et=ZhrtN6chwqyv2IAFuFwn8Q&amp;nmid=0" alt="" /></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXr7dQoKCIYAAHcNGO01"></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1"></a><a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsEWQoKCIYAAFljK9w1">[img 404]</a></p>
 
 <p>On the left is Tentomon (holding Koushiro’s laptop) and to the right is Kabuterimon, Tentomon’s Adult form.</p>
 
 <p>Cool, isn’t it? (This happened at ep 5).</p>
 
-<p>Secondly, this picture:<br />
-<a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsGKgoKCIYAAARdPr81"><img src="http://images.thegenuisishere.multiply.com/image/1/photos/upload/300x300/SXsGKgoKCIYAAARdPr81/Screenshot.png?et=EzWjvzg9MkNsVsaaCZVMiw&amp;nmid=0" alt="" /></a></p>
+<p>Secondly, this picture: <a href="http://thegenuisishere.multiply.com/photos/hi-res/upload/SXsGKgoKCIYAAARdPr81"><img src="http://images.thegenuisishere.multiply.com/image/1/photos/upload/300x300/SXsGKgoKCIYAAARdPr81/Screenshot.png?et=EzWjvzg9MkNsVsaaCZVMiw&amp;nmid=0" alt="" /></a></p>
 
-<p>This is what my Firefox looks like now.<br />
-This is about:blank page.</p>
+<p>This is what my Firefox looks like now. This is about:blank page.</p>
 
-<p>How did I do it?<br />
-Btw, this is my Linux version of Firefox.</p>
+<p>How did I do it? Btw, this is my Linux version of Firefox.</p>
 
-<p>1. Install Stylish add-on.<br />
-2. Then, go to www.userscripts.org and search for the following scripts:</p>
+<p>1. Install Stylish add-on. 2. Then, go to www.userscripts.org and search for the following scripts:</p>
 
-<p>a. Matrix - Global Style &lt;- makes all webpages have a black background and green text<br />
-b. about:blank - Dark Firefox &lt;- for displaying the blue Firefox logo at every blank tab<br />
-c. BlackMail (real black gmail Theme)<br />
-d. Firefox 3 - Chrome Theme (Dark Gray) Tabs on Top &lt;- for Google Chrome styled tabs<br />
-e. Firefox 3 - Tab Tweaks<br />
-f. OneManga - Optimal Viewing<br />
-g. Yahoo! Wide BlackForest</p>
+<p>a. Matrix - Global Style &lt;- makes all webpages have a black background and green text b. about:blank - Dark Firefox &lt;- for displaying the blue Firefox logo at every blank tab c. BlackMail (real black gmail Theme) d. Firefox 3 - Chrome Theme (Dark Gray) Tabs on Top &lt;- for Google Chrome styled tabs e. Firefox 3 - Tab Tweaks f. OneManga - Optimal Viewing g. Yahoo! Wide BlackForest</p>
 
 <p>Anyway, all of these are optional; so choose whatever you like.</p>
 
@@ -217,45 +179,25 @@ g. Yahoo! Wide BlackForest</p>
 
 <p>Multiply comments</p>
 
-<p>| <a href="http://zizo0003.multiply.com">[img 404]</a> <br />
-| <a class="mine">delete</a> <a href="http://thegenuisishere.multiply.com/item/reply/thegenuisishere:journal:48+5?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">reply</a>     <a href="http://zizo0003.multiply.com">zizo0003</a> wrote on Nov 19, ‘10             assuming command “line” draws a line between (x0,y0) and (x1,y1) I found that this code draws a sequence of lines between the points (100,50) and (412,50) along with a straight line between these two points .   if anyone is interested mail my at zizo_0003@yahoo.com <br />
-|
+<p>| <a href="http://zizo0003.multiply.com">[img 404]</a> | <a class="mine">delete</a> <a href="http://thegenuisishere.multiply.com/item/reply/thegenuisishere:journal:48+5?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">reply</a>  <a href="http://zizo0003.multiply.com">zizo0003</a> wrote on Nov 19, ‘10    assuming command “line” draws a line between (x0,y0) and (x1,y1) I found that this code draws a sequence of lines between the points (100,50) and (412,50) along with a straight line between these two points . if anyone is interested mail my at zizo_0003@yahoo.com |
 |—|—|</p>
 
-<p><a id="anchor4" name="reply4"></a></p>
-
-<p>| <a href="http://tyuluio.multiply.com"><img src="http://multiply.com/mu/tyuluio/logo/" alt="tyuluio" /></a> <br />
-| <a class="mine">delete</a> <a href="http://thegenuisishere.multiply.com/item/reply/thegenuisishere:journal:48+4?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">reply</a>     <a href="http://tyuluio.multiply.com">tyuluio</a> wrote on Nov 18, ‘09             <a href="http://filipinofriendfinder.xm.com"> Meet Your Perfect Love Near Now! </a> <br />
-|
+<p><a id="anchor4" name="reply4"></a>| <a href="http://tyuluio.multiply.com"><img src="http://multiply.com/mu/tyuluio/logo/" alt="tyuluio" /></a> | <a class="mine">delete</a> <a href="http://thegenuisishere.multiply.com/item/reply/thegenuisishere:journal:48+4?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">reply</a>  <a href="http://tyuluio.multiply.com">tyuluio</a> wrote on Nov 18, ‘09    <a href="http://filipinofriendfinder.xm.com"> Meet Your Perfect Love Near Now! </a> |
 |—|—|</p>
 
 <p><a id="anchor3" name="reply3"></a>Comment deleted at the request of the thread owner.</p>
 
-<p><a id="anchor2" name="reply2"></a></p>
-
-<p>| <a href="http://chong69.multiply.com">[img 404]</a> <br />
-| <a class="mine">delete</a> <a href="http://thegenuisishere.multiply.com/item/reply/thegenuisishere:journal:48+2?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">reply</a>     <a href="http://chong69.multiply.com">chong69</a> wrote on Jan 25, ‘09                <a href="http://thegenuisishere.multiply.com">thegenuisishere</a> said     <img src="http://images.multiply.com/common/misc/quote-start.gif" alt="" /><em>C or C++? I believe not. The line numbers already can tell us that this is not C (in BASIC, line numbers are important). Also, there are no opening/closing braces, which are prerequisites in C programs for grouping statements. Also, “input” is not a special word in C, but it is in BASIC.</em>Please be not offended. I don’t intend to offend anybody, I’m just saying what I know. [img 404]       none taken!we all are human, thus flawed! :D  and its good to learn something new! :D <br />
-|
+<p><a id="anchor2" name="reply2"></a>| <a href="http://chong69.multiply.com">[img 404]</a> | <a class="mine">delete</a> <a href="http://thegenuisishere.multiply.com/item/reply/thegenuisishere:journal:48+2?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">reply</a>  <a href="http://chong69.multiply.com">chong69</a> wrote on Jan 25, ‘09    <a href="http://thegenuisishere.multiply.com">thegenuisishere</a> said  <img src="http://images.multiply.com/common/misc/quote-start.gif" alt="" /><em>C or C++? I believe not. The line numbers already can tell us that this is not C (in BASIC, line numbers are important). Also, there are no opening/closing braces, which are prerequisites in C programs for grouping statements. Also, “input” is not a special word in C, but it is in BASIC.</em>Please be not offended. I don’t intend to offend anybody, I’m just saying what I know. [img 404]    none taken!we all are human, thus flawed! :D  and its good to learn something new! :D |
 |—|—|</p>
 
-<p><a id="anchor1" name="reply1"></a></p>
-
-<p>| <a href="http://thegenuisishere.multiply.com"><img src="http://multiply.com/mu/thegenuisishere/logo/4" alt="thegenuisishere" /></a> <br />
-| <a href="http://thegenuisishere.multiply.com/item/edit/thegenuisishere:journal:48+1?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">edit</a> <a class="mine">delete</a> <a href="http://thegenuisishere.multiply.com/item/reply/thegenuisishere:journal:48+1?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">reply</a>     <a href="http://thegenuisishere.multiply.com">thegenuisishere</a> wrote on Jan 25, ‘09                <a href="http://chong69.multiply.com">chong69</a> said     [img 404]<em>:))</em>true…  the program’s not really BASIC, but more of C or C++  but then again, who knows??? :) <img src="http://images.multiply.com/common/misc/quote-end.gif" alt="" />       C or C++? I believe not. The line numbers already can tell us that this is not C (in BASIC, line numbers are important). Also, there are no opening/closing braces, which are prerequisites in C programs for grouping statements. Also, “input” is not a special word in C, but it is in BASIC.Please be not offended. I don’t intend to offend anybody, I’m just saying what I know. <br />
-|
+<p><a id="anchor1" name="reply1"></a>| <a href="http://thegenuisishere.multiply.com"><img src="http://multiply.com/mu/thegenuisishere/logo/4" alt="thegenuisishere" /></a> | <a href="http://thegenuisishere.multiply.com/item/edit/thegenuisishere:journal:48+1?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">edit</a> <a class="mine">delete</a> <a href="http://thegenuisishere.multiply.com/item/reply/thegenuisishere:journal:48+1?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">reply</a>  <a href="http://thegenuisishere.multiply.com">thegenuisishere</a> wrote on Jan 25, ‘09    <a href="http://chong69.multiply.com">chong69</a> said  [img 404]<em>:))</em>true…  the program’s not really BASIC, but more of C or C++  but then again, who knows??? :) <img src="http://images.multiply.com/common/misc/quote-end.gif" alt="" />    C or C++? I believe not. The line numbers already can tell us that this is not C (in BASIC, line numbers are important). Also, there are no opening/closing braces, which are prerequisites in C programs for grouping statements. Also, “input” is not a special word in C, but it is in BASIC.Please be not offended. I don’t intend to offend anybody, I’m just saying what I know. |
 |—|—|</p>
 
-<p><a id="anchor0" name="reply0"></a><br />
-| <a href="http://chong69.multiply.com">[img 404]</a> <br />
-| <a class="mine">delete</a> <a href="http://thegenuisishere.multiply.com/item/reply/thegenuisishere:journal:48+0?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">reply</a>     <a href="http://chong69.multiply.com">chong69</a> wrote on Jan 24, ‘09, edited on Jan 24, ‘09             :))true…  the program’s not really BASIC, but more of C or C++  but then again, who knows??? :) <br />
-|
+<p><a id="anchor0" name="reply0"></a>| <a href="http://chong69.multiply.com">[img 404]</a> | <a class="mine">delete</a> <a href="http://thegenuisishere.multiply.com/item/reply/thegenuisishere:journal:48+0?xurl=http%3A%2F%2Fthegenuisishere.multiply.com%2Fjournal%2Fitem%2F48%2FProgramming-in-Anime-Firefox-Addons">reply</a>  <a href="http://chong69.multiply.com">chong69</a> wrote on Jan 24, ‘09, edited on Jan 24, ‘09    :))true…  the program’s not really BASIC, but more of C or C++  but then again, who knows??? :) |
 |—|—|</p>
 
-<p>| Jan 24, ‘09 8:28 PM <br />
-|
+<p>| Jan 24, ‘09 8:28 PM |
 |—|</p>
-
-<p><br /></p>
 
 <hr />
 <h3 id="comments">Comments</h3>
