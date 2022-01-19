@@ -4,6 +4,10 @@ class Agsao {
 	#WORD_SELECT_MAX_ATTEMPT = 10
 	#SPECIALS = "~!@#$%^&*()_+`-='\"{}[]\\|<>,./?"
 	#ENTCALC = null
+
+	// Number of elements to insert in a batch array merge
+	// Here to avoid "stack call size exceeded"
+	//#ARR_MERGE_BATCH_MAX_ELEMS = 100000
 	
 	// config variables: default values
 	#configs = {
@@ -115,7 +119,8 @@ class Agsao {
 		)).then(data => {
 			var tw = []
 			for (let i = 0; i < data.length; i++) {
-				tw.push(...data[i].split("\n"))
+			// to avoid "stack call size exceeded" on large arrays
+				tw = [...tw, ...data[i].split("\n")]
 			}
 			this.#corpus = [...new Set(tw)]
 			for (let i in this.#wordlists) {
@@ -271,7 +276,10 @@ class Agsao {
 
 			// compute entropy
 			phrase_entropy_bits = this.#ENTCALC(phrase)
-			if (phrase_entropy_bits < opts.min_entropy_bits) continue;
+			if (phrase_entropy_bits < opts.min_entropy_bits) {
+				phrase = null
+				continue
+			} 
 			
 			// we're ok if we got here.
 			break;

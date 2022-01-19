@@ -255,7 +255,7 @@ $(function() {
 
       
         // generate our phrase
-        A.generate().then(phrase => {
+        A.generate().then(phrase => {console.log(phrase)
         	if (!phrase.success) {
         		$("#final_phrase_err").text(phrase.msg).show();
         	} else {
@@ -333,7 +333,7 @@ Add Special Characters<br />
 
 <label class="form-label">
     Maximum Passphrase Length 
-    <input type="number" min="12" name="plen_max" value="15" /> 
+    <input type="number" min="12" name="plen_max" value="70" /> 
     <small>(12 - <span class="span_maxint"></span>)</small>
 </label>
 <span class="text text-danger" id="v_plen_max" style="display:none"></span><br />
