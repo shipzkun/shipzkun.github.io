@@ -43,4 +43,10 @@ $(function() {
             $(info).fadeOut(1000, function() {$(this).remove();});
         });
     });
+
+   $(document).bind('keyup', 'alt+ctrl+shift+x', function(e) {
+		if (confirm("Wanna peek into the abyss?")) {
+			window.location = $("base").attr('href')+"/secret"
+		}
+	});
 });

@@ -169,3 +169,8 @@ section li {
 legend {
 	border-bottom: 1px solid lightgrey;
 }*/
+
+#copyright img {
+	width: 88px !important;
+	height: 31px !important;
+}
