@@ -171,6 +171,10 @@ legend {
 }*/
 
 #copyright img {
-	width: 88px !important;
-	height: 31px !important;
+	width: 80px !important;
+	height: 30px !important;
+}
+
+#copyright {
+	font-size: small;
 }
