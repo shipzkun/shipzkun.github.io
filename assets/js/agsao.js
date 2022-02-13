@@ -8,7 +8,7 @@ class Agsao {
 	// Number of elements to insert in a batch array merge
 	// Here to avoid "stack call size exceeded"
 	//#ARR_MERGE_BATCH_MAX_ELEMS = 100000
-	
+
 	// config variables: default values
 	#configs = {
 		wordlen_min : 4,
@@ -32,7 +32,7 @@ class Agsao {
 	#reload_corpus = true
 	// will we need to validate the configs
 	#validate_confs = true
-	
+
 	constructor(confs) {
 		if (confs) {
 			this.#configs = confs
@@ -54,7 +54,7 @@ class Agsao {
 		for (const i in this.#wordlists) {
 			if (!lists.includes(i)) {
 				delete this.#wordlists[i]
-				this.#reload_corpus = true 
+				this.#reload_corpus = true
 			}
 		}
 	}
@@ -86,20 +86,20 @@ class Agsao {
 		// 0: validate configs
 		let errors = this.validate_configs()
 		if (Object.keys(errors).length != 0) return this.#error("Invalid configs detected", errors);
-	
+
 		// 1: Init corpus from wordlists
 		return await this.#init_corpus().then(() => {
 			// 2: Generate passphrase
 			return this.#gen_phrase()
-			//if (!phrase.success) return this.#error(phrase.msg) 
+			//if (!phrase.success) return this.#error(phrase.msg)
 		});
 	}
 
 	async #init_corpus() {
 		if (!this.#reload_corpus) {
-			return true	
+			return true
 		}
-		
+
 		if (Object.keys(this.#wordlists).length == 0) {
 			this.#corpus = []
 			return true
@@ -112,8 +112,8 @@ class Agsao {
 		for (const url in this.#wordlists) {
 			toload.push(url)
 		}
-		
-		return Promise.all(toload.map(url => 
+
+		return Promise.all(toload.map(url =>
 			fetch(url)
 			.then(response => response.text())
 		)).then(data => {
@@ -136,25 +136,25 @@ class Agsao {
 	// Standard return objects
 	#success(data){return {"success":true, "data":data}}
 	#error(msg,data){return {"success":false, "data":data, "msg":msg}}
-	
-	
+
+
 	validate_configs() {
         if (!this.#validate_confs) {
         	return {}
         }
 
-		let errors = {}        
+		let errors = {}
         let opts = this.#configs
-        // alias to avoid typing 
+        // alias to avoid typing
 		let maxint = Number.MAX_SAFE_INTEGER
 
 		let isInt = function(text) {
 	        return !isNaN(text) && (text | 0 == text);
 	    }
-        
+
         if (Object.keys(this.#wordlists).length == 0) {
             errors["wordlists"] = "Please select at least one word list.";
-        } 
+        }
 
         if (!isInt(opts.wordlen_min) || opts.wordlen_min < 1 || opts.wordlen_min > maxint) {
             errors["wordlen_min"] = "Minimum word length must be a number between 1 and "+maxint+", inclusive";
@@ -166,8 +166,8 @@ class Agsao {
 
         if (isInt(opts.wordlen_min) && isInt(opts.wordlen_max) && opts.wordlen_min > opts.wordlen_max) {
             errors["wordlen_min"] = "Minimum word length must be a number ≤ maximum word length ("+opts.wordlen_max+")";
-        }    	
-  
+        }
+
         let add_positions = ["no", "start", "end", "random"];
         if (!add_positions.includes(opts.addnum)) {
             errors["addnum"] = "Please select a valid option from the list.";
@@ -200,12 +200,12 @@ class Agsao {
 
         return errors;
     }
-    
+
 	// function return: {success: true|false, data: "phrase" | "errmsg"}
 	#gen_phrase() {
 		let phrase = null;
 		let phrase_entropy_bits = 0;
-		
+
 		let opts = this.#configs
 
 		// closures we'll use here
@@ -218,7 +218,7 @@ class Agsao {
 	            case 'random': default: // intentional fall-through
 					pos = rand(0,str.length); break;
 	        }
-	
+
 	        return str.slice(0, pos)+c+str.slice(pos, str.length);
 	    }
 
@@ -226,13 +226,13 @@ class Agsao {
         for (let a=0; a<this.#GENERATION_MAX_ATTEMPT; a++) {
       		phrase = null;
         	phrase_entropy_bits = 0;
-        
+
 			// 1: Select words, applying min and max lengths
             let selected = [];
 
             let ws_attempt = 0; // word select attempt counter
-			let cplen = this.#corpus.length 
-			
+			let cplen = this.#corpus.length
+
             while (selected.length < opts.num_words && ws_attempt < this.#WORD_SELECT_MAX_ATTEMPT) {
                 ws_attempt++;
                 let w = this.#corpus[rand(0, cplen-1)];
@@ -245,7 +245,7 @@ class Agsao {
 
                 selected.push(w);
                 ws_attempt = 0;
-                
+
             }
 
             // Check if we successfully fulfilled the num_words requirement
@@ -257,11 +257,11 @@ class Agsao {
             // we apply the other rules
             let spchar_pos = ["start", "end", "random"];
             for (let i=0; i<selected.length; i++) {
-                if (opts.capitalise_words) 
+                if (opts.capitalise_words)
                     selected[i] = ucfirst(selected[i]);
-                if (spchar_pos.includes(opts.addnum) && (rand(1,2) == 2)) 
+                if (spchar_pos.includes(opts.addnum) && (rand(1,2) == 2))
                     selected[i] = insertChar(selected[i], rand(0,9), opts.addnum);
-                if (spchar_pos.includes(opts.addspecial) && (rand(1,2) == 2)) 
+                if (spchar_pos.includes(opts.addspecial) && (rand(1,2) == 2))
                     selected[i] = insertChar(selected[i], this.#SPECIALS[rand(0,9)], opts.addspecial);
             }
 
@@ -270,17 +270,17 @@ class Agsao {
 
 			// if less than minlength, start over
             if (phrase.length < opts.phraselen_min) continue;
-                
+
             // truncate to requested length
-            phrase = phrase.substr(0, opts.plen_max);
+            phrase = phrase.substr(0, opts.phraselen_max);
 
 			// compute entropy
 			phrase_entropy_bits = this.#ENTCALC(phrase)
 			if (phrase_entropy_bits < opts.min_entropy_bits) {
 				phrase = null
 				continue
-			} 
-			
+			}
+
 			// we're ok if we got here.
 			break;
         }
@@ -288,10 +288,10 @@ class Agsao {
 		if (phrase == null) {
 			return this.#error("Cannot generate passphrase based on the given options")
 		} else {
-			return this.#success({"phrase":phrase, "entropy":phrase_entropy_bits})		
+			return this.#success({"phrase":phrase, "entropy":phrase_entropy_bits})
 		}
 	}
-	
+
 }
 
 

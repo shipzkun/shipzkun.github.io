@@ -129,7 +129,7 @@ $(function() {
 	// init lib
 	var A = new Agsao();
 	A.entropy_calculator = kp_pqc.default;
-	
+
     $(".span_maxint").text(Number.MAX_SAFE_INTEGER);
     $("small").css('font-size', 'x-small');
 
@@ -155,9 +155,9 @@ $(function() {
 		},
 		
 	}
-	
 
-	// validation specific to this page	
+
+	// validation specific to this page
 	function validate_wordlists(list) {
 		for (const i of list) {
 			if (!WORDLISTS[i]) {
@@ -166,7 +166,7 @@ $(function() {
 		}
 		return null;
 	}
-	
+
 	function validate_custom_numlimits(opts) {
 		let errors = {};
 
@@ -184,7 +184,7 @@ $(function() {
 		}
 		if (opts.phraselen_max < 12) {
 			errors["phraselen_max"] = "Maximum passphrase length must be a number ≥ 12"
-		}	
+		}
 		if (opts.min_entropy_bits < 80) {
 			errors["min_entropy_bits"] = "Minimum entropy bits must be a number ≥ 80"
 		}
@@ -192,12 +192,12 @@ $(function() {
 		return errors;
 	}
 
-    $("#pgen").on('submit', function(e) { 
+    $("#pgen").on('submit', function(e) {
         e.preventDefault();
 
         $("span[id^=v_]").hide();
         $("#final_phrase_err").hide();
-        
+
         // get form vals
 		let opts = {
 		 	wordlists : $('[name=wordlists]:checked').map(function(){return this.value.trim();}).get(),
@@ -216,7 +216,7 @@ $(function() {
 
         if (opts.addnum) opts.addnum = opts.addnum.trim();
         if (opts.addspecial) opts.addspecial = opts.addspecial.trim();
-        
+
         $(".alert-danger").hide();
         $("#final_phrase").hide();
 
@@ -237,8 +237,8 @@ $(function() {
         // pass configs to our library
 		A.configs = opts
 		A.wordlists = wordlist_urls
-		
-        let errors = A.validate_configs(opts); 
+
+        let errors = A.validate_configs(opts);
 		// validation specific to this page
 		let custerrs = validate_custom_numlimits(opts);
 		// merge errors, custerrs overwriting conflicts with errors
@@ -256,14 +256,15 @@ $(function() {
             return;
         }
 
-      
+
         // generate our phrase
-        A.generate().then(phrase => {console.log(phrase)
+        A.generate().then(phrase => {
         	if (!phrase.success) {
         		$("#final_phrase_err").text(phrase.msg).show();
         	} else {
         		$("#final_phrase code").text(phrase.data.phrase);
         		$("#final_phrase #span_ent_bits").text(phrase.data.entropy);
+        		$("#final_phrase #span_plen").text(phrase.data.phrase.length);
 				$("#final_phrase").show();
         	}
         });
@@ -288,14 +289,14 @@ Word Composition:<br />
 <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox" name="allow_dupes" />Allow Duplicates</label></div>
 <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox" name="capitalise" />Capitalise Start</label></div>
 <label class="form-label">
-    Minimum Length 
+    Minimum Length
     <input type="number" min="4" name="wlen_min" value="4" />
     <small>(4 - <span class="span_maxint"></span>)</small>
 </label>
 <span class="text text-danger" id="v_wlen_min" style="display:none"></span><br />
 <label class="form-label">
-    Maximum Length 
-    <input type="number" min="4" name="wlen_max" value="7" /> 
+    Maximum Length
+    <input type="number" min="4" name="wlen_max" value="7" />
     <small>(4 - <span class="span_maxint"></span>)</small>
 </label>
 <span class="text text-danger" id="v_wlen_max" style="display:none"></span><br />
@@ -317,33 +318,33 @@ Add Special Characters<br />
 
 <br />
 <label class="form-label">
-    Word Separator <small>Can be multiple characters</small>  
-    <input type="text" name="separator" /> 
+    Word Separator <small>Can be multiple characters</small>
+    <input type="text" name="separator" />
 </label><br />
 <label class="form-label">
-    Number of Words 
-    <input type="number" min="3" max="20" name="wc" value="3" /> 
+    Number of Words
+    <input type="number" min="3" max="20" name="wc" value="3" />
     <small>(3 - 20)</small>
 </label>
 <span class="text text-danger" id="v_wc" style="display:none"></span>
 <br />
 <label class="form-label">
-    Minimum Passphrase Length 
-    <input type="number" min="12" name="plen_min" value="12" /> 
+    Minimum Passphrase Length
+    <input type="number" min="12" name="plen_min" value="12" />
     <small>(12 - <span class="span_maxint"></span>)</small>
 </label>
 <span class="text text-danger" id="v_plen_min" style="display:none"></span><br />
 
 <label class="form-label">
-    Maximum Passphrase Length 
-    <input type="number" min="12" name="plen_max" value="70" /> 
+    Maximum Passphrase Length
+    <input type="number" min="12" name="plen_max" value="70" />
     <small>(12 - <span class="span_maxint"></span>)</small>
 </label>
 <span class="text text-danger" id="v_plen_max" style="display:none"></span><br />
 
 <label class="form-label">
-    Minimum Entropy Bits 
-    <input type="number" min="80" name="min_ent_bits" value="80" /> 
+    Minimum Entropy Bits
+    <input type="number" min="80" name="min_ent_bits" value="80" />
     <small>(80 - <span class="span_maxint"></span>)</small>
 </label>
 <span class="text text-danger" id="v_min_ent_bits" style="display:none"></span><br />
@@ -353,9 +354,10 @@ Add Special Characters<br />
 
 <p><br /></p>
 <div id="final_phrase" style="display:none">
-Your passphrase: 
+Your passphrase:
 <code class="can-copy"></code>
 <br />Entropy: <span id="span_ent_bits"></span>
+<br />Length: <span id="span_plen"></span>
 </div>
 
 <div id="final_phrase_err" class="alert alert-danger" style="display:none">
