@@ -170,6 +170,10 @@ legend {
 	border-bottom: 1px solid lightgrey;
 }*/
 
+img {
+	width: 80%;
+}
+
 #copyright img {
 	width: 80px !important;
 	height: 30px !important;
