@@ -49,4 +49,6 @@ $(function() {
 			window.location = $("base").attr('href')+"/secret"
 		}
 	});
+
+	$(".tablesorter").tablesorter();
 });
