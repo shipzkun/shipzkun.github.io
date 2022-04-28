@@ -146,7 +146,7 @@ th {
 
 <script>
 $(function() {
-	let tabs = ["commentary", "art", "verse"]
+	let tabs = ["commentary", "art", "verse", "travels"]
 	let rtab = window.location.hash.substring(1) || "commentary"
 	if (tabs.includes(rtab)) {
 		new bootstrap.Tab($("#ntab_"+rtab)).show()
@@ -165,9 +165,12 @@ $(function() {
 <nav class="ntabs">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a href="#tab_commentary" class="nav-link" id="ntab_commentary" data-bs-toggle="tab" data-bs-target="#tab_commentary" type="button" role="tab" aria-controls="tab_commentary" aria-selected="true">Commentary</a>
+
     <a href="#tab_art" class="nav-link" id="ntab_art" data-bs-toggle="tab" data-bs-target="#tab_art" type="button" role="tab" aria-controls="tab_art" aria-selected="false">Art</a>
 
     <a href="#tab_verse" class="nav-link" id="ntab_verse" data-bs-toggle="tab" data-bs-target="#tab_verse" type="button" role="tab" aria-controls="tab_verse" aria-selected="false">Verse</a>
+
+    <a href="#tab_travels" class="nav-link" id="ntab_travels" data-bs-toggle="tab" data-bs-target="#tab_travels" type="button" role="tab" aria-controls="tab_travels" aria-selected="false">Travels</a>
   </div>
 </nav>
 
@@ -187,21 +190,6 @@ $(function() {
 		<tr>
 		    <td>19 Mar 2022 16:00:00</td>
 		    <td><a href="/commentary/2022-03-19-Bird-Insider.html">Bird Insider Newsletter</a></td>
-		</tr>
-		
-		<tr>
-		    <td>01 Aug 2021 10:04:39</td>
-		    <td><a href="/commentary/2021-08-01-10-04-39-Lonely_Travels_20_Jul_2021_Silang_feat._Cafe_Agapita.html">Lonely Travels: [20 Jul 2021] Silang, feat. Cafe Agapita</a></td>
-		</tr>
-		
-		<tr>
-		    <td>29 Jul 2021 12:26:26</td>
-		    <td><a href="/commentary/2021-07-29-12-26-26-Lonely_Travels_02_Jul_2021_Bike_Ride_Sampaloc_Avenue_Dasmari%C3%B1as_Cavite.html">Lonely Travels: [02 Jul 2021] Bike Ride: Sampaloc Avenue, Dasmariñas Cavite</a></td>
-		</tr>
-		
-		<tr>
-		    <td>11 Jul 2021 16:39:15</td>
-		    <td><a href="/commentary/2021-07-11-16-39-15-Lonely_Travels_6x7_Jul_2021_Tagaytay__Silang.html">Lonely Travels: [6x7 Jul 2021] Tagaytay + Silang</a></td>
 		</tr>
 		
 		<tr>
@@ -939,7 +927,6 @@ $(function() {
 		
 		</tbody>
 		</table>
-
 	</div>
 
 	<div class="tab-pane" id="tab_verse" role="tabpanel" aria-labelledby="ntab_verse">
@@ -1141,7 +1128,39 @@ $(function() {
 		
 		</tbody>
 		</table>
+	</div>
 
+	<div class="tab-pane" id="tab_travels" role="tabpanel" aria-labelledby="ntab_travels">
+		Jet-setting, but with a "stingy" family eschewing "unnecessary" travel and insists you be back at 18:00 even though you're already 30+. And they always demand money.
+
+		<table class="table table-striped table-bordered table-hover tablesorter">
+		<thead>
+		<tr>
+			<th>Date, <a href="https://en.wikipedia.org/wiki/Philippine_Standard_Time"><abbr title="Philippine Standard Time">PST</abbr></a></th>
+			<th>Title</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+		<tr>
+		    <td>01 Aug 2021</td>
+		    <td><a href="/travels/2021-08-01-10-04-39-Lonely_Travels_20_Jul_2021_Silang_feat._Cafe_Agapita.html">Lonely Travels: [20 Jul 2021] Silang, feat. Cafe Agapita</a></td>
+		</tr>
+		
+		<tr>
+		    <td>29 Jul 2021</td>
+		    <td><a href="/travels/2021-07-29-12-26-26-Lonely_Travels_02_Jul_2021_Bike_Ride_Sampaloc_Avenue_Dasmari%C3%B1as_Cavite.html">Lonely Travels: [02 Jul 2021] Bike Ride: Sampaloc Avenue, Dasmariñas Cavite</a></td>
+		</tr>
+		
+		<tr>
+		    <td>11 Jul 2021</td>
+		    <td><a href="/travels/2021-07-11-16-39-15-Lonely_Travels_6x7_Jul_2021_Tagaytay__Silang.html">Lonely Travels: [6x7 Jul 2021] Tagaytay + Silang</a></td>
+		</tr>
+		
+		</tbody>
+		</table>
+
+		Entries dated 01 Aug 2021 and older are imported from <a href="http://multiply.com">Multiply</a>, Friendster, and <a href="http://wordpress.com">Wordpress</a>, so expect dead links and formatting issues.
 	</div>
 </div>
 
