@@ -2578,60 +2578,6 @@
 	
 	
 	<url>
-		<loc>https://arden-chan.party/commentary/2021-07-11-16-39-15-Lonely_Travels_6x7_Jul_2021_Tagaytay__Silang.html</loc>
-		<lastmod>
-						2021-07-11T00:00:00+08:00
-			
-		</lastmod>
-		<changefreq>
-									monthly
-			
-		</changefreq>
-		<priority>
-								0.5
-			
-		</priority>
-	</url>
-	
-	
-	
-	<url>
-		<loc>https://arden-chan.party/commentary/2021-07-29-12-26-26-Lonely_Travels_02_Jul_2021_Bike_Ride_Sampaloc_Avenue_Dasmari%C3%B1as_Cavite.html</loc>
-		<lastmod>
-						2021-07-29T00:00:00+08:00
-			
-		</lastmod>
-		<changefreq>
-									monthly
-			
-		</changefreq>
-		<priority>
-								0.5
-			
-		</priority>
-	</url>
-	
-	
-	
-	<url>
-		<loc>https://arden-chan.party/commentary/2021-08-01-10-04-39-Lonely_Travels_20_Jul_2021_Silang_feat._Cafe_Agapita.html</loc>
-		<lastmod>
-						2021-08-01T00:00:00+08:00
-			
-		</lastmod>
-		<changefreq>
-									monthly
-			
-		</changefreq>
-		<priority>
-								0.5
-			
-		</priority>
-	</url>
-	
-	
-	
-	<url>
 		<loc>https://arden-chan.party/commentary/2022-03-19-Bird-Insider.html</loc>
 		<lastmod>
 						2022-03-19T00:00:00+08:00
@@ -3315,11 +3261,29 @@
 	
 	
 	
+	<url>
+		<loc>https://arden-chan.party/verse/2022-04-28-Religion.html</loc>
+		<lastmod>
+						2022-04-28T00:00:00+08:00
+			
+		</lastmod>
+		<changefreq>
+									monthly
+			
+		</changefreq>
+		<priority>
+								0.5
+			
+		</priority>
+	</url>
+	
+	
+	
 	
 	<url>
 		<loc>https://arden-chan.party/404.html</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -3337,7 +3301,7 @@
 	<url>
 		<loc>https://arden-chan.party/amazfitbip_watchface</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -3355,7 +3319,7 @@
 	<url>
 		<loc>https://arden-chan.party/blog</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -3373,7 +3337,7 @@
 	<url>
 		<loc>https://arden-chan.party/common_unicode_chars</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -3391,7 +3355,7 @@
 	<url>
 		<loc>https://arden-chan.party/faq</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -3409,7 +3373,7 @@
 	<url>
 		<loc>https://arden-chan.party/ilo_agsao.html</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -3427,7 +3391,7 @@
 	<url>
 		<loc>https://arden-chan.party/ilo_relos.html</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -3445,7 +3409,7 @@
 	<url>
 		<loc>https://arden-chan.party/</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -3463,7 +3427,7 @@
 	<url>
 		<loc>https://arden-chan.party/resume</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -3481,7 +3445,7 @@
 	<url>
 		<loc>https://arden-chan.party/secret</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -3501,7 +3465,7 @@
 	<url>
 		<loc>https://arden-chan.party/test.html</loc>
 		<lastmod>
-								2022-04-16T20:33:53+08:00
+								2022-05-15T11:13:27+08:00
 			
 		</lastmod>
 		<changefreq>
