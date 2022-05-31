@@ -15,6 +15,8 @@ $(function() {
         }
     }
 
+    $("#content").focus().css('outline', 'none');
+
     $(".can-copy").hover(
         // hover in: show copy button
         function() {
