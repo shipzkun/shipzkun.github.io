@@ -153,7 +153,7 @@ th {
 
 <script>
 $(function() {
-	let tabs = ["commentary", "art", "verse", "travels"]
+	let tabs = ["commentary", "art", "verse", "travels", "birding"]
 	let rtab = window.location.hash.substring(1) || "commentary"
 	if (tabs.includes(rtab)) {
 		new bootstrap.Tab($("#ntab_"+rtab)).show()
@@ -178,6 +178,8 @@ $(function() {
     <a href="#tab_verse" class="nav-link" id="ntab_verse" data-bs-toggle="tab" data-bs-target="#tab_verse" type="button" role="tab" aria-controls="tab_verse" aria-selected="false">Verse</a>
 
     <a href="#tab_travels" class="nav-link" id="ntab_travels" data-bs-toggle="tab" data-bs-target="#tab_travels" type="button" role="tab" aria-controls="tab_travels" aria-selected="false">Travels</a>
+    
+	<a href="#tab_birding" class="nav-link" id="ntab_birding" data-bs-toggle="tab" data-bs-target="#tab_birding" type="button" role="tab" aria-controls="tab_birding" aria-selected="false">Birding</a>
   </div>
 </nav>
 
@@ -1357,6 +1359,27 @@ $(function() {
 		</table>
 
 		Entries dated 01 Aug 2021 and older are imported from <a href="http://multiply.com">Multiply</a>, Friendster, and <a href="http://wordpress.com">Wordpress</a>, so expect dead links and formatting issues.
+	</div>
+	
+	<div class="tab-pane" id="tab_birding" role="tabpanel" aria-labelledby="ntab_birding">
+		Finding <a href="https://zelda.fandom.com/wiki/Revali">Revali</a>.
+
+		<table class="table table-striped table-bordered table-hover tablesorter">
+		<thead>
+		<tr>
+			<th>Date, <a href="https://en.wikipedia.org/wiki/Philippine_Standard_Time"><abbr title="Philippine Standard Time">PST</abbr></a></th>
+			<th>Title</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+		<tr>
+		    <td>20 Aug 2022</td>
+		    <td><a href="/birding/2022-08-20-Black-naped-Oriole.html">Black-naped Oriole</a></td>
+		</tr>
+		
+		</tbody>
+		</table>
 	</div>
 </div>
 
