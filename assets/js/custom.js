@@ -55,6 +55,8 @@ $(function() {
 	$(".tablesorter").tablesorter({
 		"headerTemplate": "{content} {icon}", // new in v2.7. Needed to add the bootstrap icon!
 		"widthFixed": true,
-		"widgets": ["filter"]
+		"widgets": ["filter"],
+		// attribute used by image parser
+		"imgAttr": "data-sorttext"
 	});
 });
