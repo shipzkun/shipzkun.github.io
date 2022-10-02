@@ -171,7 +171,7 @@ legend {
 }*/
 
 img {
-	width: 80%;
+	max-width: 80%;
 }
 
 #copyright img {
@@ -182,3 +182,24 @@ img {
 #copyright {
 	font-size: small;
 }
+
+/* IUCN classifications */
+.iucn {
+	font-weight: bold;
+	border-radius: 3em;
+	border: 2px solid white;
+	padding: 0.5em;
+	text-decoration: none !important;
+}
+a.iucn:hover {
+	color: inherit
+}
+.iucn_EX {background: black; color: red;}
+.iucn_EW {background: black; color: white;}
+.iucn_CR {background: red; color: white;}
+.iucn_EN {background: darkorange; color: white;}
+.iucn_VU {background: orange; color: white;}
+.iucn_NT {background: green; color: yellow;}
+.iucn_LC {background: green; color: white;}
+.iucn_NE {background: gray; color: white;}
+.iucn_DD {background: gray; color: white;}
