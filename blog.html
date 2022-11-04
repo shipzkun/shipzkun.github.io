@@ -167,7 +167,7 @@ th {
 
 <script>
 $(function() {
-	let tabs = ["commentary", "art", "verse", "travels", "birding"]
+	let tabs = ["commentary", "art", "verse", "travels", "birding", "cooking-recipes"]
 	let rtab = window.location.hash.substring(1) || "commentary"
 	if (tabs.includes(rtab)) {
 		new bootstrap.Tab($("#ntab_"+rtab)).show()
@@ -186,14 +186,11 @@ $(function() {
 <nav class="ntabs">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a href="#tab_commentary" class="nav-link" id="ntab_commentary" data-bs-toggle="tab" data-bs-target="#tab_commentary" type="button" role="tab" aria-controls="tab_commentary" aria-selected="true">Commentary</a>
-
     <a href="#tab_art" class="nav-link" id="ntab_art" data-bs-toggle="tab" data-bs-target="#tab_art" type="button" role="tab" aria-controls="tab_art" aria-selected="false">Art</a>
-
     <a href="#tab_verse" class="nav-link" id="ntab_verse" data-bs-toggle="tab" data-bs-target="#tab_verse" type="button" role="tab" aria-controls="tab_verse" aria-selected="false">Verse</a>
-
     <a href="#tab_travels" class="nav-link" id="ntab_travels" data-bs-toggle="tab" data-bs-target="#tab_travels" type="button" role="tab" aria-controls="tab_travels" aria-selected="false">Travels</a>
-    
 	<a href="#tab_birding" class="nav-link" id="ntab_birding" data-bs-toggle="tab" data-bs-target="#tab_birding" type="button" role="tab" aria-controls="tab_birding" aria-selected="false">Birding</a>
+	<a href="#tab_cooking-recipes" class="nav-link" id="ntab_cooking-recipes" data-bs-toggle="tab" data-bs-target="#tab_cooking-recipes" type="button" role="tab" aria-controls="tab_cooking-recipes" aria-selected="false">Cooking Recipes</a>
   </div>
 </nav>
 
@@ -1545,6 +1542,27 @@ $(function() {
 				<span class="iucn iucn_LC" title="Least Concern">LC</span>
 				<a href="/birding/2022-08-20-Oriolus-chinensis.html">
 				Oriolus chinensis</a></td>
+		</tr>	
+		
+		</tbody>
+		</table>
+	</div>
+	
+	<div class="tab-pane" id="tab_cooking-recipes" role="tabpanel" aria-labelledby="ntab_cooking-recipes">
+		<a lang="ja" title="Food Wars!: Shokugeki no Soma" href="https://en.wikipedia.org/wiki/Food_Wars!:_Shokugeki_no_Soma">食戟のソーマ</a> rejects.
+		
+		<table class="table table-striped table-bordered table-hover tablesorter">
+		<thead>
+		<tr>
+			<th>Date, <a href="https://en.wikipedia.org/wiki/Philippine_Standard_Time"><abbr title="Philippine Standard Time">PST</abbr></a></th>
+			<th class="sorter-image">Title</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+		<tr>
+		    <td>24 Feb 2014</td>
+			<td><a href="/cooking-recipes/2014-02-24-Ginisang-Munggo.html">Ginisang Munggo</a></td>
 		</tr>	
 		
 		</tbody>
