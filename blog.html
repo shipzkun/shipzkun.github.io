@@ -148,16 +148,12 @@
 	background-color: var(--bs-dark);
 }
 
-.tab-pane {
-	padding-top: 1em;
-	padding-bottom: 1em;
-}
 
 /* sticky table headers */
 /* resource: https://css-tricks.com/position-sticky-and-table-headers/ */
 th {
 	position: sticky;
-	top: 2.5rem;
+	top: 0rem;
 	border-bottom: 1px solid white;
 	background-color: #222 !important;
 	z-index: 100;
@@ -183,15 +179,14 @@ $(function() {
 
 <p>For comments, violent reactions, etc, feel free to <a href="mailto:lets-talk@arden-chan.party" title="email">shoot an email</a>. If it’s good enough, I might even feature it here.</p>
 
-<nav class="ntabs">
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a href="#tab_commentary" class="nav-link" id="ntab_commentary" data-bs-toggle="tab" data-bs-target="#tab_commentary" type="button" role="tab" aria-controls="tab_commentary" aria-selected="true">Commentary</a>
-    <a href="#tab_art" class="nav-link" id="ntab_art" data-bs-toggle="tab" data-bs-target="#tab_art" type="button" role="tab" aria-controls="tab_art" aria-selected="false">Art</a>
-    <a href="#tab_verse" class="nav-link" id="ntab_verse" data-bs-toggle="tab" data-bs-target="#tab_verse" type="button" role="tab" aria-controls="tab_verse" aria-selected="false">Verse</a>
-    <a href="#tab_travels" class="nav-link" id="ntab_travels" data-bs-toggle="tab" data-bs-target="#tab_travels" type="button" role="tab" aria-controls="tab_travels" aria-selected="false">Travels</a>
+<div class="d-flex align-items-start">
+<nav class="ntabs nav flex-column nav-pills me-3">
+	<a href="#tab_commentary" class="nav-link" id="ntab_commentary" data-bs-toggle="tab" data-bs-target="#tab_commentary" type="button" role="tab" aria-controls="tab_commentary" aria-selected="true">Commentary</a>
+	<a href="#tab_art" class="nav-link" id="ntab_art" data-bs-toggle="tab" data-bs-target="#tab_art" type="button" role="tab" aria-controls="tab_art" aria-selected="false">Art</a>
+	<a href="#tab_verse" class="nav-link" id="ntab_verse" data-bs-toggle="tab" data-bs-target="#tab_verse" type="button" role="tab" aria-controls="tab_verse" aria-selected="false">Verse</a>
+	<a href="#tab_travels" class="nav-link" id="ntab_travels" data-bs-toggle="tab" data-bs-target="#tab_travels" type="button" role="tab" aria-controls="tab_travels" aria-selected="false">Travels</a>
 	<a href="#tab_birding" class="nav-link" id="ntab_birding" data-bs-toggle="tab" data-bs-target="#tab_birding" type="button" role="tab" aria-controls="tab_birding" aria-selected="false">Birding</a>
 	<a href="#tab_cooking-recipes" class="nav-link" id="ntab_cooking-recipes" data-bs-toggle="tab" data-bs-target="#tab_cooking-recipes" type="button" role="tab" aria-controls="tab_cooking-recipes" aria-selected="false">Cooking Recipes</a>
-  </div>
 </nav>
 
 <div class="tab-content">
@@ -1578,6 +1573,8 @@ $(function() {
 		</tbody>
 		</table>
 	</div>
+</div>
+
 </div>
 
 		</div>
