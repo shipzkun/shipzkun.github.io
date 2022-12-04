@@ -276,7 +276,7 @@ class Agsao {
 
 			// compute entropy
 			phrase_entropy_bits = this.#ENTCALC(phrase)
-			if (phrase_entropy_bits < opts.min_entropy_bits) {
+			if (phrase_entropy_bits == null || phrase_entropy_bits < opts.min_entropy_bits) {
 				phrase = null
 				continue
 			}

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="utf-8">
 	<title>Arden's Corner</title>
 	<base href="https://arden-chan.party">
 
 	<link rel="shortcut icon" href="/assets/images/favicon.png">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="https://arden-chan.party/assets/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="https://arden-chan.party/assets/css/darkly.min.css"/>
-	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/theme.dark.min.css"/>
-	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/jquery.tablesorter.pager.min.css"/>
-	<link rel="stylesheet" href="https://arden-chan.party/assets/css/custom.css"/>
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/darkly.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/theme.dark.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/jquery.tablesorter.pager.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/custom.css">
 
 	<!-- JS -->
 	<script src="https://arden-chan.party/assets/js/jquery-3.6.0.min.js"></script>
@@ -21,8 +22,7 @@
 	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.widgets.min.js"></script>
 	<script src="https://arden-chan.party/assets/js/tablesorter/extras/jquery.tablesorter.pager.min.js"></script>
 	<script src="https://arden-chan.party/assets/js/custom.js"></script>
-
-	<meta charset="utf-8">
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
@@ -116,7 +116,7 @@
 				<ul class='list-unstyled components'>
 					
 						
-							<li><a href="https://ko-fi.com/Z8Z133PAX" title=""><img height='36' style='border:0px;height:2em' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' alt='Buy Me a Coffee at ko-fi.com' /></a></li>
+							<li><a href="https://ko-fi.com/Z8Z133PAX" title=""><img height='36' style='border:0px;height:2em' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' alt='Buy Me a Coffee at ko-fi.com'></a></li>
 						
 					
 						
@@ -127,9 +127,9 @@
 			
 			</div>
 
-			<hr/>
+			<hr>
 			<div id="copyright">
-				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> <br/>
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a> <br>
 				This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 			</div>
 		</div>
@@ -153,7 +153,6 @@ $(function() {
 	var A = new Agsao();
 	A.entropy_calculator = kp_pqc.default;
 
-    $(".span_maxint").text(Number.MAX_SAFE_INTEGER);
     $("small").css('font-size', 'x-small');
 
 	// our possible wordlists
@@ -193,23 +192,24 @@ $(function() {
 	function validate_custom_numlimits(opts) {
 		let errors = {};
 
-		if (opts.wordlen_min < 4) {
-			errors["wordlen_min"] = "Minimum word length must be a number ≥ 4"
+		if (opts.wordlen_min < 4 || opts.wordlen_min > 10) {
+			errors["wordlen_min"] = "Minimum word length must be a number between 4 and 10, inclusive"
 		}
-		if (opts.wordlen_max < 4) {
-			errors["wordlen_min"] = "Maximum word length must be a number ≥ 4"
+		if (opts.wordlen_max < 4 || opts.wordlen_max > 10) {
+			errors["wordlen_max"] = "Maximum word length must be a number between 4 and 10, inclusive"
 		}
+		
 		if (opts.num_words < 3 || opts.num_words > 20) {
 			errors["num_words"] = "Number of words must be a number between 3 and 20, inclusive"
 		}
-		if (opts.phraselen_min < 12) {
-			errors["phraselen_min"] = "Minimum passphrase length must be a number ≥ 12"
+		if (opts.phraselen_min < 12 || opts.phraselen_min > 200) {
+			errors["phraselen_min"] = "Minimum passphrase length must be a number between 12 and 200, inclusive"
 		}
-		if (opts.phraselen_max < 12) {
-			errors["phraselen_max"] = "Maximum passphrase length must be a number ≥ 12"
+		if (opts.phraselen_max < 12 || opts.phraselen_max > 200) {
+			errors["phraselen_max"] = "Maximum passphrase length must be a number between 12 and 200, inclusive"
 		}
-		if (opts.min_entropy_bits < 80) {
-			errors["min_entropy_bits"] = "Minimum entropy bits must be a number ≥ 80"
+		if (opts.min_entropy_bits < 80 || opts.min_entropy_bits > 200) {
+			errors["min_entropy_bits"] = "Minimum entropy bits must be a number between 80 and 200, inclusive"
 		}
 
 		return errors;
@@ -313,14 +313,14 @@ Word Composition:<br />
 <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox" name="capitalise" />Capitalise Start</label></div>
 <label class="form-label">
     Minimum Length
-    <input type="number" min="4" name="wlen_min" value="4" />
-    <small>(4 - <span class="span_maxint"></span>)</small>
+    <input type="number" min="4" max="10" name="wlen_min" value="4" />
+    <small>(4 - 10)</small>
 </label>
 <span class="text text-danger" id="v_wlen_min" style="display:none"></span><br />
 <label class="form-label">
     Maximum Length
-    <input type="number" min="4" name="wlen_max" value="7" />
-    <small>(4 - <span class="span_maxint"></span>)</small>
+    <input type="number" min="4" max="10" name="wlen_max" value="7" />
+    <small>(4 - 10)</small>
 </label>
 <span class="text text-danger" id="v_wlen_max" style="display:none"></span><br />
 
@@ -353,22 +353,22 @@ Add Special Characters<br />
 <br />
 <label class="form-label">
     Minimum Passphrase Length
-    <input type="number" min="12" name="plen_min" value="12" />
-    <small>(12 - <span class="span_maxint"></span>)</small>
+    <input type="number" min="12" max="200" name="plen_min" value="12" />
+    <small>(12 - 200)</small>
 </label>
 <span class="text text-danger" id="v_plen_min" style="display:none"></span><br />
 
 <label class="form-label">
     Maximum Passphrase Length
-    <input type="number" min="12" name="plen_max" value="70" />
-    <small>(12 - <span class="span_maxint"></span>)</small>
+    <input type="number" min="12" max="200" name="plen_max" value="70" />
+    <small>(12 - 200)</small>
 </label>
 <span class="text text-danger" id="v_plen_max" style="display:none"></span><br />
 
 <label class="form-label">
     Minimum Entropy Bits
-    <input type="number" min="80" name="min_ent_bits" value="80" />
-    <small>(80 - <span class="span_maxint"></span>)</small>
+    <input type="number" min="80" max="200" name="min_ent_bits" value="80" />
+    <small>(80 - 200)</small>
 </label>
 <span class="text text-danger" id="v_min_ent_bits" style="display:none"></span><br />
 
@@ -377,10 +377,10 @@ Add Special Characters<br />
 
 <p><br /></p>
 <div id="final_phrase" style="display:none">
-Your passphrase:
-<code class="can-copy"></code>
-<br />Entropy: <span id="span_ent_bits"></span>
-<br />Length: <span id="span_plen"></span>
+Entropy: <span id="span_ent_bits"></span><br />
+Length: <span id="span_plen"></span><br />
+<code style="display: none" id="pwd" class="cp-text"></code>
+<button class="btn-copy" type="button" data-target="pwd">🗒 Copy to clipboard</button>
 </div>
 
 <div id="final_phrase_err" class="alert alert-danger" style="display:none">
@@ -428,12 +428,25 @@ Cannot generate passphrase. Please check your selections.
   <li><a href="https://www.okta.com/identity-101/password-entropy/">Password Entropy: The Value of Unpredictable Passwords</a></li>
   <li><a href="https://www.pleacher.com/mp/mlessons/algebra/entropy.html">Calculating Password Entropy</a></li>
   <li><a href="https://keepass.info/help/kb/pw_quality_est.html">Password Quality Estimation - KeePass</a></li>
+  <li><a href="https://www.groovypost.com/howto/check-password-strength/">How to Check the Strength of Your Passwords</a></li>
 </ul>
 
 <hr />
 <h6 id="whats-with-the-name">What’s with the name?</h6>
 
 <p><em>Agsao</em> <code>[ɐg.sɐ.'o]</code> means <em>to speak</em> in Ilocano. Given the nature of the service, it’s close enough, don’t you think?</p>
+
+<hr />
+<p>UPDATES</p>
+<ul>
+  <li>04 Dec 2022:
+    <ul>
+      <li>Hidden generated passwords</li>
+      <li>Updated max limits to realistic values</li>
+      <li>Added new reference link</li>
+    </ul>
+  </li>
+</ul>
 
 		</div>
 
