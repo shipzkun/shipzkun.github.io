@@ -59,4 +59,9 @@ $(function() {
 		// attribute used by image parser
 		"imgAttr": "data-sorttext"
 	});
+
+	// carousel: do not autoslide
+	$('.carousel').carousel({
+		interval: false,
+	});
 });
