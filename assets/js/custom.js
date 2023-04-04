@@ -58,8 +58,10 @@ $(function() {
 		"widgets": ["filter"],
 		// attribute used by image parser
 		"imgAttr": "data-sorttext",
-		"widgetOptions": {
-			"filter_useParsedData": false
+		"textExtraction": {
+			".content-html": function(node, table, cellIndex) {
+				return $(node).text();
+			}
 		}
 	});
 
