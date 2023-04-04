@@ -57,7 +57,10 @@ $(function() {
 		"widthFixed": true,
 		"widgets": ["filter"],
 		// attribute used by image parser
-		"imgAttr": "data-sorttext"
+		"imgAttr": "data-sorttext",
+		"widgetOptions": {
+			"filter_useParsedData": false
+		}
 	});
 
 	// carousel: do not autoslide
