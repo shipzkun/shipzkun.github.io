@@ -212,3 +212,18 @@ a.iucn:hover {
 .iucn_LC {background: green; color: white;}
 .iucn_NE {background: gray; color: white;}
 .iucn_DD {background: gray; color: white;}
+
+/** Default table style, in case bootstrap does not kick in **/
+td, th {
+	border: 1px solid;
+	border-collapse: collapse;
+	padding-right: 1em;
+}
+
+tr:nth-child(even) {
+	background-color: #8080803d;
+}
+
+tr:hover {
+	background-color: #ffd70026;
+}
