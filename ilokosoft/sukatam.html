@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<title>Arden's Corner</title>
 	<base href="https://arden-chan.party">
@@ -41,12 +40,12 @@
 
 	<div id="container">
 		<!-- Sidebar -->
-		<div class="navbar-collapse collapse navbar-toggleable-md navbar navbar-dark bg-secondary" id="sidebar">
+		<div class="navbar-collapse collapse navbar-toggleable-md navbar navbar-dark bg-secondary" id="sidebar" >
 
 			<div>
 			
-				<span class="links-header">🖦 IlokoSoft</span>
-				<ul class="list-unstyled components">
+				<span class='links-header'>🖦 IlokoSoft</span>
+				<ul class='list-unstyled components'>
 					
 						
 							<li><a href="https://arden-chan.party/ilokosoft/agsao.html" title="Passphrase Generator">Agsao</a></li>
@@ -62,8 +61,8 @@
 					
 				</ul>
 			
-				<span class="links-header">📋 Other Projects</span>
-				<ul class="list-unstyled components">
+				<span class='links-header'>📋 Other Projects</span>
+				<ul class='list-unstyled components'>
 					
 						
 							<li><a href="https://arden-chan.party/amazfitbip_watchface" title="">Amazfit Bip Watch Faces</a></li>
@@ -79,11 +78,11 @@
 					
 				</ul>
 			
-				<span class="links-header">🎉 Fun Stuff</span>
-				<ul class="list-unstyled components">
+				<span class='links-header'>🎉 Fun Stuff</span>
+				<ul class='list-unstyled components'>
 					
 						
-							<li><a href="https://arden-chan.party/faq" title="">Q&amp;A</a></li>
+							<li><a href="https://arden-chan.party/faq" title="">Q&A</a></li>
 						
 					
 						
@@ -96,8 +95,8 @@
 					
 				</ul>
 			
-				<span class="links-header">▶ YouTube</span>
-				<ul class="list-unstyled components">
+				<span class='links-header'>▶ YouTube</span>
+				<ul class='list-unstyled components'>
 					
 						
 							<li><a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ" title="Cringe TV">Main</a></li>
@@ -113,11 +112,11 @@
 					
 				</ul>
 			
-				<span class="links-header">➹ External Links</span>
-				<ul class="list-unstyled components">
+				<span class='links-header'>➹ External Links</span>
+				<ul class='list-unstyled components'>
 					
 						
-							<li><a href="https://ko-fi.com/Z8Z133PAX" title=""><img height="36" style="border:0px;height:2em" src="https://cdn.ko-fi.com/cdn/kofi2.png?v=2" alt="Buy Me a Coffee at ko-fi.com"></a></li>
+							<li><a href="https://ko-fi.com/Z8Z133PAX" title=""><img height='36' style='border:0px;height:2em' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' alt='Buy Me a Coffee at ko-fi.com'></a></li>
 						
 					
 						
@@ -144,35 +143,111 @@
 		</div>
 
 		<div id="content" class="container-fluid" tabindex="-1">
-			<script src="https://arden-chan.party/assets/js/secret.js"></script>
-<script src="https://arden-chan.party/assets/js/sha256.js"></script>
-<script src="https://arden-chan.party/assets/js/aes.js"></script>
-<div id="crypt_params" style="display:none"><script>var _gj = {salt: 'bad42d79b41ed092',  iv: '77a21e930392e423ac40be871eda2e3f' } </script></div>
+			<script type="module">
+import {Sukatam} from "https://arden-chan.party/assets/js/ilokosoft/sukatam.js";
 
-<a href="https://arden-chan.party/secret">← Back to post list</a>
+let t = new Sukatam()
 
-<h2></h2>
-<div style="font-size: x-small;">Posted on: </div>
-<div style="font-size: x-small;">Categories:
-	
+$(function() {
+	// on load, populate dropdown with supported text conversions
+	let converters = t.supported_converters()
+	populate_dd_converters(converters)
+
+	// to avoid code spill
+	// expected format of converters:
+	//   {"converter_id": "name", "converter_group":{"converter_id", "name"}}
+	//   at most one level of depth
+	function populate_dd_converters(converters) {
+		// to avoid copy-paste:
+		let make_elem_option = function(value, label) {
+			return "<option value='"+value+"'>"+label+"</option>"
+		}
+
+		// contents is a string of options
+		// this function WON'T MAKE OPTION ELEMS for you
+		let make_elem_optgroup = function(group_name, contents) {
+			return "<optgroup label='"+group_name+"'>"+contents+"</optgroup>"
+		}
+
+		let opts = "";
+		for (var i in converters) {
+			if (typeof converters[i] == "object") {
+				let subopts = ""
+				for (var j in converters[i]) {
+					subopts+=make_elem_option(j, converters[i][j])
+				}
+				opts+=make_elem_optgroup(i, subopts)
+			} else {
+				opts+=make_elem_option(i, converters[i])
+			}
+		}
+
+		$("#dd_converter").html(opts)
+	}
+
+	// convert on onchange event
+	$("#txt_input").on('input', delay(process_conversion, 400))
+	$("#dd_converter").on('change', process_conversion)
+	function process_conversion(e) {
+		let source_text = $("#txt_input").val()
+		let converter = $("#dd_converter").val()
+
+		$("#converter_remarks").text('')
+		$("#converter_error").text('')
+		$("output").text('')
+
+		let conv_info = t.get_converter_details(converter)
+		if (conv_info == null) {
+			$("#converter_error").text('Unrecognized converter: '+converter)
+		} else {
+			$("#converter_remarks").text(conv_info.remarks)
+			t.process(source_text, converter).then(result => {
+				if (result.success) {
+					$("output").text(result.data)
+				} else {
+					$("#converter_error").text(result.errmsg)
+				}
+			})
+		}
+	}
+});
+</script>
+
+<div class="row g-3 align-items-top">
+  <div class="col-4">
+	<label for="txt_input">Source</label>
+	<div class="input-group">
+	  <textarea class="form-control" id="txt_input" name="source" placeholder="Your input here" row="5"></textarea>
+	</div>
+  </div>
+
+  <div class="col-3">
+	<label for="dd_converter">Converter</label>
+	<select class="form-select" id="dd_converter" name="converter">
+	  <option selected="">None</option>
+	</select>
+	<small id="converter_remarks" class="text-warning"></small>
+	<small id="converter_error" class="text-danger"></small>
+  </div>
+
+  <div class="col-5">
+	<span>Output</span>
+	<br />
+	<div style="max-height: 10em; overflow: auto; word-wrap:anywhere">
+	<output for="source converter" class="can-copy"></output>
+	</div>
+  </div>
 </div>
-<div style="font-size: x-small;">Tags:
-	
-</div>
-<br>
 
-<div id="secure-container" style="display: none;">47cd1d344211a0ecb1e88f41c2fafcf2b131c4292a12968c12811927a1b4aaa0cdc02814db58f8c63309b1ccb601ad48db04627ea522ac82e5cda42b31730d691bd7e4c8b04a4cc09f807139aa7c837605a9f31df786f6bd94b5b7ac6be842591605cabd79467faba846331aad6492d180017654e69829a6a7c60608feda8ed6251de9a82d813336ee26ed5eac912cee</div>
+<hr />
+<p>A collection of utilities that converts the source text.</p>
 
-<div>
-	Key: <input type="password" name="key">
-	<br>
-	<button id="decrypt">View content</button>
-</div>
-<br>
-<br>
-<br>
+<p>Coded for fun. Hope you enjoy too.</p>
 
-Want to comment? <a href="mailto:lets-talk@arden-chan.party" title="email">Send an email.</a>
+<hr />
+<h6 id="whats-with-the-name">What’s with the name?</h6>
+
+<p><em>Sukatam</em> <code>[su.kɐ.'tɐm]</code> means <em>Change this!</em> in Ilocano. The sense of change is mainly like substitute.</p>
 
 		</div>
 
