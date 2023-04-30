@@ -227,3 +227,27 @@ tr:nth-child(even) {
 tr:hover {
 	background-color: #ffd70026;
 }
+
+
+/** Search bar CSS **/
+#site_search_results ul {
+	list-style-type: disclosure-closed;
+}
+#site_search_results {
+	position: absolute;
+	z-index: 1999;
+	max-height: 10em;
+	overflow-y: auto;
+	width: 18rem;
+	right: 1em;
+}
+
+#site_search_results a {
+	white-space: break-spaces;
+	word-break: normal;
+	overflow-wrap: anywhere;
+}
+
+#site_search_results mark {
+	background-color: yellow;
+}

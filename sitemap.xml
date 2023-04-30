@@ -4183,7 +4183,7 @@
 	<url>
 		<loc>https://arden-chan.party/404.html</loc>
 		<lastmod>
-								2023-04-27T20:52:51+08:00
+								2023-04-30T22:15:56+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -4201,7 +4201,7 @@
 	<url>
 		<loc>https://arden-chan.party/amazfitbip_watchface</loc>
 		<lastmod>
-								2023-04-27T20:52:51+08:00
+								2023-04-30T22:15:56+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -4219,7 +4219,7 @@
 	<url>
 		<loc>https://arden-chan.party/common_unicode_chars</loc>
 		<lastmod>
-								2023-04-27T20:52:51+08:00
+								2023-04-30T22:15:56+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -4237,7 +4237,7 @@
 	<url>
 		<loc>https://arden-chan.party/faq</loc>
 		<lastmod>
-								2023-04-27T20:52:51+08:00
+								2023-04-30T22:15:56+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -4255,7 +4255,25 @@
 	<url>
 		<loc>https://arden-chan.party/</loc>
 		<lastmod>
-								2023-04-27T20:52:51+08:00
+								2023-04-30T22:15:56+08:00
+			
+		</lastmod>
+		<changefreq>
+									monthly
+			
+		</changefreq>
+		<priority>
+								0.3
+			
+		</priority>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://arden-chan.party/links.json</loc>
+		<lastmod>
+								2023-04-30T22:15:56+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -4273,7 +4291,7 @@
 	<url>
 		<loc>https://arden-chan.party/public_file_repos</loc>
 		<lastmod>
-								2023-04-27T20:52:51+08:00
+								2023-04-30T22:15:56+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -4291,7 +4309,7 @@
 	<url>
 		<loc>https://arden-chan.party/resume</loc>
 		<lastmod>
-								2023-04-27T20:52:51+08:00
+								2023-04-30T22:15:56+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -4309,7 +4327,7 @@
 	<url>
 		<loc>https://arden-chan.party/secret</loc>
 		<lastmod>
-								2023-04-27T20:52:51+08:00
+								2023-04-30T22:15:56+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -4329,7 +4347,7 @@
 	<url>
 		<loc>https://arden-chan.party/test.html</loc>
 		<lastmod>
-								2023-04-27T20:52:51+08:00
+								2023-04-30T22:15:56+08:00
 			
 		</lastmod>
 		<changefreq>

@@ -46,12 +46,6 @@ $(function() {
 		});
 	});
 
-   $(document).bind('keyup', 'alt+ctrl+shift+x', function(e) {
-		if (confirm("Wanna peek into the abyss?")) {
-			window.location = $("base").attr('href')+"/secret"
-		}
-	});
-
 	$(".tablesorter").tablesorter({
 		"headerTemplate": "{content} {icon}", // new in v2.7. Needed to add the bootstrap icon!
 		"widthFixed": true,
@@ -69,6 +63,118 @@ $(function() {
 	$('.carousel').carousel({
 		interval: false,
 	});
+
+	// search for website content
+	let sitemap_url = $("base").attr('href')+"/links.json";
+	let sitemap = null; // load lazily
+	$("#site_search").on('input', delay(function(e){
+		let filter_urls = function() {
+			let matches = []
+			for (let i in sitemap) {
+				let url = sitemap[i].url.toLowerCase()
+				let title = sitemap[i].title.toLowerCase()
+				let label = sitemap[i].label.toLowerCase()
+				let categories = sitemap[i].categories.toLowerCase().replaceAll('|',' ')
+				let tags = sitemap[i].tags.toLowerCase().replaceAll('|',' ')
+
+				if (url.indexOf(filter) > -1 ||
+					title.indexOf(filter) > -1 ||
+					label.indexOf(filter) > -1 ||
+					categories.indexOf(filter) > -1 ||
+					tags.indexOf(filter) > -1
+				) {
+					matches = matches.concat(sitemap[i])
+				}
+			}
+
+			return matches
+		}
+
+		let show_matches = function(matches, errmsg) {
+			let highlight = function(q, text) {
+				return text.replaceAll(new RegExp('('+q+')', 'ig'), "<mark>$1</mark>")
+			}
+
+			let make_badge = function(text, type) {
+				let bclass = '';
+
+				switch (type) {
+					case "label": bclass = 'bg-success'; break;
+					case "category": bclass = 'bg-primary'; break;
+					case "tag": bclass = 'bg-info'; break;
+				}
+				return '<span class="badge '+bclass+'" style="font-size: xx-small;">'+text+'</span>';
+			}
+
+			if (errmsg) {
+				$("#site_search_results").append("<div class='text-danger'>"+errmsg+"</div>").show()
+				return
+			}
+
+			if (matches == null || matches.length == 0) {
+				$("#site_search_results").append("<div>No results found.</div>").show()
+				return
+			}
+
+			$("#site_search_results").append('<ul>')
+			for (let i in matches) {
+				let cats = '';
+				let tags = '';
+				let labl = '';
+
+				if (matches[i].label.length > 0) {
+					labl += make_badge(highlight(filter, matches[i].label), 'label')+' '
+				}
+
+				if (matches[i].categories.length > 0) {
+					let rcats = matches[i].categories.split('|')
+					for (let j in rcats) {
+						cats += make_badge(highlight(filter, rcats[j]), 'category')+' '
+					}
+				}
+
+				if (matches[i].tags.length > 0) {
+					let rtags = matches[i].tags.split('|')
+					for (let j in rtags) {
+						tags += make_badge(highlight(filter, rtags[j]), 'tag')+' '
+					}
+				}
+
+				let entry = '<li><a class="dropdown-item" href="'+matches[i].url+'" tabindex=0>'+highlight(filter, matches[i].title)
+				if (cats.length > 0 || tags.length > 0) {
+					entry += '<br/>'+labl+cats+tags
+				}
+				entry+="</a>"
+
+				$("#site_search_results ul").append(entry)
+			}
+			$("#site_search_results").show()
+		}
+
+		$("#site_search_results").hide()
+		$("#site_search_results").empty()
+
+		let filter = $(this).val()
+		if (filter == "") {
+			return
+		}
+
+		filter = filter.trim().toLowerCase()
+
+		if (sitemap == null) {
+			$.get(sitemap_url, function(data) {
+				sitemap = data
+
+				show_matches(filter_urls())
+			}, "json").fail(function(e, status, error) {
+				console.log(status, error)
+				show_matches(null, 'Failed getting index; please contact the developer. ('+status+': '+error+')')
+			})
+		} else {
+			show_matches(filter_urls())
+		}
+
+	}, 600))
 });
 
 // function that can be used to delay things

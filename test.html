@@ -23,6 +23,7 @@
 	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.widgets.min.js"></script>
 	<script src="https://arden-chan.party/assets/js/tablesorter/extras/jquery.tablesorter.pager.min.js"></script>
 	<script src="https://arden-chan.party/assets/js/custom.js"></script>
+	<script src="https://arden-chan.party/assets/js/kbd_shortcuts.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
@@ -37,7 +38,11 @@
 		</button>
 		<a class="navbar-brand" href="https://arden-chan.party">🏠 Arden's Corner</a>
 	</div>
+	<div class="float-right me-3">
+		<input id="site_search" type="search" placeholder="Search">
+		<div id="site_search_results" class="bg-secondary"></div>
 	</div>
+</div>
 
 	<div id="container">
 		<!-- Sidebar -->
@@ -147,7 +152,7 @@
 			<script src="https://arden-chan.party/assets/js/secret.js"></script>
 <script src="https://arden-chan.party/assets/js/sha256.js"></script>
 <script src="https://arden-chan.party/assets/js/aes.js"></script>
-<div id="crypt_params" style="display:none"><script>var _gj = {salt: 'bad42d79b41ed092',  iv: '77a21e930392e423ac40be871eda2e3f' } </script></div>
+<div id="crypt_params" style="display:none"><script>var _gj = {salt: '8b79126d659c7adf',  iv: 'cc5666468eb477790c2174731211cfac' } </script></div>
 
 <a href="https://arden-chan.party/secret">← Back to post list</a>
 
@@ -161,7 +166,7 @@
 </div>
 <br>
 
-<div id="secure-container" style="display: none;">47cd1d344211a0ecb1e88f41c2fafcf2b131c4292a12968c12811927a1b4aaa0cdc02814db58f8c63309b1ccb601ad48db04627ea522ac82e5cda42b31730d691bd7e4c8b04a4cc09f807139aa7c837605a9f31df786f6bd94b5b7ac6be842591605cabd79467faba846331aad6492d180017654e69829a6a7c60608feda8ed6251de9a82d813336ee26ed5eac912cee</div>
+<div id="secure-container" style="display: none;">4331439d2a38ababdf6deeac384e9bba6ea59e3fda98f78bca8fe7150e03c8ce71adbdd8980f78e5122fd03883123d21b8ef194be4d4dd55c2d88bb88ee0aacf7897b16a711749f2b3959a5e1357f6c957b1114b3e21e4b2136076516f68119c093a30e93fbac93464d10270af8eb036b1d8335118711e92aa1a1da16c8b86398b9f9e68b4de0d18e7de2e94e80f56fa</div>
 
 <div>
 	Key: <input type="password" name="key">
