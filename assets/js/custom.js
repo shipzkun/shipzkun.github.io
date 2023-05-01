@@ -20,10 +20,10 @@ $(function() {
 	$(".can-copy").hover(
 		// hover in: show copy button
 		function() {
-			let id = 'i-'+Math.random();
-			let txt = "<span class='cp-text' id='"+id+"'>"+$(this).text()+"</span>";
-			let btn = "<button class='btn-copy' title='Copy to clipboard' type='button' data-target='"+id+"'>🗒</button>";
-			$(this).html(txt+' '+btn);
+			let id = 'i-'+Math.random()
+			let txt = $("<span class='cp-text' id='"+id+"'>").text($(this).text())
+			let btn = $("<button class='btn-copy' title='Copy to clipboard' type='button' data-target='"+id+"'>🗒</button>");
+			$(this).empty().append(txt).append(btn);
 		},
 		// hover out: remove copy button
 		function() {
