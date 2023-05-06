@@ -148,13 +148,13 @@
 		</div>
 
 		<div id="content" class="container-fluid" tabindex="-1">
-			<script src="https://arden-chan.party/assets/js/basaem.js" type="module"></script>
+			<script src="https://arden-chan.party/assets/js/ilokosoft/basaem.js" type="module"></script>
 
 <script type="module">
-import {Basaem} from "https://arden-chan.party/assets/js/basaem.js";
-   
+import {Basaem} from "https://arden-chan.party/assets/js/ilokosoft/basaem.js";
+
 let b = new Basaem()
-let x = await  b.load_links("https://arden-chan.party/assets/js/basaem_links.json")
+let x = await  b.load_links("https://arden-chan.party/assets/js/ilokosoft/basaem_links.json")
 
 
 $(function() {
@@ -162,7 +162,7 @@ $(function() {
 		$("#article_pane").hide()
 		$("#article_loading").hide()
 		$("#article_unembeddable").hide()
-			
+
 		let weighted_random = $("input[name=weighted_random]").is(':checked');
 
 		b.set_weighted_random(weighted_random)
