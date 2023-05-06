@@ -167,13 +167,12 @@ $(function() {
 
 				show_matches(filter_urls())
 			}, "json").fail(function(e, status, error) {
-				console.log(status, error)
 				show_matches(null, 'Failed getting index; please contact the developer. ('+status+': '+error+')')
 			})
 		} else {
 			show_matches(filter_urls())
 		}
-
+		$("#site_search_results").prepend("<i style='font-size: x-small; position: sticky; top:0; opacity: 0.8' class='bg-secondary'>[Escape] to dismiss</i>")
 	}, 600))
 });
 
