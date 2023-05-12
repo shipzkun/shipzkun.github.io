@@ -210,8 +210,7 @@ a.iucn:hover {
 .iucn_VU {background: orange; color: white;}
 .iucn_NT {background: green; color: yellow;}
 .iucn_LC {background: green; color: white;}
-.iucn_NE {background: gray; color: white;}
-.iucn_DD {background: gray; color: white;}
+.iucn_NE, .iucn_DD, .iucn_NR {background: gray; color: white;}
 
 /** Default table style, in case bootstrap does not kick in **/
 td, th {
