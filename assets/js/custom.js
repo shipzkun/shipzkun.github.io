@@ -1,3 +1,18 @@
+// constants
+const LINKS_HANDLING_OPEN_ALL_SAME_TAB = 'open_all_in_same_tab'
+const LINKS_HANDLING_OPEN_INT_SAME_TAB_EXT_OTHER_TAB = 'open_int_same_tab_ext_other_tab'
+const LINKS_HANDLING_OPEN_ALL_OTHER_TAB = 'open_all_other_tab'
+const LINKS_HANDLING_MODES = [
+	LINKS_HANDLING_OPEN_ALL_SAME_TAB,
+	LINKS_HANDLING_OPEN_INT_SAME_TAB_EXT_OTHER_TAB,
+	LINKS_HANDLING_OPEN_ALL_OTHER_TAB
+]
+
+const SETTING_LINKS_HANDLING = 'links_handling'
+
+const OPEN_EXT = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
+
+
 $(function() {
 	init_showhide_sidebar();
 
@@ -148,6 +163,7 @@ $(function() {
 
 				$("#site_search_results ul").append(entry)
 			}
+			update_links(get_setting(SETTING_LINKS_HANDLING))
 			$("#site_search_results").show()
 		}
 
@@ -174,6 +190,24 @@ $(function() {
 		}
 		$("#site_search_results").prepend("<i style='font-size: x-small; position: sticky; top:0; opacity: 0.8' class='bg-secondary'>[Escape] to dismiss</i>")
 	}, 600))
+
+
+	$("input[name="+SETTING_LINKS_HANDLING+"]").on('change', function() {
+		update_links($(this).val())
+		save_setting(SETTING_LINKS_HANDLING, $(this).val())
+	});
+
+	// load saved link handling
+	let links_handling = null
+	if (storageAvailable('localStorage')) {
+		links_handling = get_setting(SETTING_LINKS_HANDLING)
+		if (links_handling == null || LINKS_HANDLING_MODES.indexOf(links_handling) < 0) {
+			links_handling = LINKS_HANDLING_OPEN_ALL_SAME_TAB
+			save_setting(SETTING_LINKS_HANDLING, links_handling)
+		}
+	}
+	update_links(links_handling)
+	$("input[name="+SETTING_LINKS_HANDLING+"][value="+links_handling+"]").prop('checked', true)
 });
 
 // function that can be used to delay things
@@ -186,4 +220,81 @@ function delay(callback, ms) {
 			callback.apply(context, args);
 		}, ms || 0);
 	};
+}
+
+function update_links(mode) {
+	if (mode == null) return;
+
+	let base_url = $('base').attr('href')
+
+	if (LINKS_HANDLING_MODES.indexOf(mode) < 0) {
+		alert('Unrecognised option: '+ mode)
+		return
+	}
+
+	let set_target = function (node_regex, target) {
+		$(node_regex).attr('target', target)
+
+		if (target == '_self') {
+			$(node_regex+' svg').remove()
+		} else {
+			$(node_regex).append(OPEN_EXT)
+		}
+	}
+
+	// Remove all external cues
+	set_target('a', '_self')
+
+	// apply special cues as applicable
+	if (mode == LINKS_HANDLING_OPEN_INT_SAME_TAB_EXT_OTHER_TAB) {
+		set_target('a:not([href^="'+base_url+'"])', '_blank')
+		// do not mark relative links
+		set_target('a:not([href^="http"])', '_self')
+	} else if (mode == LINKS_HANDLING_OPEN_ALL_OTHER_TAB) {
+		set_target('a', '_blank')
+	}
+
+	// a. Do not touch URL fragments
+	// b. Do not touch home button
+	set_target('a[href^="#"]', '_self')
+	set_target('a[href="'+base_url+'"]', '_self')
+}
+
+function save_setting(setting, value) {
+	if (storageAvailable('localStorage')) {
+		localStorage.setItem(setting, value)
+	}
+}
+
+function get_setting(setting) {
+	return localStorage.getItem(setting)
+}
+
+// Original code: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#feature-detecting_localstorage
+function storageAvailable(type) {
+	let storage;
+	try {
+		storage = window[type];
+		const x = "__storage_test__";
+		storage.setItem(x, x);
+		storage.removeItem(x);
+		return true;
+	} catch (e) {
+		return (
+			e instanceof DOMException &&
+			// everything except Firefox
+			(e.code === 22 ||
+				// Firefox
+				e.code === 1014 ||
+				// test name field too, because code might not be present
+				// everything except Firefox
+				e.name === "QuotaExceededError" ||
+				// Firefox
+				e.name === "NS_ERROR_DOM_QUOTA_REACHED"
+			) &&
+			// acknowledge QuotaExceededError only if there's something already stored
+			storage &&
+			storage.length !== 0
+		);
+	}
 }

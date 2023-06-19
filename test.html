@@ -39,7 +39,10 @@
 		<a class="navbar-brand" href="https://arden-chan.party">🏠 Arden's Corner</a>
 	</div>
 	<div id="search_div" class="float-right me-3">
-		<input id="site_search" type="search" placeholder="Search [Ctrl+Alt+Shift+S]">
+		<div class="input-group">
+			<input class="form-control" id="site_search" type="search" placeholder="Search [Ctrl+Alt+Shift+S]">
+			<button id="settings" class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#settings_modal">⚙</button>
+		</div>
 		<div id="site_search_results" class="bg-secondary"></div>
 	</div>
 </div>
@@ -152,7 +155,7 @@
 			<script src="https://arden-chan.party/assets/js/secret.js"></script>
 <script src="https://arden-chan.party/assets/js/sha256.js"></script>
 <script src="https://arden-chan.party/assets/js/aes.js"></script>
-<div id="crypt_params" style="display:none"><script>var _gj = {salt: '1b0d5033f8faa805',  iv: 'dedf84a80b3123e3e20099f4b3abc209' } </script></div>
+<div id="crypt_params" style="display:none"><script>var _gj = {salt: '641bb174ad87f574',  iv: '9f784f7d21f743e796832118ccdb4b46' } </script></div>
 
 <a href="https://arden-chan.party/secret">← Back to post list</a>
 
@@ -166,7 +169,7 @@
 </div>
 <br>
 
-<div id="secure-container" style="display: none;">a5e575e91361f2acc8f47a24718e77d07fbfab40bbe5a1daded0935fa913efe63dc0171d65cd05175fa1020d6f780b1844568b3c068d7d0a2c95233530e379f819836d0d6343fe74fa3c890f446bba312f9e0bb366530b06df6b71757e27fe0bd07ea93a5844cc9306db69508b41875d193141873e5627b923c8d6bbde93d0cb919568e19a73f1cb108b345f219ff3e8</div>
+<div id="secure-container" style="display: none;">a7abc4cdd8030c43e4b91ac06514010cc351f3e40b9189426cc995dd9766ac1bc8a3e4eff02e798c481a516469ecb316b7f1e4b3254da92c920361fb76d447f72079ff2f025f9c3f9595758eb6e8a9e0baa07c345e2f767e36449a1007125908345533887d2461b91b5a867cf701dc06dcfe6a28b85b8d10f0853d5eddf2ef5deab3b1098bfb720ea2c32bd033787561</div>
 
 <div>
 	Key: <input type="password" name="key">
@@ -183,5 +186,43 @@ Want to comment? <a href="mailto:lets-talk@arden-chan.party" title="email">Send 
 
 	</div>
 </div>
+
+<div class="modal fade" id="settings_modal" tabindex="-1" aria-labelledby="modal_lbl" aria-hidden="true" style="z-index:10000">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="modal_lbl">UI Settings</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<div class="alert alert-warning">
+				This uses the localStorage API to store your customisations. This means that:
+				<ul>
+					<li>No data will be saved if your browser does not support the localStorage API.</li>
+					<li>When you change browsers, switch to Incognito mode, or clear your browser's data, all of your customisations will be gone.</li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div>How to open links: (Samples: <a href="https://arden-chan.party/faq.html">internal</a>, <a href="https://example.com/">external</a>)
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_in_same_tab" id="op1">
+					<label class="form-check-label" for="op1">Open all links in same tab (default)</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_int_same_tab_ext_other_tab" id="op2">
+					<label class="form-check-label" for="op2">Open internal links in same tab but open external ones in another tab</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_other_tab" id="op3">
+					<label class="form-check-label" for="op3">Open all links in separate tabs</label>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
 </body>
 </html>
