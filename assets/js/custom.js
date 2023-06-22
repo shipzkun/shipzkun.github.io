@@ -208,6 +208,17 @@ $(function() {
 	}
 	update_links(links_handling)
 	$("input[name="+SETTING_LINKS_HANDLING+"][value="+links_handling+"]").prop('checked', true)
+
+	$(".toggle_note").click(function(e) {
+		e.preventDefault()
+
+		let target = $(this).data('target')
+
+		if (target == "" || $(target).length == 0) return
+
+		$(target).toggle()
+	})
+
 });
 
 // function that can be used to delay things

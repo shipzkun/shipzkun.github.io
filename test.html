@@ -155,7 +155,7 @@
 			<script src="https://arden-chan.party/assets/js/secret.js"></script>
 <script src="https://arden-chan.party/assets/js/sha256.js"></script>
 <script src="https://arden-chan.party/assets/js/aes.js"></script>
-<div id="crypt_params" style="display:none"><script>var _gj = {salt: '9b1472ecd0f087d0',  iv: '93e4e32301f324f3abc2058ccc29751e' } </script></div>
+<div id="crypt_params" style="display:none"><script>var _gj = {salt: '5acd820139998987',  iv: '664361a1d254a32a94983376f63c38c5' } </script></div>
 
 <a href="https://arden-chan.party/secret">← Back to post list</a>
 
@@ -169,7 +169,7 @@
 </div>
 <br>
 
-<div id="secure-container" style="display: none;">b09a927c87757248dc4edf7e1df1d361f5a6ccf00ef00fc80022bd265fbd3695356a255d0bac81fdfaaa8ef3fb67ae00bb359d4cb7aed1d02df4939dd5cbf8d64e9d851a42ccd3ecd0f3fe3b849c272136f69849929575d7bf74f2f45048a961e4737157aaf61fb3283bbe5d2611497e9fe66222bd0933a5b982e290feba12d6b23e4666d7c4728166da7035109436c7</div>
+<div id="secure-container" style="display: none;">e6cc0dbe1e846d5655a57fc1cd1a2aa239c536e85fba10ce47663be2b4e88be13d8a9ec16c56d8b43ae0322429b79adc27c08fdef22a1272cc1e8b98e698e9613de17b7ed0ff70fab121eaae66e72789719b8e063a9f206cb817b23fd7998c4e4838ebddf4b66ba140292c3824c9bb03ee56a8b32f541e29a3dbed20f0d18b1f54579dace587cd10fefabe9a6468ab639422f3dfad82d80eee21befba1839a64715b34a422967b97ba2e49559a711a5a0616c021396be4aaf1b4ab57ad4aa628778999602e4ae30337479edf77a8f65615f68e4eec8c258fae58f8761a4ccf8c63d5daae9527a3b1a2174bfde6b5f813c71e1ac9f8d28fd182882346e72ca0d9</div>
 
 <div>
 	Key: <input type="password" name="key">
@@ -192,10 +192,11 @@ Want to comment? <a href="mailto:lets-talk@arden-chan.party" title="email">Send 
 	<div class="modal-content">
 		<div class="modal-header">
 		  <h5 class="modal-title" id="modal_lbl">UI Settings</h5>
+		   <a class="toggle_note" data-target="#localStorage_note" href="#" style="font-size: x-small;">toggle note</a>
 		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
-			<div class="alert alert-warning">
+			<div id="localStorage_note" class="alert alert-warning">
 				This uses the localStorage API to store your customisations. This means that:
 				<ul>
 					<li>No data will be saved if your browser does not support the localStorage API.</li>

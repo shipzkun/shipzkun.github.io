@@ -232,10 +232,11 @@ Want to comment? <a href="mailto:lets-talk@arden-chan.party" title="email">Send 
 	<div class="modal-content">
 		<div class="modal-header">
 		  <h5 class="modal-title" id="modal_lbl">UI Settings</h5>
+		  &nbsp;<a class="toggle_note" data-target="#localStorage_note" href="#" style="font-size: x-small;">toggle note</a>
 		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
-			<div class="alert alert-warning">
+			<div id="localStorage_note" class="alert alert-warning">
 				This uses the localStorage API to store your customisations. This means that:
 				<ul>
 					<li>No data will be saved if your browser does not support the localStorage API.</li>
