@@ -69,7 +69,7 @@ $(function() {
 		"imgAttr": "data-sorttext",
 		"textExtraction": {
 			".content-html": function(node, table, cellIndex) {
-				return $(node).text();
+				return $(node).text().replace(/\s+/g, ' ');
 			}
 		}
 	});
