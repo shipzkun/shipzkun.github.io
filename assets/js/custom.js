@@ -253,6 +253,13 @@ function update_links(mode) {
 		}
 	}
 
+	// For URLs with leading and trailing spaces, remove
+	// Done this way to hopefully only touch wonky urls
+	$("a[href^=\\ ], a[href^=\\ ] ").each(function(k,v) {
+		let trimmed_url = $(this).attr('href').trim()
+		$(this).attr('href', trimmed_url)
+	})
+
 	// Remove all external cues
 	set_target('a', '_self')
 
