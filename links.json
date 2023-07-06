@@ -177,31 +177,11 @@
 
 
 {
-	"url": "https://arden-chan.party/art/2021-01-24-Sharing-the-Night-Together-Legendz-Version.html",
-	"title": "Sharing the Night Together: Legendz Version",
-	"label": "art",
-	"categories": "",
-	"tags": "legendz|shiron|ranshiin|song_spoof"
-},
-
-
-
-{
 	"url": "https://arden-chan.party/art/2021-01-24-Shiron-Snickers.html",
 	"title": "Shiron Snickers",
 	"label": "art",
 	"categories": "",
 	"tags": "shuu|windragon|kanerudo|nezuccho|waruccho|snickers_meme"
-},
-
-
-
-{
-	"url": "https://arden-chan.party/art/2021-01-24-Sing-Along-MLP-FiM-Intro-Legendz-Version.html",
-	"title": "Sing Along: MLP:FiM Intro, Legendz Version",
-	"label": "art",
-	"categories": "",
-	"tags": "legendz|ranshiin|song_spoof|fimmylittlepony"
 },
 
 
@@ -553,6 +533,16 @@
 {
 	"url": "https://arden-chan.party/blog/art.html",
 	"title": "Art",
+	"label": "blog",
+	"categories": "",
+	"tags": ""
+},
+
+
+
+{
+	"url": "https://arden-chan.party/blog/music.html",
+	"title": "Music",
 	"label": "blog",
 	"categories": "",
 	"tags": ""
@@ -1178,16 +1168,6 @@
 	"label": "commentary",
 	"categories": "Events",
 	"tags": "Asia|Japan|japanese holiday|marine day|Ocean|umi no hi|海の日"
-},
-
-
-
-{
-	"url": "https://arden-chan.party/commentary/2011-07-19-10-38-15-Acts_of_Lasciviousness.html",
-	"title": "Acts of Lasciviousness",
-	"label": "commentary",
-	"categories": "Adult|Scribbles",
-	"tags": "adult songs|kakantutin ka lang nila|kantutan ignition|kantutan na|lascivious|ma boy|pangmatandang kanta|puki song"
 },
 
 
@@ -2084,6 +2064,48 @@
 	"label": "insecting",
 	"categories": "",
 	"tags": "Apis cerana|asian honey bee|bubuyog"
+},
+
+
+
+
+
+{
+	"url": "https://arden-chan.party/music/2011-07-19-10-38-15-Acts_of_Lasciviousness.html",
+	"title": "Acts of Lasciviousness",
+	"label": "music",
+	"categories": "Adult|Scribbles",
+	"tags": "adult songs|kakantutin ka lang nila|kantutan ignition|kantutan na|lascivious|ma boy|pangmatandang kanta|puki song"
+},
+
+
+
+{
+	"url": "https://arden-chan.party/music/2021-01-24-Sharing-the-Night-Together-Legendz-Version.html",
+	"title": "Sharing the Night Together: Legendz Version",
+	"label": "music",
+	"categories": "",
+	"tags": "legendz|shiron|ranshiin|song_spoof"
+},
+
+
+
+{
+	"url": "https://arden-chan.party/music/2021-01-24-Sing-Along-MLP-FiM-Intro-Legendz-Version.html",
+	"title": "Sing Along: MLP:FiM Intro, Legendz Version",
+	"label": "music",
+	"categories": "",
+	"tags": "legendz|ranshiin|song_spoof|fimmylittlepony"
+},
+
+
+
+{
+	"url": "https://arden-chan.party/music/2023-07-06-Oh-Carol.html",
+	"title": "Oh Carol",
+	"label": "music",
+	"categories": "",
+	"tags": "oh carol|song_spoof"
 },
 
 
