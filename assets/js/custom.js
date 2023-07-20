@@ -219,6 +219,23 @@ $(function() {
 		$(target).toggle()
 	})
 
+	// populate the recent updates list
+	const RECENT_UPDATES_LIMIT = 10;
+	$.get("links.json", {}, function(data) {
+		data.sort((a,b) => {
+			d1 = new Date(a.date)
+			d2 = new Date(b.date)
+			return d1 <= d2
+		})
+		for (let i = 0; i < RECENT_UPDATES_LIMIT; i++) {
+			let d = data[i].date.replace('T', ' ').replace('+08:00', ' PST')
+			$("#recent_updates").append("<li>"+
+				"<a href='"+data[i].url+"'>"+data[i].title+"</a> "+
+				"<span style='font-size: xx-small'>"+d+"</span>"+
+				"</li>"
+			)
+		}
+	}, "json")
 });
 
 // function that can be used to delay things
