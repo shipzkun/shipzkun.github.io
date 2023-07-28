@@ -9,9 +9,10 @@ const LINKS_HANDLING_MODES = [
 ]
 
 const SETTING_LINKS_HANDLING = 'links_handling'
+const RECENT_UPDATES_LIMIT = 10;
 
 const OPEN_EXT = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
-
+var SITEMAP = null
 
 $(function() {
 	init_showhide_sidebar();
@@ -80,17 +81,15 @@ $(function() {
 	});
 
 	// search for website content
-	let sitemap_url = $("base").attr('href')+"/links.json";
-	let sitemap = null; // load lazily
 	$("#site_search").on('input', delay(function(e){
 		let filter_urls = function() {
 			let matches = []
-			for (let i in sitemap) {
-				let url = sitemap[i].url.toLowerCase()
-				let title = sitemap[i].title.toLowerCase()
-				let label = sitemap[i].label.toLowerCase()
-				let categories = sitemap[i].categories.toLowerCase().replaceAll('|',' ')
-				let tags = sitemap[i].tags.toLowerCase().replaceAll('|',' ')
+			for (let i in SITEMAP) {
+				let url = SITEMAP[i].url.toLowerCase()
+				let title = SITEMAP[i].title.toLowerCase()
+				let label = SITEMAP[i].label.toLowerCase()
+				let categories = SITEMAP[i].categories.toLowerCase().replaceAll('|',' ')
+				let tags = SITEMAP[i].tags.toLowerCase().replaceAll('|',' ')
 
 				if (url.indexOf(filter) > -1 ||
 					title.indexOf(filter) > -1 ||
@@ -98,7 +97,7 @@ $(function() {
 					categories.indexOf(filter) > -1 ||
 					tags.indexOf(filter) > -1
 				) {
-					matches = matches.concat(sitemap[i])
+					matches = matches.concat(SITEMAP[i])
 				}
 			}
 
@@ -177,13 +176,9 @@ $(function() {
 
 		filter = filter.trim().toLowerCase()
 
-		if (sitemap == null) {
-			$.get(sitemap_url, function(data) {
-				sitemap = data
-
+		if (SITEMAP == null) {
+			load_site_pagelist(function() {
 				show_matches(filter_urls())
-			}, "json").fail(function(e, status, error) {
-				show_matches(null, 'Failed getting index; please contact the developer. ('+status+': '+error+')')
 			})
 		} else {
 			show_matches(filter_urls())
@@ -220,23 +215,32 @@ $(function() {
 	})
 
 	// populate the recent updates list
-	const RECENT_UPDATES_LIMIT = 10;
-	$.get("links.json", {}, function(data) {
-		data.sort((a,b) => {
-			d1 = new Date(a.date)
-			d2 = new Date(b.date)
-			return d1 <= d2
-		})
-		for (let i = 0; i < RECENT_UPDATES_LIMIT; i++) {
-			let d = data[i].date.replace('T', ' ').replace('+08:00', ' PST')
-			$("#recent_updates").append("<li>"+
-				"<a href='"+data[i].url+"'>"+data[i].title+"</a> "+
-				"<span style='font-size: xx-small'>"+d+"</span>"+
-				"</li>"
-			)
+	let recent_updates_list = $("#recent_updates")
+	if (recent_updates_list.length != 0) {
+		if (SITEMAP == null) {
+			load_site_pagelist(populate_recent_updates_list)
+		} else {
+			populate_recent_updates_list()
 		}
-	}, "json")
+	}
 });
+
+function populate_recent_updates_list() {
+	let data = SITEMAP
+	data.sort((a,b) => {
+		d1 = new Date(a.date)
+		d2 = new Date(b.date)
+		return d1 <= d2
+	})
+	for (let i = 0; i < RECENT_UPDATES_LIMIT; i++) {
+		let d = data[i].date.replace('T', ' ').replace('+08:00', ' PST')
+		$("#recent_updates").append("<li>"+
+			"<a href='"+data[i].url+"'>"+data[i].title+"</a> "+
+			"<span style='font-size: xx-small'>"+d+"</span>"+
+			"</li>"
+		)
+	}
+}
 
 // function that can be used to delay things
 function delay(callback, ms) {
@@ -332,4 +336,16 @@ function storageAvailable(type) {
 			storage.length !== 0
 		);
 	}
+}
+
+function load_site_pagelist(callback) {
+	let sitemap_url = $("base").attr('href')+"/links.json";
+	$.get(sitemap_url, {}, function(data) {
+		SITEMAP = data
+		if (typeof callback == 'function') {
+			callback()
+		}
+	}, "json").fail(function(e, status, error) {
+		alert('Failed getting index; please contact the developer. ('+status+': '+error+')')
+	})
 }
