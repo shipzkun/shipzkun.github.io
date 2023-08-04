@@ -109,16 +109,6 @@ $(function() {
 				return text.replaceAll(new RegExp('('+q+')', 'ig'), "<mark>$1</mark>")
 			}
 
-			let make_badge = function(text, type) {
-				let bclass = '';
-
-				switch (type) {
-					case "label": bclass = 'bg-success'; break;
-					case "category": bclass = 'bg-primary'; break;
-					case "tag": bclass = 'bg-info'; break;
-				}
-				return '<span class="badge '+bclass+'" style="font-size: xx-small;">'+text+'</span>';
-			}
 
 			if (errmsg) {
 				$("#site_search_results").append("<div class='text-danger'>"+errmsg+"</div>").show()
@@ -234,8 +224,11 @@ function populate_recent_updates_list() {
 	})
 	for (let i = 0; i < RECENT_UPDATES_LIMIT; i++) {
 		let d = data[i].date.replace('T', ' ').replace('+08:00', ' PST')
-		$("#recent_updates").append("<li>"+
-			"<a href='"+data[i].url+"'>"+data[i].title+"</a> "+
+		$("#recent_updates").append("<li style='list-style:none'>"+
+			make_badge(data[i].label, "category")+
+			" <a href='"+data[i].url+"'>"+
+				data[i].title+
+			"</a> "+
 			"<span style='font-size: xx-small'>"+d+"</span>"+
 			"</li>"
 		)
@@ -348,4 +341,15 @@ function load_site_pagelist(callback) {
 	}, "json").fail(function(e, status, error) {
 		alert('Failed getting index; please contact the developer. ('+status+': '+error+')')
 	})
+}
+
+function make_badge(text, type) {
+	let bclass = '';
+
+	switch (type) {
+		case "label": bclass = 'bg-success'; break;
+		case "category": bclass = 'bg-primary'; break;
+		case "tag": bclass = 'bg-info'; break;
+	}
+	return '<span class="badge '+bclass+'" style="font-size: xx-small;">'+text+'</span>';
 }
