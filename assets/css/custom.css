@@ -170,9 +170,10 @@ legend {
 	border-bottom: 1px solid lightgrey;
 }*/
 
-img {
+img, iframe[title^=YouTube], .carousel {
 	max-width: 35em;
-	max-height: 40em;
+	height: auto;
+	margin: auto;
 }
 
 #copyright img {
