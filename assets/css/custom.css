@@ -173,7 +173,6 @@ legend {
 img, iframe[title^=YouTube], .carousel {
 	max-width: 35em;
 	height: auto;
-	margin: auto;
 }
 
 #copyright img {
