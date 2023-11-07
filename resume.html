@@ -151,12 +151,27 @@
 		</div>
 
 		<div id="content" class="container-fluid" tabindex="-1">
-			<div id="rightbar" class="navbar navbar-dark bg-dark float-right">
+			<style>
+#bscard {
+	max-height: 18em;
+	overflow: hidden;
+}
+#bscard:hover {
+	overflow: auto;
+}
+#bscard img {
+	max-width: 25em;
+}
+</style>
+
+<div id="rightbar" class="navbar navbar-dark bg-dark float-right">
 <ul class="list-unstyled components">
 	<li>
+		<div id="bscard">
 		<a href="https://arden-chan.party/resume#about_me" title="business card">
 			<img src="https://arden-chan.party/assets/images/business-card.png" alt="business card" />
 		</a>
+		</div>
 	</li>
 	<li><a href="https://arden-chan.party/resume#-experience">Experience</a></li>
 	<li><a href="https://arden-chan.party/resume#-education">Education</a></li>
@@ -172,7 +187,7 @@
 	<h1 class="display-5 fw-bold">Arden Chan</h1>
 	<p class="col-md-8 fs-5">An experienced developer of web-based applications mainly intended for information systems.</p>
 
-    <address>
+	<address>
 		📬 Cavite, Philippines <br />
 		📧 <a href="mailto:lets-talk@arden-chan.party">lets-talk@arden-chan.party</a>
 	</address>
