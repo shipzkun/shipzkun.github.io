@@ -220,7 +220,7 @@ function populate_recent_updates_list() {
 	data.sort((a,b) => {
 		d1 = new Date(a.date)
 		d2 = new Date(b.date)
-		return d1 <= d2
+		return (d1 <= d2 ? 1 : -1)
 	})
 	for (let i = 0; i < RECENT_UPDATES_LIMIT; i++) {
 		let d = data[i].date.replace('T', ' ').replace('+08:00', ' PST')
