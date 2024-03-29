@@ -712,6 +712,47 @@
 	
 	
 {
+	"url": "https://arden-chan.party/biyernes_santo/2022-04-16-Biyernes-Santo-001.html",
+	"title": "Biyernes Santo 1",
+	"label": "biyernes_santo",
+	"categories": "",
+	"tags": "",
+	"date": "2022-04-16T00:00:00+08:00"
+},
+
+
+
+	
+	
+{
+	"url": "https://arden-chan.party/biyernes_santo/2023-04-07-Biyernes-Santo-002.html",
+	"title": "Biyernes Santo 2",
+	"label": "biyernes_santo",
+	"categories": "",
+	"tags": "",
+	"date": "2023-04-07T00:00:00+08:00"
+},
+
+
+
+	
+	
+{
+	"url": "https://arden-chan.party/biyernes_santo/2024-03-29-Biyernes-Santo-003.html",
+	"title": "Biyernes Santo 3",
+	"label": "biyernes_santo",
+	"categories": "",
+	"tags": "",
+	"date": "2024-03-29T00:00:00+08:00"
+},
+
+
+
+
+
+	
+	
+{
 	"url": "https://arden-chan.party/blog/commentary.html",
 	"title": "Commentary",
 	"label": "blog",
@@ -766,6 +807,19 @@
 {
 	"url": "https://arden-chan.party/blog/salawikain.html",
 	"title": "Salawikain",
+	"label": "blog",
+	"categories": "",
+	"tags": "",
+	"date": "1970-01-01T00:00:00+08:00"
+},
+
+
+
+	
+	
+{
+	"url": "https://arden-chan.party/blog/biyernes_santo.html",
+	"title": "Biyernes_santo",
 	"label": "blog",
 	"categories": "",
 	"tags": "",
@@ -3841,19 +3895,6 @@
 	
 	
 {
-	"url": "https://arden-chan.party/verse/2022-04-16-Biyernes-Santo.html",
-	"title": "Biyernes Santo",
-	"label": "verse",
-	"categories": "",
-	"tags": "",
-	"date": "2022-04-16T00:00:00+08:00"
-},
-
-
-
-	
-	
-{
 	"url": "https://arden-chan.party/verse/2022-04-16-Pagbabago.html",
 	"title": "Pagbabago",
 	"label": "verse",
@@ -4159,19 +4200,6 @@
 	"categories": "",
 	"tags": "spread the good word|print to merch",
 	"date": "2023-01-11T00:00:00+08:00"
-},
-
-
-
-	
-	
-{
-	"url": "https://arden-chan.party/verse/2023-04-07-Biyernes-Santo-II.html",
-	"title": "Biyernes Santo II",
-	"label": "verse",
-	"categories": "",
-	"tags": "",
-	"date": "2023-04-07T00:00:00+08:00"
 },
 
 
