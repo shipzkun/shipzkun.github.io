@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Arden's Corner</title>
+	<base href="https://arden-chan.party">
+
+	<link rel="shortcut icon" href="/assets/images/favicon.png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/darkly.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/theme.dark.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/jquery.tablesorter.pager.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/custom.css">
+
+	<!-- JS -->
+	<script src="https://arden-chan.party/assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/jquery.hotkeys.js"></script>
+	<script src="https://arden-chan.party/assets/js/bootstrap.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.widgets.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/extras/jquery.tablesorter.pager.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/custom.js"></script>
+	<script src="https://arden-chan.party/assets/js/kbd_shortcuts.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+<div class="wrapper">
+	<!-- Header navbar-expand-lg -->
+	<div id="topbar" class="navbar navbar-dark bg-primary">
+	<div class="float-left">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="https://arden-chan.party">🏠 Arden's Corner</a>
+	</div>
+	<div id="search_div" class="float-right me-3">
+		<div class="input-group">
+			<input class="form-control" id="site_search" type="search" placeholder="Search [Ctrl+Alt+Shift+S]">
+			<button id="settings" class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#settings_modal">⚙</button>
+		</div>
+		<div id="site_search_results" class="bg-secondary"></div>
+	</div>
+</div>
+
+	<div id="container">
+		<!-- Sidebar -->
+		<div class="navbar-collapse collapse navbar-toggleable-md navbar navbar-dark bg-secondary" id="sidebar" >
+
+			<div>
+			
+				<span class='links-header'>🖦 IlokoSoft</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/agsao.html" title="Passphrase Generator">Agsao</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/basaem.html" title="Read Random Articles">Basaem</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/relos.html" title="Picture Clock">Relos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>📋 Other Projects</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/amazfitbip_watchface" title="">Amazfit Bip Watch Faces</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/common_unicode_chars" title="">Common Unicode Characters</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/public_file_repos" title="Public file repositories.">Public File Repos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>🎉 Fun Stuff</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/faq" title="">Q&A</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/resume" title="">Résumé</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/blog" title="Let the cringe flow">Blog</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>▶ YouTube</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ" title="Cringe TV">Main</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSFPCZew2ed5M9DFOv8RigO" title="Finding Revali">Birding</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSQDK6RwqEreCiRK_oZTfye" title="Companion, Avian Offering">Superworms</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>➹ External Links</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://ko-fi.com/Z8Z133PAX" title=""><img height='36' style='border:0px;height:2em' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' alt='Buy Me a Coffee at ko-fi.com'></a></li>
+						
+					
+						
+							<li><a href="https://unicode.org/resources/fonts.html" title="You might need this if you cannot see all characters or words properly">Unicode Fonts</a></li>
+						
+					
+						
+							<li><a href="https://fonts.google.com/noto" title="Quick fix for missing fonts">Google Noto Fonts</a></li>
+						
+					
+						
+							<li><a href="https://symbl.cc/en/" title="SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, and the entire UNICODE">Search Unicode for characters</a></li>
+						
+					
+				</ul>
+			
+			</div>
+
+			<hr>
+			<div id="copyright">
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a> <br>
+				This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+
+		<div id="content" class="container-fluid" tabindex="-1">
+			<div id="pagination">
+
+	
+		<a href="/travels/2024-02-24-Lonely_Travels_24_Feb_2024_Roma,_Bacoor,_Cavite.html">⎗ Previous</a>
+	
+
+	
+
+	
+	
+	<a href="https://arden-chan.party/blog/travels.html">⤴ Back to list</a>
+
+</div>
+
+
+
+
+
+
+
+<h2 >Lonely Travels: [07x08 Feb 2024] Hotel Sogo Macapagal, Parañaque</h2>
+<div style="font-size: x-small;">Posted on: 16 Apr 2024 20:30:00 PST</div>
+
+
+
+
+
+
+<div style="font-size: x-small;">Categories:
+	
+	<span class="badge bg-secondary">Travels</span>
+	
+</div>
+
+
+
+<div style="font-size: x-small;">Tags:
+	
+	<span class="badge bg-secondary">Hotel Sogo Macapagal</span>
+	
+	<span class="badge bg-secondary">Parañaque</span>
+	
+</div>
+
+
+<br/>
+
+<div >
+	
+<p><strong><abbr title="too long; didn't read">tl;dr</abbr></strong>:</p>
+<ul>
+  <li>Hotel Sogo Macapagal branch is a nice hotel if you are on a budget.</li>
+  <li>Ask reception to freshen up the room if you don’t like the smell of <dfn title="British English: cigarettes">fags</dfn>.</li>
+</ul>
+
+<p>Expenses:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Price, <a href="https://en.wikipedia.org/wiki/Philippine_peso">₱</a></th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Executive Room, 10 hours</td>
+      <td>1210.00</td>
+      <td>Weekday rate</td>
+    </tr>
+    <tr>
+      <td>Grilled Ham and Cheese, 2pcs</td>
+      <td>270.00</td>
+      <td>135.00/pc</td>
+    </tr>
+    <tr>
+      <td>Cold Milo</td>
+      <td>45.00</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Hot Coffee, 3 in 1</td>
+      <td>45.00</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mineral Water, 500ml</td>
+      <td>35.00</td>
+      <td> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td>1605.00</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<p>I needed to go home to Cavite on 08 Feb, while at the same time wanting to try <a href="https://www.facebook.com/AsiatelBacoor/">Asiatel Bacoor</a>. So I started cycling around 21:00 from Mandaluyong. It was nice going, and arrived at <a href="https://en.wikipedia.org/wiki/Para%C3%B1aque_Integrated_Terminal_Exchange">Parañaque Integrated Terminal Exchange</a> (PITX) by 22:00. However, I got afraid while cycling through Las Piñas Parañaque Wetland Park as it was all dark, so I turned around and decided to stay in Hotel Sogo nearby.</p>
+
+<p>This Hotel Sogo branch is one of their newest branches as of February 2024. Their <a href="https://www.facebook.com/HotelSogoOfficialPage/posts/visit-our-newly-opened-macapagal-branch-to-enjoy-a-50-discount-on-all-room-rates/10159166428303920/">Facebook</a>, <a href="https://twitter.com/HotelSogo/status/1542344413908652033">X</a>, and <a href="https://www.youtube.com/watch?v=dM7kMqrLcAg">YouTube</a> posts indicate that this branch opened on June 2022. It is located just beside PITX, which is convenient for travelers and backpackers. Don’t expect too much though, as Hotel Sogo is a budget hotel, with Google saying it’s a 3-star.</p>
+
+<p>Anyway, time to check in. They gave me room Executive 320, and even allowed my bicycle in the room.</p>
+
+<script>
+$(function() {
+	$("#room .carousel-indicators button").first().addClass('active')
+	$("#room .carousel-item").first().addClass('active')
+})
+</script>
+
+<div id="room" class="carousel slide" style="margin: auto">
+	<div class="carousel-indicators">
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="0" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="1" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="2" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="3" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="4" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="5" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="6" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="7" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="8" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="9" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="10" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="11" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#room" data-bs-slide-to="12" aria-label=""></button>
+		
+	</div>
+	<div class="carousel-inner">
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src="https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-front.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+					<div class="carousel-caption text-white bg-dark" style="opacity: 0.8">Executive Room 320</div>
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-01.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-02.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-03.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-04.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-05.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-06.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-07.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-08.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-09.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-10.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-11.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/room-inside-12.jpg " style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#room" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#room" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div>
+
+<p>As with all Hotel Sogo branches, they provide you with basic amenities like soap and shampoo, hair blower and a safe to put your valuables. There is free Internet, and you can also avail a massage.</p>
+
+<script>
+$(function() {
+	$("#amenities .carousel-indicators button").first().addClass('active')
+	$("#amenities .carousel-item").first().addClass('active')
+})
+</script>
+
+<div id="amenities" class="carousel slide" style="margin: auto">
+	<div class="carousel-indicators">
+		
+			<button type="button" data-bs-target="#amenities" data-bs-slide-to="0" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#amenities" data-bs-slide-to="1" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#amenities" data-bs-slide-to="2" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#amenities" data-bs-slide-to="3" aria-label=""></button>
+		
+	</div>
+	<div class="carousel-inner">
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src="https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/amenities-01.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/amenities-02.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/amenities-03.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/amenities-05.jpg " style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#amenities" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#amenities" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div>
+
+<p>Apparently, you can also connect your phone to this port to “amplify your music”. Perhaps there are hidden speakers in the room which will blare your crigy playlist through USB. I didn’t try though.</p>
+
+<p><img src="https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/amenities-04.jpg" alt="" /></p>
+
+<p>It seems that rooms smelling of cigarettes is quite the norm in Hotel Sogo, as I have experienced the same in my <a href="https://arden-chan.party/travels/2023-03-16-Lonely_Travels-27-28_Jan_2023_Manila_Tour_Manila_Zoo_Sogo_Malate_and_more.html">Manila Zoo trip</a>. I raised it to reception; room service sprayed air freshener around the room which made the smell tolerable.</p>
+
+<p>After taking a bath, I wanted to eat something. As with all Hotel Sogo branches, one can order food. They even have a 10-minute guarantee, wherein your food is free if it does not arrive within 10 minutes, though you will have to report it.</p>
+
+<script>
+$(function() {
+	$("#menu .carousel-indicators button").first().addClass('active')
+	$("#menu .carousel-item").first().addClass('active')
+})
+</script>
+
+<div id="menu" class="carousel slide" style="margin: auto">
+	<div class="carousel-indicators">
+		
+			<button type="button" data-bs-target="#menu" data-bs-slide-to="0" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#menu" data-bs-slide-to="1" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#menu" data-bs-slide-to="2" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#menu" data-bs-slide-to="3" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#menu" data-bs-slide-to="4" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#menu" data-bs-slide-to="5" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#menu" data-bs-slide-to="6" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#menu" data-bs-slide-to="7" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#menu" data-bs-slide-to="8" aria-label=""></button>
+		
+	</div>
+	<div class="carousel-inner">
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src="https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/menu-01.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/menu-02.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/menu-03.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/menu-04.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/menu-05.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/menu-06.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/menu-07.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/menu-08.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/menu-09.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#menu" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#menu" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div>
+
+<p>I ordered Grilled Ham and Cheese and cold Milo as a late night snack.</p>
+
+<script>
+$(function() {
+	$("#meal01 .carousel-indicators button").first().addClass('active')
+	$("#meal01 .carousel-item").first().addClass('active')
+})
+</script>
+
+<div id="meal01" class="carousel slide" style="margin: auto">
+	<div class="carousel-indicators">
+		
+			<button type="button" data-bs-target="#meal01" data-bs-slide-to="0" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#meal01" data-bs-slide-to="1" aria-label=""></button>
+		
+			<button type="button" data-bs-target="#meal01" data-bs-slide-to="2" aria-label=""></button>
+		
+	</div>
+	<div class="carousel-inner">
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src="https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/meal-01-grilled-ham-and-cheese-cold-milo.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/meal-01-grilled-ham-and-cheese.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+					<div class="carousel-caption text-white bg-dark" style="opacity: 0.8">Grilled Ham and Cheese</div>
+				
+			</div>
+		
+			
+			
+			
+			<div class="carousel-item">
+				
+					<img src=" https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/meal-01-cold-milo.jpg" style="margin:auto" class="d-block" alt="" />
+				
+				
+					<div class="carousel-caption text-white bg-dark" style="opacity: 0.8">Cold Milo as served</div>
+				
+			</div>
+		
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#meal01" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#meal01" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div>
+
+<p>I managed to sleep afterwards, albeit lightly.</p>
+
+<p>I got up around 04:00 the next day, and tried walking around the hotel grounds. There was not much to see aside from parked taxis and the dark road and sidewalk. It was not quiet nor serene, as there are vehicles going to and fro even during this time.</p>
+
+<p>Going back to the hotel, I ordered Grilled Ham and Cheese (again), hot coffee, and a bottle of water.</p>
+
+<p><img src="https://arden-chan.party/assets/images/2024-04-16-Lonely_Travels_07x08_Feb_2024_Sogo_Parañaque/meal-02-grilled-ham-and-cheese-hot-coffee-bottled-water.jpg" alt="" /></p>
+
+<p>By 06:00 I was able to check out of the hotel without issues.</p>
+
+<p>I still have to pedal my way to Dasmariñas, so I guess I’ll go now.</p>
+
+</div>
+
+Want to comment? <a href="mailto:lets-talk@arden-chan.party" title="email">Send an email.</a>
+
+		</div>
+
+	</div>
+</div>
+
+<div class="modal fade" id="settings_modal" tabindex="-1" aria-labelledby="modal_lbl" aria-hidden="true" style="z-index:10000">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="modal_lbl">UI Settings</h5>
+		  &nbsp;<a class="toggle_note" data-target="#localStorage_note" href="#" style="font-size: x-small;">toggle note</a>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<div id="localStorage_note" class="alert alert-warning">
+				This uses the localStorage API to store your customisations. This means that:
+				<ul>
+					<li>No data will be saved if your browser does not support the localStorage API.</li>
+					<li>When you change browsers, switch to Incognito mode, or clear your browser's data, all of your customisations will be gone.</li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div>How to open links: (Samples: <a href="https://arden-chan.party/faq.html">internal</a>, <a href="https://example.com/">external</a>)
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_in_same_tab" id="op1">
+					<label class="form-check-label" for="op1">Open all links in same tab (default)</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_int_same_tab_ext_other_tab" id="op2">
+					<label class="form-check-label" for="op2">Open internal links in same tab but open external ones in another tab</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_other_tab" id="op3">
+					<label class="form-check-label" for="op3">Open all links in separate tabs</label>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+</body>
+</html>
