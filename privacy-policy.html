@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Arden's Corner</title>
+	<base href="https://arden-chan.party">
+
+	<link rel="shortcut icon" href="/assets/images/favicon.png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/darkly.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/theme.dark.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/jquery.tablesorter.pager.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/custom.css">
+
+	<!-- JS -->
+	<script src="https://arden-chan.party/assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/jquery.hotkeys.js"></script>
+	<script src="https://arden-chan.party/assets/js/bootstrap.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.widgets.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/extras/jquery.tablesorter.pager.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/custom.js"></script>
+	<script src="https://arden-chan.party/assets/js/kbd_shortcuts.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+<div class="wrapper">
+	<!-- Header navbar-expand-lg -->
+	<div id="topbar" class="navbar navbar-dark bg-primary">
+	<div class="float-left">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="https://arden-chan.party">🏠 Arden's Corner</a>
+	</div>
+	<div id="search_div" class="float-right me-3">
+		<div class="input-group">
+			<input class="form-control" id="site_search" type="search" placeholder="Search [Ctrl+Alt+Shift+S]">
+			<button id="settings" class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#settings_modal">⚙</button>
+		</div>
+		<div id="site_search_results" class="bg-secondary"></div>
+	</div>
+</div>
+
+	<div id="container">
+		<!-- Sidebar -->
+		<div class="navbar-collapse collapse navbar-toggleable-md navbar navbar-dark bg-secondary" id="sidebar" >
+
+			<div>
+			
+				<span class='links-header'>🖦 IlokoSoft</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/agsao.html" title="Passphrase Generator">Agsao</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/basaem.html" title="Read Random Articles">Basaem</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/relos.html" title="Picture Clock">Relos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>📋 Other Projects</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/amazfitbip_watchface" title="">Amazfit Bip Watch Faces</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/common_unicode_chars" title="">Common Unicode Characters</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/public_file_repos" title="Public file repositories.">Public File Repos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>🎉 Fun Stuff</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/faq" title="">Q&A</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/resume" title="">Résumé</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/blog" title="Let the cringe flow">Blog</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>▶ YouTube</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ" title="Cringe TV">Main</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSFPCZew2ed5M9DFOv8RigO" title="Finding Revali">Birding</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSQDK6RwqEreCiRK_oZTfye" title="Companion, Avian Offering">Superworms</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>➹ External Links</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://ko-fi.com/Z8Z133PAX" title=""><img height='36' style='border:0px;height:2em' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' alt='Buy Me a Coffee at ko-fi.com'></a></li>
+						
+					
+						
+							<li><a href="https://unicode.org/resources/fonts.html" title="You might need this if you cannot see all characters or words properly">Unicode Fonts</a></li>
+						
+					
+						
+							<li><a href="https://fonts.google.com/noto" title="Quick fix for missing fonts">Google Noto Fonts</a></li>
+						
+					
+						
+							<li><a href="https://symbl.cc/en/" title="SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, and the entire UNICODE">Search Unicode for characters</a></li>
+						
+					
+				</ul>
+			
+			</div>
+
+			<hr>
+			<div id="copyright">
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a> <br>
+				This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+			<div><a href="https://arden-chan.party/privacy-policy">Privacy Policy</a></div>
+		</div>
+
+		<div id="content" class="container-fluid" tabindex="-1">
+			<h1 id="privacy-policy">Privacy Policy</h1>
+<p><small>Last updated: 28 April 2024.</small></p>
+
+<p>Thank you for visiting my website and/or using my software. This website might collect information from VISITORS, either actively or passively. Below are details on what is being collected, how those data are being used, if they are being shared, and takedown procedures if YOU wish to remove them.</p>
+
+<h2 id="terminologies">Terminologies</h2>
+
+<p>Please keep in mind the following terms that is used in this document, and how they are meant to be interpreted.</p>
+<ul>
+  <li><strong>OWNER</strong>: the person that owns this website.</li>
+  <li><strong>VISITOR, VISITORS</strong>: person/s or entity/ies that uses the website through a software application (e.g., a web browser). They might just passively read the site’s contents or interact with it by using form controls or web applications that the OWNER built.</li>
+  <li><strong>YOU, YOUR</strong>: synonymous to VISITOR.</li>
+</ul>
+
+<h2 id="what-is-being-collected">What is Being Collected</h2>
+<p>The following sections enumerate the personal information this website collects, explicitly or accidentally.</p>
+
+<h3 id="information-actively-given-by-visitors-to-the-website">Information Actively Given by VISITORS to the Website</h3>
+<p>This website has blog entries VISITORS can peruse at their leisure. VISITORS are encouraged to comment on posts by <a href="mailto:lets-talk@arden-chan.party">sending an email</a> to the site owner, after which the OWNER decides whether or not to post it on the site. When sending emails to the OWNER, a VISITOR might share personal information, such as their name (full or in part), social media handles, etc. VISITORS might also on their own accord share personal information of other VISITORS or third parties.</p>
+
+<p>This website has a <a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ">companion YouTube channel</a> where VISITORS may post comments. When commenting, VISITORS might share personal information with the OWNER, such as their name (full or in part), social media handles, etc. VISITORS might also on their own accord share personal information of other VISITORS or third parties.</p>
+
+<p>This website also hosts software programs VISITORS can interact with. VISITORS can inadvertently give personal information, either their own or others’, when interacting with the software.</p>
+
+<p>Information actively given by VISITORS to the website are assumed to have been given willingly to the OWNER.</p>
+
+<h3 id="information-actively-collected-by-the-owner">Information Actively Collected by the OWNER</h3>
+<p>Some information may be actively gathered by the OWNER when creating blog posts, vlogs, computer programs, or other digital and/or physical assets. These information may have been collected explicitly (e.g., if the OWNER is writing about a specific topic) or accidentally (e.g., a photobomber in a photograph).</p>
+
+<h3 id="information-passively-collected-by-the-website">Information Passively Collected by the Website</h3>
+<p>The act of perusing this website might cause personal information to be shared to the website. Most common ones, but not limited to, are IP addresses, cookies, and User-Agent data.</p>
+
+<h2 id="how-is-your-information-being-used">How is YOUR Information Being Used</h2>
+<p>Information shared by VISITORS to the website, whether actively or passively, may be used by the OWNER for activities like, but not limited to, writing blog entries, producing vlogs, as inputs into software programs, and producing digital and/or physical assets.</p>
+
+<p>For software programs authored by the OWNER, information may be possibly stored into a database, cookie, or localStorage. Stored or provided information might also be used by programs to accomplish their intended purpose.</p>
+
+<h2 id="is-your-information-being-shared">Is YOUR Information Being Shared?</h2>
+<p>As of 28 April 2024, this website and the OWNER DO NOT explicitly share information to any third party.</p>
+
+<p>It might be prudent to be aware of third parties used by the OWNER to maintain the website and keep potential businesses functioning properly.</p>
+
+<h3 id="github-pages">Github Pages</h3>
+<p>This website is hosted on Github Pages, which may collect personal information from YOU like IP Addresses and cookies while YOU browse. Github’s Privacy Policies can be found <a href="https://docs.github.com/en/site-policy/privacy-policies">here</a>.</p>
+
+<h3 id="ko-fi">Ko-fi</h3>
+<p>VISITORS can give donations to the OWNER through Ko-fi, specifically through <a href="https://ko-fi.com/garuruchan">this link</a>. Their logo is also being downloaded from their <a href="https://en.wikipedia.org/wiki/Content_delivery_network">CDN</a> while YOU browse. Ko-fi’s Privacy Policies can be found <a href="https://more.ko-fi.com/privacy">here</a>.</p>
+
+<h3 id="creative-commons">Creative Commons</h3>
+<p>Unless specifically indicated, this website (including this Privacy Policy!) is released under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Their logo is also being downloaded from their <a href="https://en.wikipedia.org/wiki/Content_delivery_network">CDN</a> while YOU browse. Their Privacy Policy can be found <a href="https://creativecommons.org/privacy/">here</a>.</p>
+
+<h3 id="youtube-and-google-drive">YouTube and Google Drive</h3>
+<p>This website has a <a href="https://drive.google.com/drive/u/1/folders/18_tU9Jg2IP2wFvxjmXRewRkCbmaxG14G">companion public file repository</a> wherein VISITORS can peruse and download items. This file repository is hosted on Google Drive.</p>
+
+<p>This website has a <a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ">companion YouTube channel</a> where video clips are hosted. Videos from that channel may be embedded or referenced in posts or programs.</p>
+
+<p>Google’s Privacy Policies can be found <a href="https://policies.google.com/privacy">here</a>.</p>
+
+<h3 id="other-third-party-links-and-embeds">Other Third-Party Links and Embeds</h3>
+<p>This website might have referenced content from other sites, which might collect YOUR personal information when YOU visit them. The VISITOR is encouraged to seek and read these websites’ privacy policies.</p>
+
+<h2 id="information-removal">Information Removal</h2>
+<p>If you think some or all of YOUR information needs to be updated or removed on this website, YOU may <a href="mailto:lets-talk@arden-chan.party">send an email request</a> to the OWNER asking for such information to be updated or removed. Please be as detailed as possible in your request; for example, which image from a specific post.</p>
+
+<p>The OWNER will do his best to act on the request. Do note that since this is being maintained by a one-man team, removal might not be as swift or as thorough as YOU would like.</p>
+
+<p>The OWNER requests YOU to be cordial in these emails.</p>
+
+<p>For third parties, the OWNER has no control over their information collection procedures. Thus, the OWNER encourages VISITORS to familiarise themselves to the third parties’ information takedown procedures. Listed below are the takedown procedure links to the entities explicitly mentioned <a href="/privacy-policy#is-your-information-being-shared">above</a>.</p>
+
+<ul>
+  <li>Github: <a href="https://docs.github.com/en/site-policy/content-removal-policies">https://docs.github.com/en/site-policy/content-removal-policies</a></li>
+  <li>Ko-fi: <a href="https://more.ko-fi.com/privacy">https://more.ko-fi.com/privacy</a>, search for “deletion”, “data removal”, or other variants.</li>
+  <li>Creative Commons: According to their <a href="https://creativecommons.org/privacy/">Privacy Policy</a>, YOU may email them at  legal@creativecommons.org detailing YOUR concerns.</li>
+  <li>Google: <a href="https://policies.google.com/privacy#inforetaining">https://policies.google.com/privacy#inforetaining</a></li>
+</ul>
+
+<h2 id="updates-to-the-privacy-policy">Updates to the Privacy Policy</h2>
+<p>The OWNER reserves the rights to update this Privacy Policy at any time. Any changes to the Privacy Policy will be posted here. VISITORS are encouraged to monitor this page to be informed of any changes.</p>
+
+<hr />
+<p>Update History</p>
+<ul>
+  <li>2024 Apr 28 - Initial version.</li>
+</ul>
+
+		</div>
+
+	</div>
+</div>
+
+<div class="modal fade" id="settings_modal" tabindex="-1" aria-labelledby="modal_lbl" aria-hidden="true" style="z-index:10000">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="modal_lbl">UI Settings</h5>
+		  &nbsp;<a class="toggle_note" data-target="#localStorage_note" href="#" style="font-size: x-small;">toggle note</a>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<div id="localStorage_note" class="alert alert-warning">
+				This uses the localStorage API to store your customisations. This means that:
+				<ul>
+					<li>No data will be saved if your browser does not support the localStorage API.</li>
+					<li>When you change browsers, switch to Incognito mode, or clear your browser's data, all of your customisations will be gone.</li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div>How to open links: (Samples: <a href="https://arden-chan.party/faq.html">internal</a>, <a href="https://example.com/">external</a>)
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_in_same_tab" id="op1">
+					<label class="form-check-label" for="op1">Open all links in same tab (default)</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_int_same_tab_ext_other_tab" id="op2">
+					<label class="form-check-label" for="op2">Open internal links in same tab but open external ones in another tab</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_other_tab" id="op3">
+					<label class="form-check-label" for="op3">Open all links in separate tabs</label>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+</body>
+</html>
