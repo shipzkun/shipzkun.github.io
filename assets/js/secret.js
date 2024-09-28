@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 		key = $("input[name=key]").val();
 		plain = decrypt(cipher, key);
-		console.log(plain);
+		// console.log(cipher, key, plain);
 
 		if (typeof plain == 'undefined') {
 			alert("Wrong key provided!")
