@@ -1,0 +1,21 @@
+Current workng setup:
+- jekyll 4.3.4
+- Ruby gems installed via Arch's pacman:
+	- ruby-ffi
+	- ruby-erb
+	- ruby-maruku
+	- ruby-nokogiri
+	- ruby-racc
+	- ruby-rb-inotify
+	- ruby-sass
+	- ruby-webrick
+- If you want to `bundle install` in Arch, you might want to **temporarily** grant write access to the `others` group of the following folders. Return them to `755` afterwards to avoid pacman complaining.
+	- /usr/bin
+	- /usr/lib/ruby/gems/3.3.0/\
+- For `encrypt`:
+	- Original code: https://github.com/xct/jekyll-encrypt
+	- We are moving away to its original implem due to jekyll install complications in Arch Linux
+	- Current rb is in `_plugins/encrypt2.rb`, tested working in ruby 3.3.5 and jekyll 4.3.4
+	- Also see this for workaround in post.content: https://github.com/jekyll/jekyll/issues/4714#issuecomment-224494030
+- Jekyll is quite hard to debug, so be prepared for headaches
+

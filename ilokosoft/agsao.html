@@ -191,6 +191,12 @@ $(function() {
 			"url": "https://arden-chan.party/assets/wordlists/tl_uniq.txt"
 		},
 		
+		"site_words": {
+			"name": "Words from this website",
+			"desc": "Words scraped from this website",
+			"url": "https://arden-chan.party/assets/wordlists/site_words.txt"
+		},
+		
 	}
 
 
@@ -236,6 +242,15 @@ $(function() {
         $("span[id^=v_]").hide();
         $("#final_phrase_err").hide();
 
+		let btn_gen_set_ongoing = function() {
+			$("input[value^=Generat]").val("Generating...").prop("disabled", true)
+		}
+		let btn_gen_set_active = function() {
+			$("input[value^=Generat]").val("Generate").prop("disabled", false)
+		}
+
+		btn_gen_set_ongoing()
+
         // get form vals
 		let opts = {
 		 	wordlists : $('[name=wordlists]:checked').map(function(){return this.value.trim();}).get(),
@@ -262,6 +277,7 @@ $(function() {
 		let werr = validate_wordlists(opts.wordlists);
 		if (werr) {
 			$("#v_wordlists").text(werr).show();
+			btn_gen_set_active()
 			return;
 		}
 
@@ -291,6 +307,7 @@ $(function() {
             if (errors.phraselen_min) $("#v_plen_min").text(errors.phraselen_min).show();
             if (errors.phraselen_max) $("#v_plen_max").text(errors.phraselen_max).show();
             if (errors.min_entropy_bits) $("#v_min_ent_bits").text(errors.min_entropy_bits).show();
+			btn_gen_set_active()
             return;
         }
 
@@ -305,7 +322,7 @@ $(function() {
         		$("#final_phrase #span_plen").text(phrase.data.phrase.length);
 				$("#final_phrase").show();
         	}
-        });
+        }).finally(btn_gen_set_active)
     });
 });
 
@@ -319,6 +336,8 @@ Select wordlist:<br />
 <div class="form-check"><label class="form-check-label" title="Words scraped from the Ilocano Wikipedia" style="border-bottom: 1px dotted"><input class="form-check-input" type="checkbox" name="wordlists" value="ilo_uniq" />Words from Ilocano Wikipedia</label></div>
 
 <div class="form-check"><label class="form-check-label" title="Words scraped from the Filipino Wikipedia" style="border-bottom: 1px dotted"><input class="form-check-input" type="checkbox" name="wordlists" value="tl_uniq" />Words from Filipino Wikipedia</label></div>
+
+<div class="form-check"><label class="form-check-label" title="Words scraped from this website" style="border-bottom: 1px dotted"><input class="form-check-input" type="checkbox" name="wordlists" value="site_words" />Words from this website</label></div>
 
 <span class="text text-danger" id="v_wordlists" style="display:none"></span>
 <br />

@@ -49,17 +49,37 @@ $(function() {
 	);
 
 	$("body").on("click", ".btn-copy", function() {
+		let isIOS = navigator.userAgent.match(/Macintosh|Safari|AppleWebKit/i)
+
 		let btn_parent = $(this).parent();
 		let text = $(this).siblings('.cp-text').text();
-		navigator.clipboard.writeText(text).then(function() {
-			let info = $('<span class="text text-info">Copied!</span>');
-			$(btn_parent).append(info);
-			$(info).fadeOut(1000, function() {$(this).remove();});
-		}, function(err) {
-			let info = $('<span class="text text-danger">Cannot copy!</span>');
-			$(btn_parent).append(info);
-			$(info).fadeOut(1000, function() {$(this).remove();});
-		});
+
+		let flash_success = function() {
+			let info = $('<span class="text text-info">Copied!</span>')
+			$(btn_parent).append(info)
+			$(info).fadeOut(1000, function() {$(this).remove()})
+		}
+		let flash_error = function(err) {
+			let info = $('<span class="text text-danger">Cannot copy! Error: '+err+'</span>')
+			$(btn_parent).append(info)
+			$(info).fadeOut(1000, function() {$(this).remove()})
+		}
+
+		if (isIOS) {
+			let textarea = document.createElement('textarea')
+			textarea.value = text
+			document.body.appendChild(textarea)
+			let range = document.createRange()
+			range.selectNodeContents(textarea)
+			let selection = window.getSelection()
+			selection.removeAllRanges()
+			selection.addRange(range)
+			textarea.setSelectionRange(0, Number.MAX_SAFE_INTEGER)
+			document.execCommand('copy') ? flash_success() : flash_error()
+			document.body.removeChild(textarea)
+		} else {
+			navigator.clipboard.writeText(text).then(flash_success, flash_error);
+		}
 	});
 
 	$(".tablesorter").tablesorter({

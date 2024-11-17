@@ -209,7 +209,13 @@ class Agsao {
 		let opts = this.#configs
 
 		// closures we'll use here
-		let rand =  function(start, end) {return Math.floor(Math.random() * end) + 1;}
+		let rand =  function(start, end) {
+			let byteArray = new Uint32Array(1);
+
+			window.crypto.getRandomValues(byteArray);
+			let randno = byteArray[0] / (0xffffffff + 1);
+			return Math.floor(randno * (end - start + 1)) + start;
+		}
 		const ucfirst = ([first, ...rest], locale = navigator.language) => first.toLocaleUpperCase(locale) + rest.join('');
 		let insertChar = function (str, c, pos) {
 	        switch (pos) {
