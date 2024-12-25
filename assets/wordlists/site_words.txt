@@ -5718,6 +5718,7 @@ highly
 highly-interconnected
 higit
 higure
+hihingi
 hijack
 hikari
 hild
@@ -6446,6 +6447,7 @@ interests
 interet
 interface
 interior
+interlude
 intermedia
 intermediate
 intermittently
@@ -6715,6 +6717,7 @@ ivkrfxqq
 ivnzg
 ivv
 iwaglit
+iwasan
 iwxblg
 iwxnws
 iya't
@@ -7355,6 +7358,7 @@ kwela
 kwenta
 kwento
 kwzakz
+kxppb
 kyl
 kym-assets
 kym-cdn
@@ -7379,6 +7383,7 @@ lacks
 laden
 lady
 lagay
+lagi
 laging
 lagot
 lagyan
@@ -8430,6 +8435,7 @@ malls
 malubhang
 malunas-lunasan
 malungkot
+maluwalhati
 malware
 malware-friendly
 malware-laden
@@ -8558,6 +8564,7 @@ mapataas
 mapatay
 mapatunayan
 maperahan
+mapikon
 mapipirata
 maps
 mapua
@@ -8726,6 +8733,7 @@ mayabong
 mayaman
 mayan
 mayang
+maybahay
 maybe
 maybes
 maykapal
@@ -8954,6 +8962,7 @@ mins
 minsam
 minsan
 minsang
+minstrels
 mint
 minus
 minute
@@ -9324,6 +9333,7 @@ nage
 nagging
 naghahanap
 naghahangad
+naghari
 naghihintay
 naghuhubad
 nagiging
@@ -9553,6 +9563,7 @@ nama'y
 namam
 namamalimos
 namamansin
+namamasko
 naman
 namanang
 namang
@@ -10433,6 +10444,7 @@ outputs
 outrage
 outrageous
 outright
+outro
 outside
 outsider-mp
 outwit
@@ -10615,6 +10627,7 @@ pagmamahalan
 pagod
 pagos
 pagpapakalat
+pagparito
 pagpaskil
 pagpasok
 pagpatak
@@ -10646,6 +10659,7 @@ pagtitipid
 pagtripan
 pagtulong
 pagyaman
+pahalagahan
 pahayagan
 pahina
 pahinang
@@ -10715,6 +10729,7 @@ pambobo
 pamilya
 pamilya'ng
 pamilya't
+pamilya'y
 pamilyang
 pamilyar
 paminsan-minsan
@@ -10759,6 +10774,7 @@ pangalang
 pangarap
 pangasinan
 panghampas
+panghihingi
 pangit
 pangkat
 pangmatandang
@@ -10880,6 +10896,7 @@ pasensya
 pasimpleng
 paskil
 pasko
+paskong
 pasok
 pasosyal
 pass
@@ -11062,6 +11079,7 @@ pertinent
 peruse
 perusing
 peruvian
+perwisyo
 pesky
 peso
 pesos
@@ -12667,6 +12685,7 @@ saint's
 sainyo
 saka
 sakahan
+sakaling
 sakay
 sake
 sakit
@@ -12723,6 +12742,7 @@ sangay
 sanggol
 sangkap
 sangkot
+sanhi
 sanity
 sans-serif
 santa
@@ -14647,6 +14667,7 @@ tide
 tiebiuy
 tied
 ties
+tifp
 tigas
 tight
 tightly
