@@ -49,7 +49,7 @@ $(function() {
 	);
 
 	$("body").on("click", ".btn-copy", function() {
-		let isIOS = navigator.userAgent.match(/Macintosh|Safari|AppleWebKit/i)
+		let isIOS = navigator.platform.indexOf('Mac') > -1
 
 		let btn_parent = $(this).parent();
 		let text = $(this).siblings('.cp-text').text();
@@ -103,25 +103,7 @@ $(function() {
 	// search for website content
 	$("#site_search").on('input', delay(function(e){
 		let filter_urls = function() {
-			let matches = []
-			for (let i in SITEMAP) {
-				let url = SITEMAP[i].url.toLowerCase()
-				let title = SITEMAP[i].title.toLowerCase()
-				let label = SITEMAP[i].label.toLowerCase()
-				let categories = SITEMAP[i].categories.toLowerCase().replaceAll('|',' ')
-				let tags = SITEMAP[i].tags.toLowerCase().replaceAll('|',' ')
-
-				if (url.indexOf(filter) > -1 ||
-					title.indexOf(filter) > -1 ||
-					label.indexOf(filter) > -1 ||
-					categories.indexOf(filter) > -1 ||
-					tags.indexOf(filter) > -1
-				) {
-					matches = matches.concat(SITEMAP[i])
-				}
-			}
-
-			return matches
+			return SITEMAP[filter]
 		}
 
 		let show_matches = function(matches, errmsg) {
@@ -135,36 +117,40 @@ $(function() {
 				return
 			}
 
-			if (matches == null || matches.length == 0) {
+			if (matches == null || matches.count == 0) {
 				$("#site_search_results").append("<div>No results found.</div>").show()
+				$("#site_search_results_num").hide()
 				return
 			}
 
+			$("#site_search_results_num").text('; '+Object.keys(matches.sites).length +' found').show()
+
 			$("#site_search_results").append('<ul>')
-			for (let i in matches) {
+			for (let i in matches.sites) {
+				let url = i
+				let inf = matches.sites[url]
+
 				let cats = '';
 				let tags = '';
 				let labl = '';
 
-				if (matches[i].label.length > 0) {
-					labl += make_badge(highlight(filter, matches[i].label), 'label')+' '
+				if (inf.label.length > 0) {
+					labl += make_badge(highlight(filter, inf.label), 'label')+' '
 				}
 
-				if (matches[i].categories.length > 0) {
-					let rcats = matches[i].categories.split('|')
-					for (let j in rcats) {
-						cats += make_badge(highlight(filter, rcats[j]), 'category')+' '
+				if (inf.categories != null && inf.categories.length > 0) {
+					for (let j in inf.categories) {
+						cats += make_badge(highlight(filter, inf.categories[j]), 'category')+' '
 					}
 				}
 
-				if (matches[i].tags.length > 0) {
-					let rtags = matches[i].tags.split('|')
-					for (let j in rtags) {
-						tags += make_badge(highlight(filter, rtags[j]), 'tag')+' '
+				if (inf.tags != null && inf.tags.length > 0) {
+					for (let j in inf.tags) {
+						tags += make_badge(highlight(filter, inf.tags[j]), 'tag')+' '
 					}
 				}
 
-				let entry = '<li><a class="dropdown-item" href="'+matches[i].url+'" tabindex=0>'+highlight(filter, matches[i].title)
+				let entry = '<li><a class="dropdown-item" href="'+url+'" tabindex=0>'+highlight(filter, inf.title)
 				if (cats.length > 0 || tags.length > 0) {
 					entry += '<br/>'+labl+cats+tags
 				}
@@ -172,6 +158,7 @@ $(function() {
 
 				$("#site_search_results ul").append(entry)
 			}
+
 			update_links(get_setting(SETTING_LINKS_HANDLING))
 			$("#site_search_results").show()
 		}
@@ -184,6 +171,8 @@ $(function() {
 			return
 		}
 
+		$("#site_search_results").prepend("<i style='font-size: x-small; position: sticky; top:0; opacity: 0.8' class='bg-secondary'>[Escape] to dismiss<span id='site_search_results_num' style='display:none'>; N found</span></i>")
+
 		filter = filter.trim().toLowerCase()
 
 		if (SITEMAP == null) {
@@ -193,7 +182,6 @@ $(function() {
 		} else {
 			show_matches(filter_urls())
 		}
-		$("#site_search_results").prepend("<i style='font-size: x-small; position: sticky; top:0; opacity: 0.8' class='bg-secondary'>[Escape] to dismiss</i>")
 	}, 600))
 
 
@@ -223,37 +211,7 @@ $(function() {
 
 		$(target).toggle()
 	})
-
-	// populate the recent updates list
-	let recent_updates_list = $("#recent_updates")
-	if (recent_updates_list.length != 0) {
-		if (SITEMAP == null) {
-			load_site_pagelist(populate_recent_updates_list)
-		} else {
-			populate_recent_updates_list()
-		}
-	}
 });
-
-function populate_recent_updates_list() {
-	let data = SITEMAP
-	data.sort((a,b) => {
-		d1 = new Date(a.date)
-		d2 = new Date(b.date)
-		return (d1 <= d2 ? 1 : -1)
-	})
-	for (let i = 0; i < RECENT_UPDATES_LIMIT; i++) {
-		let d = data[i].date.replace('T', ' ').replace('+08:00', ' PST')
-		$("#recent_updates").append("<li style='list-style:none'>"+
-			make_badge(data[i].label, "category")+
-			" <a href='"+data[i].url+"'>"+
-				data[i].title+
-			"</a> "+
-			"<span style='font-size: xx-small'>"+d+"</span>"+
-			"</li>"
-		)
-	}
-}
 
 // function that can be used to delay things
 function delay(callback, ms) {
@@ -352,7 +310,7 @@ function storageAvailable(type) {
 }
 
 function load_site_pagelist(callback) {
-	let sitemap_url = $("base").attr('href')+"/links.json";
+	let sitemap_url = $("base").attr('href')+"/assets/wordlists/site_index.json";
 	$.get(sitemap_url, {}, function(data) {
 		SITEMAP = data
 		if (typeof callback == 'function') {
