@@ -19,6 +19,7 @@ aaminin
 aanalisahin
 aanhin
 aaralin
+aasahan
 aasaming
 aatras
 aauthor
@@ -8005,6 +8006,7 @@ maaabutan
 maaari
 maaaring
 maaarte
+maaasahan
 maadik
 maaga
 maalaala
