@@ -447,6 +447,7 @@ among
 amongst
 amount
 amounts
+amoy
 amp
 amplify
 amputations
@@ -7173,6 +7174,7 @@ kids
 kikomachine
 kilala
 kilalang
+kilikili
 kill
 killer
 killing
@@ -8020,6 +8022,7 @@ mababang
 mababansagan
 mababansagang
 mabagal
+mabahong
 mabait
 mabalitaan
 mabasa
@@ -9509,6 +9512,7 @@ nakamamatay
 nakamtan
 nakapag-aral
 nakapagtapos
+nakapako
 nakapasa
 nakapasa't
 nakapasok
