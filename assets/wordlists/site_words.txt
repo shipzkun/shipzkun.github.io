@@ -110,6 +110,7 @@ achieve
 achieved
 aching
 ackers
+acknowledged
 acodec
 acquire
 acquired
@@ -164,6 +165,7 @@ ades
 adgerlinux
 adik
 adjacent
+adjoining
 adjtw
 adjusted
 adjustment
@@ -191,6 +193,7 @@ adopting
 adoption
 ads
 adult
+adulterate
 adulterated
 adults
 advance
@@ -429,6 +432,7 @@ amenities
 america
 american
 americanchronicle
+americano
 amerika
 amerikano
 amerikanong
@@ -915,6 +919,7 @@ avg
 avi
 aviary
 avid
+avida
 avoid
 avsrr
 awa
@@ -1919,6 +1924,7 @@ cash
 cash-in
 cashe
 cashed
+cashier
 caspian
 casque
 cassidy
@@ -1990,6 +1996,7 @@ cen
 census
 centavo
 center
+centera
 centerfold
 centers
 central
@@ -2049,6 +2056,7 @@ chasing
 chat
 chatter
 chatting
+chatty
 cheap
 cheaper
 cheapest
@@ -2465,6 +2473,7 @@ computingtech
 con
 conceited
 conceivable
+concentrated
 concentrating
 concepcion
 concept
@@ -2484,6 +2493,7 @@ concrete
 condition
 conditional
 conditioner
+conditioning
 conditions
 condom
 condominium
@@ -2739,6 +2749,7 @@ crashing
 crave
 craved
 craving
+cravings
 crawl
 crawling
 crawls
@@ -2746,6 +2757,7 @@ crazeegeekchick
 crazy
 crazy-steve-and-microsofts-garage-sale
 cream
+cream-flavoured
 creamy
 create
 created
@@ -4462,6 +4474,7 @@ fan
 fanboys
 fancy
 fandom
+fanfare
 fanfic
 fanfics
 fannouncement
@@ -4585,6 +4598,7 @@ fighting
 fights
 figuratively
 figure
+figured
 fil
 file
 file's
@@ -4698,6 +4712,7 @@ flashbacks
 flashed
 flashlight
 flashy
+flat
 flatter
 flavor
 flavoring
@@ -4735,6 +4750,7 @@ flower
 flowers
 flowing
 flown
+flu
 flubs
 fluency
 fluent
@@ -4911,6 +4927,7 @@ frequent
 frequently
 freshen
 freshener
+freshly-cooked
 freshman
 fret
 fri
@@ -8832,6 +8849,7 @@ merely
 merge
 merged
 merging
+merienda
 meron
 merong
 merriment
@@ -9950,6 +9968,7 @@ non-functioning
 non-gold
 non-gold-coloured
 non-google
+non-greasy
 non-issue
 non-manile
 non-seniors
@@ -11329,6 +11348,7 @@ pocketbooks
 pockets
 podcasts
 poetic
+pogi
 point
 pointers
 pointless
@@ -11434,6 +11454,7 @@ poster
 postgresql
 posting
 posts
+potato
 potensiyal
 potential
 potentially
@@ -11508,6 +11529,7 @@ prejudice
 preloaded
 preludes
 premise
+premises
 premium
 premyo
 preparation
@@ -11570,6 +11592,7 @@ pricey
 pricing
 pride
 priest
+prima
 primarily
 primates
 prime
@@ -11772,6 +11795,7 @@ publish
 published
 publishes
 pukawin
+pukemon
 puki
 pula
 pulitiko
@@ -11798,6 +11822,7 @@ pumuwersa
 puna
 punan
 punay
+punched
 punctuated
 pungent
 punish
@@ -12085,6 +12110,7 @@ recorded
 recording
 recording-side-down
 records
+recovered
 recovering
 recs
 rectangle
@@ -13458,6 +13484,7 @@ snide
 snippet
 snippets
 snobbish
+snobs
 snooping
 snooty
 snow
@@ -13728,6 +13755,7 @@ stackexchange
 stackoverflow
 staff
 staffblog
+staffed
 stage
 stages
 stake
@@ -14455,6 +14483,7 @@ tensions
 tenth
 tentomon
 tentomon's
+tera
 teresa
 term
 termed
@@ -14813,6 +14842,7 @@ tow
 towards
 towel
 towels
+towers
 town
 townsend
 toxic
