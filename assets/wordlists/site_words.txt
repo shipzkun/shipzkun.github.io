@@ -1144,6 +1144,7 @@ baya'y
 bayan
 bayanihan
 baybayin
+baybol
 baygon
 bbc
 bbc-fail
@@ -9283,6 +9284,7 @@ nabaon
 nabasa
 nabawasan
 nabili
+nabobo
 nabokov
 nabubuo
 nabundat
@@ -9711,6 +9713,7 @@ nasira
 nasisilaw
 nasisira
 naskightagon
+nasobrahan
 nasty
 nasubukan
 nasukat
