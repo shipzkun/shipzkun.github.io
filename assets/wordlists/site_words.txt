@@ -10785,6 +10785,7 @@ pang-matagalang
 pang-organize
 pang-unawa
 pangako
+pangala'y
 pangalan
 pangalang
 pangarap
@@ -12792,6 +12793,7 @@ sasakyan
 sasama
 sashiburi
 sat
+satan
 satanas
 satellite
 satirically
