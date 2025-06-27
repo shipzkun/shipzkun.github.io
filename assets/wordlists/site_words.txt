@@ -354,6 +354,7 @@ alila
 alimukon
 alin
 alipin
+aliping
 alis
 alive
 aliwanavenue
@@ -491,6 +492,7 @@ androids
 ang
 ang-geek
 angal
+angasan
 angeles
 angelina
 angels
@@ -1133,6 +1135,7 @@ battle-of-the-linux-distros
 battlefield
 battles
 baul
+bautista
 bawal
 bawas
 bawat
@@ -1313,6 +1316,7 @@ billion
 bills
 bilog
 bin
+binabagabag
 binabalewala
 binabalikan
 binabangungot
@@ -1716,6 +1720,7 @@ bundesarchiv
 bundle
 bundled
 bundles
+bungad
 buntis
 buntu-desktop
 buong
@@ -5065,6 +5070,7 @@ gainst
 gal
 galactic
 galansiyang
+galante
 galawang
 galawin
 galaxy
@@ -6559,6 +6565,7 @@ ipagyabang
 ipahiwatig
 ipakain
 ipakulong
+ipamukha
 ipanlilibre
 ipapakita
 ipapakulong
@@ -6672,6 +6679,7 @@ isthmus-of-manila
 istorya
 isulat
 isunod
+isusumbat
 isyu
 isyung
 it's
@@ -6904,6 +6912,7 @@ kaaway
 kaaya-ayang
 kab'lang
 kababaihang
+kababayan
 kabagrasan
 kabait
 kabaong
@@ -6954,6 +6963,7 @@ kainan
 kainin
 kaisa-isang
 kakaharapin
+kakai
 kakaiba
 kakaibang
 kakailangan
@@ -7212,6 +7222,7 @@ kinahihiligan
 kinaiinisan
 kinakailangan
 kinakailangang
+kinakatakutan
 kinakausap
 kinalimutan
 kinamkam
@@ -7377,6 +7388,7 @@ kyojin
 kyon
 l'atelier
 l-boot
+la'ng
 laang
 lab
 lab's
@@ -7456,6 +7468,7 @@ language
 languages
 lanyu
 lao
+laon
 lapit
 laptop
 laptops
@@ -7663,6 +7676,7 @@ lights
 lightweight
 lightyears
 liit
+liit-liit
 like
 like-minded
 liked
@@ -7846,6 +7860,7 @@ load
 loaded
 loading
 loads
+loan
 loanword
 lobby
 local
@@ -7951,6 +7966,7 @@ lss-worthy
 ltofie
 ltsn
 lubhea
+lubog
 lubos
 lubusan
 luc
@@ -8099,6 +8115,7 @@ mag-develop
 mag-drupal
 mag-endorso
 mag-english
+mag-iintrega
 mag-implement
 mag-inarte
 mag-ingat
@@ -8575,6 +8592,7 @@ mapasuka
 mapataas
 mapatay
 mapatunayan
+mapeperahan
 maperahan
 mapikon
 mapipirata
@@ -8726,6 +8744,7 @@ mauled
 mauling
 maulit
 maunawain
+maungusan
 mautusan
 mawala
 mawalan
@@ -9299,6 +9318,7 @@ nae
 nag
 nag-a-ala-sardinas
 nag-aaksaya
+nag-aalok
 nag-aaral
 nag-aastang
 nag-aaway
@@ -9310,6 +9330,7 @@ nag-drag
 nag-gaganyan
 nag-i-insist
 nag-i-internet
+nag-iisa
 nag-iisang
 nag-ojt
 nag-pass
@@ -10980,6 +11001,7 @@ pauwi
 pavo
 pawang
 pay
+payabangan
 payak
 payapa
 payday
@@ -16077,6 +16099,7 @@ y-devnull
 y-way-to-know
 yabang
 yacc
+yagit
 yahoo
 yahoo's
 yahoo-google
@@ -16084,6 +16107,7 @@ yahoos
 yakal
 yama'y
 yaman
+yamang
 yamato
 yan
 yang
