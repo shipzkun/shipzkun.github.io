@@ -464,6 +464,7 @@ anagrams
 anak
 anak-mahirap
 anak-mayaman
+anal
 analog
 analogue
 analogy
@@ -1052,6 +1053,7 @@ balut
 baluuuut
 ban
 banahaw
+banal
 banda
 bandai
 bandwidth
@@ -13158,6 +13160,7 @@ shield
 shift
 shifted
 shifting
+shih
 shikon
 shimizu
 shimmering
@@ -15120,6 +15123,7 @@ typing
 typo
 typosquatting
 tyuluio
+tzu
 u-k-times-gets-it-wrong-no-planned-microsoft-yahoo-deal
 uac
 uajtm
