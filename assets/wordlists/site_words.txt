@@ -993,6 +993,7 @@ bad
 bad-linux-distros
 bading
 badware
+badyet
 baesa
 baffling
 bag
@@ -1671,6 +1672,7 @@ buffalo
 bufferedreader
 buffet
 bug
+bugdet
 buget
 buggy
 bugs
@@ -4619,6 +4621,7 @@ files
 files-from-imeem
 filesystem
 filipino
+filipino-budget
 filipino-food-guide-discovering-philippine-street-food
 filipino-ka-ba-mga-gawi-at-ugali
 filipinofriendfinder
@@ -7723,6 +7726,7 @@ linkedin
 links
 linsec
 linta
+lintang
 linu
 linus
 linus-torvalds
@@ -9063,6 +9067,7 @@ mlp
 mmda
 mming
 mntfs
+mo'ng
 mo'y
 mobicomp
 mobile
@@ -10629,6 +10634,7 @@ paghanga
 pagharap
 paghihintay
 paghihirap
+paghirapan
 paghuhuli
 pagiging
 paginate
@@ -10656,6 +10662,7 @@ pagkakitaan
 pagkalipas
 pagkapresidente
 pagkasabik
+pagkasasa
 pagkat
 pagkatapos
 pagkaulyanin
@@ -10766,6 +10773,7 @@ palm
 pamagat
 pamamagitan
 pamamaraang
+pamanang
 pamasahe
 pamatay-oras
 pambabastos
@@ -15082,6 +15090,7 @@ turned
 turning
 turns
 turnstiles
+turo
 tut
 tutal
 tutorial
