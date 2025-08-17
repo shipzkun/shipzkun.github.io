@@ -8195,6 +8195,7 @@ magkanda-ugaga
 magkandaugaga
 magkano
 magkapara
+magkape
 magkarelasyon
 magkaroon
 magkita
@@ -8466,6 +8467,7 @@ malinis
 mall
 malls
 malubhang
+malugmok
 malunas-lunasan
 malungkot
 maluwalhati
