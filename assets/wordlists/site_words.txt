@@ -323,6 +323,7 @@ ala-una
 alaala
 alabang
 alada
+alaen
 alaga
 alalahanin
 alam
@@ -597,6 +598,7 @@ apache
 apage
 apart
 apat
+apay
 api
 apis
 aplikasyon
@@ -3029,6 +3031,7 @@ davao
 david
 davisintro
 daw
+dawat
 day
 day'll
 day-one-on-linux-what-would-you-miss
@@ -3493,6 +3496,7 @@ diy
 diyahe
 diyan
 diyaryo
+diyo
 diyos
 dji
 djsyntek
@@ -4523,6 +4527,7 @@ fawn
 fax
 fb-post
 fbi
+fbid
 fcc
 fcdec
 fcie
@@ -5087,6 +5092,7 @@ gallicolumba
 gallon
 gambling
 game
+gamen
 gameon
 gamer
 gamers
@@ -6422,6 +6428,7 @@ insulator
 insult
 int
 intact
+inted
 integer
 integr
 integral
@@ -6931,6 +6938,7 @@ kabuhayan
 kabuterimon
 kabutihan
 kada
+kadakuada
 kadalasa'y
 kadiri
 kadiring
@@ -7047,6 +7055,7 @@ kanina
 kanina'y
 kaninang
 kanji
+kano
 kanon
 kanon's
 kanonauthor
@@ -7184,6 +7193,7 @@ kerfuffle
 kernel
 kernel-summit
 kesa
+ket
 kev
 kevin
 key
@@ -7411,6 +7421,7 @@ lack
 lacks
 laden
 lady
+laeng
 lagay
 lagi
 laging
@@ -8371,6 +8382,7 @@ makakuha
 makakwentuhan
 makalipas
 makantot
+makapaasi
 makapag-aral
 makapaghintay
 makapal
@@ -9305,6 +9317,7 @@ naaapektuahn
 naaapektuhan
 naadik
 naalala
+naalsem
 naapektuhan
 naapi
 naatim
@@ -9720,6 +9733,7 @@ nararamdaman
 nararapat
 narcissism
 nareply
+narigat
 narinig
 narinigkosaup
 naririnig
@@ -12063,7 +12077,9 @@ raw
 ray
 rce
 rd-cracked
+rdc
 rde
+rdr
 re-issues
 re-open
 re-open-source
@@ -15234,6 +15250,7 @@ unable
 unadulterated
 unang
 unaware
+unay
 unbearable
 unc
 uncalled
@@ -15766,6 +15783,7 @@ weather
 web
 web's
 web-based
+webarchive
 webdev
 webhostingrating
 webl
