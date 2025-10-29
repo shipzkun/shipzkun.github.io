@@ -2082,6 +2082,7 @@ checkbox
 checked
 checking
 checkout
+cheeky
 cheer
 cheese
 cheezburger
@@ -4658,6 +4659,7 @@ find
 finding
 finds
 fine
+finger
 fingers
 finish
 finished
@@ -4972,6 +4974,7 @@ frustrated
 frustration
 frv
 fsample-machine-exercises-cs
+fsck
 fsdgvkx
 fsecure
 fsm
@@ -5151,6 +5154,7 @@ gawan
 gawi
 gawin
 gawing
+gawk
 gaya
 gayahin
 gayon
@@ -5164,10 +5168,12 @@ gear-up
 gearthblog
 gedit
 geek
+geek's
 geek-of-the-week
 geekiness
 geeks
 geeky
+geeky-cheeky
 geese
 gel
 gelato
@@ -7683,6 +7689,7 @@ lifelike
 lifer
 lifestyle
 lift
+lifted
 ligal
 ligaya'y
 ligayang
@@ -15238,6 +15245,7 @@ uminohi
 uminom
 umitim
 umiyak
+umount
 umpisahan
 umulan
 umulit
@@ -15248,6 +15256,7 @@ una
 una'y
 unable
 unadulterated
+uname
 unang
 unaware
 unay
@@ -15368,6 +15377,7 @@ unveils
 unwanted
 unwittingly
 unwrapping
+unzip
 uofbkiljy
 up-feisty
 up-ouezonhall
@@ -15895,6 +15905,7 @@ who's
 who-should-use-linux
 whoattends
 whoever
+whois
 whole
 wholeheartedly
 whom
