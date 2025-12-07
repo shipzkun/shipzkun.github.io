@@ -14307,6 +14307,7 @@ taal
 taas
 taasan
 tab
+taba
 tabawa
 tabi
 tabi-tabi
