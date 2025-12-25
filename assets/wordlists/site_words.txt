@@ -7097,6 +7097,7 @@ kapag
 kapaligiran
 kapalit
 kapanahunan
+kapanahunan-ng-linta
 kapangyarihan
 kapani-paniwala
 kapantay
@@ -12611,6 +12612,7 @@ rity
 rival
 riyan
 rizal
+rkrd
 rkusnery
 rlfriend-test
 rlm
