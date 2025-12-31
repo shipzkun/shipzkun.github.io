@@ -8125,6 +8125,7 @@ machine
 machine-brain
 machines
 machismo
+macho
 machu
 macintosh
 macs
@@ -10748,6 +10749,7 @@ pagtalikod
 pagtanda
 pagtanggap
 pagtataka't
+pagtatanto
 pagtatanungan
 pagtatapos
 pagtayo
@@ -11905,6 +11907,7 @@ pumapatay
 pumapatol
 pumasa
 pumasok
+pumatol
 pumili
 pumunta
 pumupunta
@@ -12855,6 +12858,7 @@ sandbox
 sandwich
 sang-ayon
 sangay
+sanggano
 sanggol
 sangkap
 sangkot
@@ -13475,6 +13479,7 @@ six-core
 sixteen
 sixth
 siya
+siya'y
 siyam
 siyang
 siyanga
