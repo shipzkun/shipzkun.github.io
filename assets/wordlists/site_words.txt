@@ -8813,6 +8813,7 @@ maya
 mayabang
 mayabong
 mayaman
+mayamang
 mayan
 mayang
 maybahay
@@ -9453,8 +9454,10 @@ naglalaman
 naglalaro
 nagma-masteral
 nagmamahal
+nagmamahirap
 nagmamakaawang
 nagmamaneho
+nagmamayamang
 nagmumukha
 nagmura
 nagne-net
