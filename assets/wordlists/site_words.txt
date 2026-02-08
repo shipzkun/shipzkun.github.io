@@ -163,6 +163,7 @@ adequacy
 adequate
 ades
 adgerlinux
+adhere
 adik
 adjacent
 adjoining
@@ -278,6 +279,7 @@ agumon
 ah's
 ahead
 ahhh
+ai-generated
 aice
 aid
 aids
@@ -301,7 +303,6 @@ ais
 aixbltdblfq
 aizawa
 ajax
-ajd
 aka
 akagi
 akala
@@ -758,6 +759,7 @@ articles-you-may-want-to-read-viii
 articles-you-might-want-to-read-part-ii
 articulo
 artificial
+artificial-intelligence-and-cc-licenses
 artist
 arzf
 as-the-sandwich-guy
@@ -1980,6 +1982,7 @@ cavite
 cbca
 cbd
 cc-by-sa
+cc-licensed
 ccb
 cd's
 cdn
@@ -5659,7 +5662,6 @@ hazard
 hazardous
 hazards
 hazy
-hcbzni
 hddvd
 hdqxtxrh
 hds
@@ -6460,6 +6462,7 @@ intel
 intel's
 intel-nokia-and-google-do-battle-in-mobile-linux-market
 intellectual
+intelligence
 intelligent
 intels
 intend
@@ -8675,6 +8678,7 @@ maritime
 mark
 markdown
 markdown-table
+marked
 market
 marketing
 marketplace
@@ -12631,7 +12635,6 @@ road
 road's
 road--fuel
 roadblock
-roadmap
 roadmaps
 roads
 roadside
@@ -13125,7 +13128,6 @@ sends
 senior
 senior-and-entitled
 seniors
-senpai
 sense
 sensed
 sensitive
@@ -15233,7 +15235,6 @@ ubuntuforums
 ubuntugeek
 ubunty
 ucavpududhbs
-uctmvhi
 uczlc
 udxx
 ueno
@@ -15494,6 +15495,7 @@ userscripts
 uses
 ushs
 using
+using-cc-licensed-works-for-ai-training
 uso
 usp
 ust
