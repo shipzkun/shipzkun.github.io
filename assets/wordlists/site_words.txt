@@ -1046,6 +1046,7 @@ balcony
 bald
 bald-man-drinks-steaming-tea-color-vector-image
 bale
+baleng
 balita
 balita't
 balitang
@@ -11441,6 +11442,7 @@ plus
 png
 poachers
 poaching
+pobre
 pocket
 pocketbooks
 pockets
@@ -14937,6 +14939,7 @@ topmost
 tops
 torcs
 tormentor
+torpe
 torrent
 torrential
 torture
