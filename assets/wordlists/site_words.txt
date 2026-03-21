@@ -3825,6 +3825,7 @@ ecija
 eckelberry
 economic
 economically
+economics
 economy
 ecosia
 ecstasy
@@ -8189,6 +8190,7 @@ mag-straight
 mag-suri
 mag-upgrade
 mag-usap
+mag-utos
 magagaling
 magagalit
 magaganap
@@ -8395,6 +8397,7 @@ makabili
 makabisita
 makagawa
 makahanap
+makahingi
 makain
 makakabasa
 makakabili
@@ -8776,6 +8779,7 @@ mathematical
 mathlab
 mathsisfun
 matigas
+matindi
 matinding
 mating
 mating-toads-leap-the-species-barrier
@@ -10640,6 +10644,7 @@ pag-aaralin
 pag-aaway
 pag-alam
 pag-alipi'y
+pag-aralin
 pag-asa
 pag-atake
 pag-atakeng
