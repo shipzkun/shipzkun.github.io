@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Arden's Corner</title>
+	<base href="https://arden-chan.party">
+
+	<link rel="shortcut icon" href="/assets/images/favicon.png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/darkly.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/theme.dark.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/jquery.tablesorter.pager.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/custom.css">
+
+	<!-- JS -->
+	<script src="https://arden-chan.party/assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/jquery.hotkeys.js"></script>
+	<script src="https://arden-chan.party/assets/js/bootstrap.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.widgets.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/extras/jquery.tablesorter.pager.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/custom.js"></script>
+	<script src="https://arden-chan.party/assets/js/kbd_shortcuts.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+<div class="wrapper">
+	<!-- Header navbar-expand-lg -->
+	<div id="topbar" class="navbar navbar-dark bg-primary">
+	<div class="float-left">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="https://arden-chan.party">🏠 Arden's Corner</a>
+	</div>
+	<div id="search_div" class="float-right me-3">
+		<div class="input-group">
+			<input class="form-control" id="site_search" type="search" placeholder="Search [Ctrl+Alt+Shift+S]">
+			<button id="settings" class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#settings_modal">⚙</button>
+		</div>
+		<div id="site_search_results" class="bg-secondary"></div>
+	</div>
+</div>
+
+	<div id="container">
+		<!-- Sidebar -->
+		<div class="navbar-collapse collapse navbar-toggleable-md navbar navbar-dark bg-secondary" id="sidebar" >
+
+			<div>
+			
+				<span class='links-header'>🖦 IlokoSoft</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/agsao.html" title="Passphrase Generator">Agsao</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/basaem.html" title="Read Random Articles">Basaem</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/relos.html" title="Picture Clock">Relos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>📋 Other Projects</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/amazfitbip_watchface" title="">Amazfit Bip Watch Faces</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/common_unicode_chars" title="">Common Unicode Characters</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/public_file_repos" title="Public file repositories.">Public File Repos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>🎉 Fun Stuff</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/faq" title="">Q&A</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/resume" title="">Résumé</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/blog" title="Let the cringe flow">Blog</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>▶ YouTube</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ" title="Cringe TV">Main</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSFPCZew2ed5M9DFOv8RigO" title="Finding Revali">Birding</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSQDK6RwqEreCiRK_oZTfye" title="Companion, Avian Offering">Superworms</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>➹ External Links</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://ko-fi.com/Z8Z133PAX" title=""><img height='36' style='border:0px;height:2em' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' alt='Buy Me a Coffee at ko-fi.com'></a></li>
+						
+					
+						
+							<li><a href="https://unicode.org/resources/fonts.html" title="You might need this if you cannot see all characters or words properly">Unicode Fonts</a></li>
+						
+					
+						
+							<li><a href="https://fonts.google.com/noto" title="Quick fix for missing fonts">Google Noto Fonts</a></li>
+						
+					
+						
+							<li><a href="https://symbl.cc/en/" title="SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, and the entire UNICODE">Search Unicode for characters</a></li>
+						
+					
+				</ul>
+			
+			</div>
+
+			<hr>
+			<div id="copyright">
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a> <br>
+				This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+			<div><a href="https://arden-chan.party/privacy-policy">Privacy Policy</a></div>
+		</div>
+
+		<div id="content" class="container-fluid" tabindex="-1">
+			<div id="pagination">
+
+	
+
+	
+
+	
+	
+	<a href="https://arden-chan.party/blog/ai.html">⤴ Back to list</a>
+
+</div>
+
+
+
+
+
+
+
+<h2 >Foreword</h2>
+<div style="font-size: x-small;">Posted on: 25 Mar 2026 22:33:11 PST</div>
+
+
+
+
+
+
+
+<div style="font-size: x-small;">Categories:
+	
+	<span class="badge bg-secondary">AI</span>
+	
+</div>
+
+
+
+
+<br/>
+
+<div >
+	
+<b>Author's note:</b>
+<br/>
+<p>This was generated by Gemini AI on 02 March 2026, 22:41. I was feeding it links from my website, asking it to comment on the unhinged entries. One thing led to another, and it asked if I want it to generate a Foreword for a hypothetical book of those writings. Below is what it generated as-is; the name, errors, and typos were solely made by Gemini AI. I even retained the formatting.</p>
+
+<hr>
+
+
+<code>######## START AI-ASSISTED/GENERATED CONTENT ########</code>
+<br>
+<br>
+<p>This Forward is written from the perspective of the ultimate “Final Boss” of Arden’s universe: <strong>The Matriarchal Auntie.</strong> She has discovered the book, doesn’t realize she is the villain, and is primarily concerned with why it isn’t helping the family’s cash flow.</p>
+
+<hr />
+
+<p><strong>FOREWORD: “A Message from the Clan”</strong></p>
+
+<p><strong>By: Tita Baby (President, Costales-Chan Family Viber Group)</strong></p>
+
+<p>“<em>Hay naku</em>, Arden!</p>
+
+<p>When I heard our favorite nephew was finally publishing a book, I told everyone at the Zumba class, <em>‘Ayan na! May writer na tayo!’</em> I thought it would be like those beautiful inspirational books by Bo Sanchez—something to help us find blessings or, at the very least, a guide on how to fix my laptop for free.</p>
+
+<p>But I read these ‘Salawikain’ of yours, and <em>iho</em>, why so bitter?</p>
+
+<p>You keep talking about ‘leeches’ (<em>linta</em>) and ‘luck.’ You know, back in my day, we didn’t have ‘version control’ or ‘LaTeX.’ We just had <em>pagtitiyaga</em> (perseverance). We sacrificed everything so you could have a good IT job! And now that you have a big salary, you write a poem about how we are ‘snatching’ (<em>dudukot</em>) your savings? <em>Grabe ka naman!</em> We only ‘snatched’ it because your Tito Boy’s gout medication is expensive and the fiesta is coming up! It’s called <em>investment</em>, Arden. You are our investment!</p>
+
+<p>I don’t understand these ‘Haikus.’ They are so short. Did the ink run out? Is this why you’re always birding in the Polillo Strait? To save on the electric bill? You should spend less time looking at birds and more time looking for a nice girl to give us an <em>apo</em>. A grandchild is the best ‘update’ a family can have!</p>
+
+<p>Anyway, buy this book, everyone. Not because the poems are good—they are very ‘cringe’ and make my head ache—but because Arden is a good provider. And the royalties from this book will surely help pay for our Christmas Reunion in Batangas.</p>
+
+<p>Arden, don’t forget to bring your laptop to the reunion. Your cousin’s printer is broken again.</p>
+
+<p><em>God bless and more power!</em></p>
+
+<p><strong>— Tita Baby</strong><br />
+<em>(Sent from my iPhone 15 Pro Max—gifted by my eldest son in Dubai)</em></p>
+
+<hr />
+
+<p><strong>Publisher’s Note:</strong></p>
+
+<p><em>The author was asked to comment on this Foreword. He responded with a 404 Error page and a photo of a seagull.</em></p>
+
+<code>##### END AI-ASSISTED/GENERATED CONTENT #####</code>
+<br>
+<hr>
+<h3>Comments</h3>
+
+None.
+
+
+</div>
+
+Want to comment? <a href="mailto:lets-talk@arden-chan.party" title="email">Send an email.</a>
+
+		</div>
+
+	</div>
+</div>
+
+<div class="modal fade" id="settings_modal" tabindex="-1" aria-labelledby="modal_lbl" aria-hidden="true" style="z-index:10000">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="modal_lbl">UI Settings</h5>
+		  &nbsp;<a class="toggle_note" data-target="#localStorage_note" href="#" style="font-size: x-small;">toggle note</a>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<div id="localStorage_note" class="alert alert-warning">
+				This uses the localStorage API to store your customisations. This means that:
+				<ul>
+					<li>No data will be saved if your browser does not support the localStorage API.</li>
+					<li>When you change browsers, switch to Incognito mode, or clear your browser's data, all of your customisations will be gone.</li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div>How to open links: (Samples: <a href="https://arden-chan.party/faq.html">internal</a>, <a href="https://example.com/">external</a>)
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_in_same_tab" id="op1">
+					<label class="form-check-label" for="op1">Open all links in same tab (default)</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_int_same_tab_ext_other_tab" id="op2">
+					<label class="form-check-label" for="op2">Open internal links in same tab but open external ones in another tab</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_other_tab" id="op3">
+					<label class="form-check-label" for="op3">Open all links in separate tabs</label>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+</body>
+</html>

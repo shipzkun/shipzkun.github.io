@@ -6,6 +6,21 @@
 
 
 [{
+	"url": "https://arden-chan.party/ai/2026-03-25-Foreword.html",
+	"title": "Foreword",
+	"label": "ai",
+	"categories": "",
+	"tags": "",
+	"date": "2026-03-25T22:33:11+08:00"
+},
+
+
+
+
+
+	
+	
+{
 	"url": "https://arden-chan.party/art/2013-03-18-Lengua-de-Gato.html",
 	"title": "Lengua de Gato",
 	"label": "art",
@@ -976,6 +991,19 @@
 {
 	"url": "https://arden-chan.party/blog/notes.html",
 	"title": "Notes",
+	"label": "blog",
+	"categories": "",
+	"tags": "",
+	"date": "1970-01-01T00:00:00+08:00"
+},
+
+
+
+	
+	
+{
+	"url": "https://arden-chan.party/blog/ai.html",
+	"title": "Ai",
 	"label": "blog",
 	"categories": "",
 	"tags": "",

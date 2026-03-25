@@ -106,6 +106,7 @@ accused
 acedia
 acer
 aces
+ache
 achieve
 achieved
 aching
@@ -803,6 +804,7 @@ assets
 assign
 assigned
 assistant
+assisted
 associate
 associated
 association
@@ -893,6 +895,7 @@ augmented
 august
 aundering
 aunt
+auntie
 aunts
 auph
 auro
@@ -2708,6 +2711,7 @@ cory
 cost
 cost-cutting
 costa
+costales-chan
 costcutting
 costing
 costly
@@ -3696,6 +3700,7 @@ dslzsvrk
 du'n
 dual
 dual-boot
+dubai
 dubbed
 dubious
 duck
@@ -3902,6 +3907,7 @@ elapsed
 elated
 elating
 elderly
+eldest
 elected
 election
 elections
@@ -4625,6 +4631,7 @@ fidel
 field
 fields
 fiendster
+fiesta
 fifth
 fight
 fighting
@@ -4860,6 +4867,7 @@ forested
 forests
 forever
 forewarned
+foreword
 forge
 forget
 forgetful
@@ -5366,6 +5374,7 @@ gosh
 gossip
 got
 goto
+gout
 goutam
 gov
 government
@@ -5399,6 +5408,7 @@ gral
 grammar
 grammatical
 grand
+grandchild
 granddaddy
 grandiloquence
 grandiose
@@ -5549,6 +5559,7 @@ hahahaha
 hahalungkatin
 hahanapan
 haharang
+haikus
 hailed
 hainan
 hair
@@ -6129,6 +6140,7 @@ ignoring
 ihahandog
 ihihiga
 ihip
+iho
 iid
 iii
 iilang
@@ -6430,6 +6442,7 @@ insomnia
 inspect
 inspects
 inspiration
+inspirational
 inspire
 inspired
 instagram
@@ -6575,6 +6588,7 @@ invest
 investigates
 investigation
 investing
+investment
 investors
 invidia
 invincibility
@@ -6697,6 +6711,7 @@ iskolar
 islam
 island
 islands
+isn
 isn't
 isnt
 iso
@@ -8786,6 +8801,7 @@ mating-toads-leap-the-species-barrier
 matino
 matinong
 matrabaho
+matriarchal
 matrix
 matso
 matt
@@ -8874,6 +8890,7 @@ media-player
 medibuntu
 medical
 medical-information
+medication
 mediocre
 mediocrity
 medium
@@ -9655,6 +9672,7 @@ nakisali
 nakisimpatiya
 nakit
 nakita
+naku
 nakuha
 nakumbinsi
 nalalaman
@@ -9890,6 +9908,7 @@ nen
 nene
 neo
 neopets
+nephew
 nerbyos
 nerd
 nergy
@@ -10769,6 +10788,7 @@ pagtayo
 pagtingin
 pagtitiis
 pagtitipid
+pagtitiyaga
 pagtripan
 pagtulong
 pagyaman
@@ -11176,6 +11196,7 @@ permutation
 permutations
 pero
 perpetual
+perseverance
 persian
 persisted
 persists
@@ -11452,6 +11473,8 @@ pocket
 pocketbooks
 pockets
 podcasts
+poem
+poems
 poetic
 pogi
 point
@@ -11714,6 +11737,7 @@ print
 print-it-all
 print-out
 printed
+printer
 printf
 printing
 prints
@@ -11864,6 +11888,7 @@ proved
 proven
 provide
 provided
+provider
 provides
 providing
 province
@@ -11900,7 +11925,9 @@ publicholidays
 publicity
 publish
 published
+publisher
 publishes
+publishing
 pukawin
 pukemon
 puki
@@ -12476,6 +12503,7 @@ respective
 respectively
 respects
 respeto
+responded
 responding
 responds
 response
@@ -12722,6 +12750,7 @@ row
 rowdy
 rows
 royal
+royalties
 roytanck
 rqxlwdxtlx
 rsquo
@@ -12787,6 +12816,7 @@ sabihin
 sabihing
 sabing
 sabog
+sacrificed
 sacrifices
 sacs
 sad
@@ -12825,6 +12855,7 @@ sakramentong
 salad
 salamat
 salaries
+salary
 salat
 salawikain
 salaysay
@@ -12863,6 +12894,7 @@ san
 sana
 sana'y
 sanang
+sanchez
 sand
 sandali
 sandaling
@@ -13596,6 +13628,8 @@ snacks
 snail
 snapped
 snapshot
+snatched
+snatching
 sneaky
 snickers
 snide
@@ -14869,11 +14903,13 @@ tipsandtwea
 tipsandtweaks
 tirahan
 tired
+tita
 tithes
 titingin-tingin
 titingnan
 title
 title's
+tito
 tiyan
 tjzlpde
 tkit
@@ -15617,6 +15653,7 @@ vgsqk
 via
 viagra
 viatour
+viber
 vibes
 vibrant
 vice
@@ -16339,6 +16376,7 @@ zrckvacvxxbwypib
 zswvzzex
 zuao
 zug
+zumba
 zune
 zurbruegg
 zwavhnfjsoq

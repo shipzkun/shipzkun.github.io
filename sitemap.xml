@@ -4,6 +4,26 @@
 	
 	
 	<url>
+		<loc>https://arden-chan.party/ai/2026-03-25-Foreword.html</loc>
+		<lastmod>
+				2026-03-25T22:33:11+08:00
+			
+		</lastmod>
+		<changefreq>
+									monthly
+			
+		</changefreq>
+		<priority>
+								0.5
+			
+		</priority>
+	</url>
+	
+	
+	
+	
+	
+	<url>
 		<loc>https://arden-chan.party/art/2013-03-18-Lengua-de-Gato.html</loc>
 		<lastmod>
 				2013-03-18T00:00:00+08:00
@@ -1343,6 +1363,24 @@
 	
 	<url>
 		<loc>https://arden-chan.party/blog/notes.html</loc>
+		<lastmod>
+							1970-01-01T00:00:00+08:00
+			
+		</lastmod>
+		<changefreq>
+									monthly
+			
+		</changefreq>
+		<priority>
+								0.5
+			
+		</priority>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://arden-chan.party/blog/ai.html</loc>
 		<lastmod>
 							1970-01-01T00:00:00+08:00
 			
