@@ -767,6 +767,7 @@ as-the-sandwich-guy
 asahan
 asahi
 asahina
+asawa'y
 ascii
 ascii-art-calendar
 asdapdsa
@@ -5812,6 +5813,7 @@ hinahanap
 hinahanap-hanap
 hinaharap
 hinaing
+hinalay
 hinanap
 hinati
 hinayaan
@@ -9516,6 +9518,7 @@ nagpapakahayop
 nagpapakalalake
 nagpapakalbo
 nagpapakatao
+nagpapako
 nagpapanatili
 nagpapasalamat
 nagpapasikat
@@ -10768,6 +10771,7 @@ pagkat
 pagkatapos
 pagkaulyanin
 pagkaupo
+pagkauwi
 pagkawala
 pagkikita
 pagkomento
@@ -10781,6 +10785,7 @@ pagmamahalan
 pagod
 pagos
 pagpapakalat
+pagpapatawad
 pagparito
 pagpaskil
 pagpasok
@@ -10907,6 +10912,7 @@ panama's
 pananalangin
 pananamit
 panandaliang
+panata
 panatilihin
 panayensis
 pancake
