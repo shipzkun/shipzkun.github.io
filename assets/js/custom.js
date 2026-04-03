@@ -8,7 +8,14 @@ const LINKS_HANDLING_MODES = [
 	LINKS_HANDLING_OPEN_ALL_OTHER_TAB
 ]
 
+const THEME_COLOR_MODE_LIGHT = 'light'
+const THEME_COLOR_MODE_DARK = 'dark'
+const THEME_COLOR_MODES = [
+	THEME_COLOR_MODE_DARK,
+	THEME_COLOR_MODE_LIGHT
+]
 const SETTING_LINKS_HANDLING = 'links_handling'
+const SETTING_THEME_COLOR_MODE = 'theme_color_mode'
 const RECENT_UPDATES_LIMIT = 10;
 
 const OPEN_EXT = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
@@ -190,17 +197,28 @@ $(function() {
 		save_setting(SETTING_LINKS_HANDLING, $(this).val())
 	});
 
-	// load saved link handling
-	let links_handling = null
-	if (storageAvailable('localStorage')) {
-		links_handling = get_setting(SETTING_LINKS_HANDLING)
-		if (links_handling == null || LINKS_HANDLING_MODES.indexOf(links_handling) < 0) {
-			links_handling = LINKS_HANDLING_OPEN_ALL_SAME_TAB
-			save_setting(SETTING_LINKS_HANDLING, links_handling)
-		}
-	}
+	$("input[name="+SETTING_THEME_COLOR_MODE+"]").on('change', function() {
+		update_theme($(this).val())
+		save_setting(SETTING_THEME_COLOR_MODE, $(this).val())
+	})
+
+
+	// honor settings
+	let links_handling = get_setting(SETTING_LINKS_HANDLING) ?? LINKS_HANDLING_OPEN_ALL_SAME_TAB
+	let theme_color_mode = get_setting(SETTING_THEME_COLOR_MODE) ?? THEME_COLOR_MODE_DARK
+
+	// deal with bad inputs
+	if (!LINKS_HANDLING_MODES.includes(links_handling)) links_handling = LINKS_HANDLING_OPEN_ALL_SAME_TAB
+	if (!THEME_COLOR_MODES.includes (theme_color_mode)) theme_color_mode = THEME_COLOR_MODE_DARK
+
+	save_setting(SETTING_LINKS_HANDLING, links_handling)
+	save_setting(SETTING_THEME_COLOR_MODE, theme_color_mode)
+
 	update_links(links_handling)
+	update_theme(theme_color_mode)
+
 	$("input[name="+SETTING_LINKS_HANDLING+"][value="+links_handling+"]").prop('checked', true)
+	$("input[name="+SETTING_THEME_COLOR_MODE+"][value="+theme_color_mode+"]").prop('checked', true)
 
 	$(".toggle_note").click(function(e) {
 		e.preventDefault()
@@ -270,6 +288,15 @@ function update_links(mode) {
 	set_target('a[href="'+base_url+'"]', '_self')
 }
 
+function update_theme(mode) {
+	if (!mode || !THEME_COLOR_MODES.includes(mode)) {
+		alert('Invalid selection; please refresh the page.');
+		return
+	}
+
+	$("html").attr("data-bs-theme", mode)
+}
+
 function save_setting(setting, value) {
 	if (storageAvailable('localStorage')) {
 		localStorage.setItem(setting, value)
@@ -277,7 +304,9 @@ function save_setting(setting, value) {
 }
 
 function get_setting(setting) {
-	return localStorage.getItem(setting)
+	if (storageAvailable('localStorage')) {
+		return localStorage.getItem(setting)
+	}
 }
 
 // Original code: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#feature-detecting_localstorage
