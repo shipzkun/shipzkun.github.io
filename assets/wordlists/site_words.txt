@@ -790,6 +790,7 @@ aso
 asp
 aspect
 aspects
+aspin
 aspire
 aspire-one-victorian-education-discriminating-against-linux
 aspx
@@ -5254,6 +5255,7 @@ gets
 getting
 gezra
 gfdsa
+ggtwre
 ghz
 ghz-a
 giant
@@ -11349,6 +11351,7 @@ pinagbago
 pinagdadamot
 pinagdadasal
 pinaggagagawa
+pinaggalingan
 pinaghirapan
 pinagkaiba
 pinagkakaguluhan
@@ -11537,6 +11540,7 @@ polyglot
 polyrachis
 polyrhachis
 pon
+pondog
 pong
 ponification
 ponifies
