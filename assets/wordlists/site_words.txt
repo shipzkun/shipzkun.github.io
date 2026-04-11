@@ -8290,6 +8290,7 @@ magkapara
 magkape
 magkarelasyon
 magkaroon
+magkatiket
 magkita
 magkita-kita
 magkuwento
@@ -8327,6 +8328,7 @@ magpapatagal
 magpasa
 magpasalamat
 magpasikat
+magpasingit
 magpaskil
 magpasukol
 magpatugtog
