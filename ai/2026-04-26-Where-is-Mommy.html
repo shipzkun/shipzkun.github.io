@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+	<meta charset="utf-8">
+	<title>Arden's Corner</title>
+	<base href="https://arden-chan.party">
+
+	<link rel="shortcut icon" href="/assets/images/favicon.png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/darkly.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/theme.dark.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/jquery.tablesorter.pager.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/custom.css">
+
+	<!-- JS -->
+	<script src="https://arden-chan.party/assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/jquery.hotkeys.js"></script>
+	<script src="https://arden-chan.party/assets/js/bootstrap.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.widgets.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/extras/jquery.tablesorter.pager.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/custom.js"></script>
+	<script src="https://arden-chan.party/assets/js/kbd_shortcuts.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+<div class="wrapper">
+	<!-- Header navbar-expand-lg -->
+	<div id="topbar" class="navbar navbar-dark bg-primary">
+	<div class="float-left">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="https://arden-chan.party">🏠 Arden's Corner</a>
+	</div>
+	<div id="search_div" class="float-right me-3">
+		<div class="input-group">
+			<input class="form-control" id="site_search" type="search" placeholder="Search [Ctrl+Alt+Shift+S]">
+			<button id="settings" class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#settings_modal">⚙</button>
+		</div>
+		<div id="site_search_results" class="bg-secondary"></div>
+	</div>
+</div>
+
+	<div id="container">
+		<!-- Sidebar -->
+		<div class="navbar-collapse collapse navbar-toggleable-md navbar navbar-dark bg-secondary" id="sidebar" >
+
+			<div>
+			
+				<span class='links-header'>🖦 IlokoSoft</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/agsao.html" title="Passphrase Generator">Agsao</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/basaem.html" title="Read Random Articles">Basaem</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/relos.html" title="Picture Clock">Relos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>📋 Other Projects</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/amazfitbip_watchface" title="">Amazfit Bip Watch Faces</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/common_unicode_chars" title="">Common Unicode Characters</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/public_file_repos" title="Public file repositories.">Public File Repos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>🎉 Fun Stuff</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/faq" title="">Q&A</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/resume" title="">Résumé</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/blog" title="Let the cringe flow">Blog</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>▶ YouTube</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ" title="Cringe TV">Main</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSFPCZew2ed5M9DFOv8RigO" title="Finding Revali">Birding</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSQDK6RwqEreCiRK_oZTfye" title="Companion, Avian Offering">Superworms</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>➹ External Links</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://ko-fi.com/Z8Z133PAX" title=""><img height='36' style='border:0px;height:2em' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' alt='Buy Me a Coffee at ko-fi.com'></a></li>
+						
+					
+						
+							<li><a href="https://unicode.org/resources/fonts.html" title="You might need this if you cannot see all characters or words properly">Unicode Fonts</a></li>
+						
+					
+						
+							<li><a href="https://fonts.google.com/noto" title="Quick fix for missing fonts">Google Noto Fonts</a></li>
+						
+					
+						
+							<li><a href="https://symbl.cc/en/" title="SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, and the entire UNICODE">Search Unicode for characters</a></li>
+						
+					
+				</ul>
+			
+			</div>
+
+			<hr>
+			<div id="copyright">
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a> <br>
+				This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+			<div><a href="https://arden-chan.party/privacy-policy">Privacy Policy</a></div>
+		</div>
+
+		<div id="content" class="container-fluid" tabindex="-1">
+			<div id="pagination">
+
+	
+		<a href="/ai/2026-04-02-README.html">⎗ Previous</a>
+	
+
+	
+
+	
+	
+	<a href="https://arden-chan.party/blog/ai.html">⤴ Back to list</a>
+
+</div>
+
+
+
+
+
+
+
+<h2 >Where is Mommy?</h2>
+<div style="font-size: x-small;">Posted on: 26 Apr 2026 17:10:00 PST</div>
+
+
+
+
+
+
+
+<div style="font-size: x-small;">Categories:
+	
+	<span class="badge bg-secondary">AI</span>
+	
+</div>
+
+
+
+
+<br/>
+
+<div >
+	
+<b>Author's note:</b>
+<br/>
+<p>This was originally generated by Deepseek v3.2 on 09 Jan 2026, 10:20:07 PST.</p>
+
+<p>The story is about Ryn, a young raven, finding out that he has no mommy. Ryn is the product of a one-night stand of Lando, his raven father, with another female raven. Hopefully, Ryn understands.</p>
+
+<p>Pako is Lando’s older raven brother. Nathan is their raven neighbor. Pengo is Pako’s raven construction workmate, and Harlan is their foreman.</p>
+
+<p>The story being set in the Hyrule universe, specifically in the Rito village, is of Deepseek’s creation. Hyrule, Rito, and other related characters are intellectual property of Nintendo.</p>
+
+<p>I kept the edits very minimal as usual.</p>
+
+<hr>
+
+
+<code>######## START AI-ASSISTED/GENERATED CONTENT ########</code>
+<br>
+<br>
+<p>The colored wooden blocks were cool against his fingers. Ryn concentrated, his tongue poking out from the corner of his beak as he carefully, so carefully, placed a red rectangle on top of his wobbly blue tower. The kindergarten room was a quiet hum of activity, the soft chatter of other chicks, the scratch of crayons, and the distant clatter of dishes from the kitchen where Ms. Nella was preparing afternoon snack. Sunlight streamed in through the large windows, painting warm rectangles on the scuffed linoleum floor, and in that pool of light, dust motes danced like tiny, silent fairies. Ryn liked this time of day. It was calm, and he could build his towers as high as he wanted, until they inevitably tumbled, which was part of the fun.</p>
+
+<p>“What’cha building?”</p>
+
+<p>The voice came from beside him. It was Kiba, a sparrow chick with bright, curious eyes. He was building his own tower, a sprawling, precarious city of blocks that took up half the play mat.</p>
+
+<p>“A skyscraper,” Ryn announced proudly, placing another block. “Like the ones Uncle Pako works on.”</p>
+
+<p>“Cool,” Kiba said, not looking up as he balanced a triangular block on its point. A moment of comfortable silence passed, filled only with the gentle *clack* of wood on wood. Then Kiba spoke again, his question as casual as a comment on the weather. “Hey, Ryn? Who’s your mommy?”</p>
+
+<p>Ryn’s claw, reaching for a yellow cylinder, froze in mid-air. He blinked. The word landed in his mind like a strange, foreign object. *Mommy.* He turned his head to look at Kiba. “What?”</p>
+
+<p>“Your mommy,” Kiba repeated, finally glancing over. “You know. My mommy picks me up on Tuesdays and Thursdays. Lem’s mommy brings the best berry cookies sometimes. We never see your mommy. How come?”</p>
+
+<p>A slow, cold trickle of something unfamiliar began in Ryn’s chest. It wasn’t fear, not exactly. It was more like the feeling he got when he walked into a room and forgot why he was there. A blank, empty confusion. *Mommy.* He knew the word, of course. He heard it in stories, saw it in picture books. It was always paired with *daddy*. A mommy was a soft voice, a warm hug, a gentle presence that bandaged knees and sang lullabies. But when he tried to attach that idea to himself, to his life, his mind skidded to a halt. There was no face, no voice, no scent that fit.</p>
+
+<p>“I have a dad,” Ryn said, his own voice sounding small to his ears. He placed the yellow block, but his heart wasn’t in it anymore.</p>
+
+<p>“I know that,” Kiba said, a hint of impatience in his tone. “Everybody has a dad. But you gotta have a mommy, too. That’s how you get a chick. My daddy told me. So where is she? Does she work super far away?”</p>
+
+<p>The cold trickle was becoming a pool. Ryn’s fledgling feathers, soft and downy around his neck, felt prickly. He looked down at his blocks, but the bright colors seemed to blur. “I… I have Uncle Pako,” he offered, grasping for the solid, known things in his world. “He lives with us. And Uncle Nathan and Uncle Harlan come over lots.”</p>
+
+<p>Kiba scrunched his beak, a look of profound skepticism on his small face. “Those are uncles. They’re not a mommy. A mommy’s different. She’s… she’s a girl. And she’s supposed to be your mommy.” He said it as if explaining the most basic rule of the universe, like gravity or the need for nap time. “Did she go away?”</p>
+
+<p>The question hung in the sunny air, sharp and sudden. *Go away.* The words conjured an image of a door closing, of a back shadow walking down a long road and never coming back. A hollow feeling opened up beneath his breastbone. He didn’t know this feeling. His world was his dad’s deep, rumbling laughter, Uncle Pako’s boisterous hugs that lifted him off his feet, the smell of sawdust and engine grease, and the safe, warm nest of his bed. There was no door closing in that world. There was no one missing.</p>
+
+<p>“I don’t know,” Ryn whispered, the truth of it chilling him.</p>
+
+<p>Before Kiba could ask another question, Ms. Nella, a kindly old owl, clapped her wings together. “Alright, little fledglings! Time to clean up! Snack time!”</p>
+
+<p>The spell was broken. Kiba immediately lost interest, his attention captured by the promise of sliced apples and sunflower butter. He began knocking his block city down with gleeful swipes of his wing. Ryn just sat there, staring at his own, still-standing tower. He didn’t want to knock it down. He wanted it to stay, solid and certain. But the question was inside it now, a shaky, invisible block at the very foundation, making the whole structure feel perilous.</p>
+
+<p>The rest of the afternoon passed in a strange, slow-motion haze. The apples tasted like nothing. The story Ms. Nella read about a brave little fox finding its way home seemed to be in a different language. Ryn sat on the story rug, cross-legged, his mind circling back to that single, puzzling word. *Mommy.* He watched the other chicks. Lem the finch was showing off a new feather his mommy had braided a bead onto. A tiny dove chick, Sora, was curled sleepily in the lap of a assistant teacher, murmuring for her “mama.” Ryn looked at his own claws. He tried to imagine another, softer set of wings guiding him, a different scent than Lando’s mix of hard work and cedar, or Pako’s smell of concrete and sweat. He couldn’t. It was like trying to picture a color he’d never seen.</p>
+
+<p>When the big clock on the wall finally ticked to dismissal time, a rush of relief washed over him. He scrambled to his cubby, shoving his drawing of a three-legged dog (it was supposed to be a horse) into his canvas bag with unusual haste. He just wanted to go home. Home was definite. Home had answers, or at least it didn’t have these questions.</p>
+
+<p>The kindergarten door swung open to the bustling street. Parents and guardians of all species called out greetings. And then, a familiar, booming voice cut through the chatter.</p>
+
+<p>“There’s my favorite nephew! Move aside, you lot, champion nephew coming through!”</p>
+
+<p>Uncle Pako, a massive raven whose shoulders seemed to block the sun, barreled through the crowd with cheerful disregard. His work clothes were dusty, and he had a smudge of something that looked like grease on his cheek. He swooped down and, before Ryn could protest, hoisted him high into the air, settling him securely on his broad shoulders. The world tilted, and Ryn was suddenly above everyone, looking down at a sea of heads and feathers.</p>
+
+<p>“How was the intellectual grind, kiddo? Build the next great city of Hyrule? Defeat a phantom Ganon with your block sword?” Pako asked, his voice a comforting rumble beneath Ryn’s knees.</p>
+
+<p>Normally, Ryn would have launched into an excited, detailed account of his tower, the snack, the story. He loved these walks home with Pako. They were adventures. They’d stop to watch construction, or Pako would buy him a sweet roll from the market, or they’d race to see who could spot the most green-featured birds.</p>
+
+<p>Today, the words stuck in his throat. He held onto Pako’s head feathers, tighter than usual. “It was okay,” he mumbled.</p>
+
+<p>Pako’s cheerful chatter continued for a block, filled with tales of a crane operator who’d gotten his cable tangled, and Foreman Harlan’s epic rant about improper mortar mixing. But when Ryn only responded with monosyllabic hums, Pako’s pace slowed. He reached up and patted Ryn’s claw where it gripped his feather.</p>
+
+<p>“Hey. You feelin’ alright, Rynny? You’re quieter than a mouse in a hawk’s nest.”</p>
+
+<p>“I’m okay,” Ryn said again, but the hollow feeling was back.</p>
+
+<p>Pako didn’t press, but his usual torrent of words dwindled to a quiet stream. He pointed out a funny-shaped cloud, but his heart wasn’t in it. Ryn rested his chin on the top of Pako’s head, watching the familiar streets of Rito Village pass by—the bustling market, the flight range in the distance, the winding paths to different roosts. Everything looked the same, but it all felt different, like he was seeing it through a thin, distorting sheet of ice.</p>
+
+<p>They reached their roost, a cozy home built into the cliffside with a spectacular view of Lake Totori. The familiar scent of home — woodsmoke, old paper, Lando’s herbal tea, and the underlying smell of the pine walls — wrapped around Ryn as Pako ducked inside, setting him down gently on the floor.</p>
+
+<p>“Lando! We’re back! And I’m starving enough to eat a whole raw cucco!” Pako bellowed, heading straight for the kitchen.</p>
+
+<p>Ryn stood in the entryway, his bag slipping from his claw to the floor with a soft thud. The living room was warm and inviting. A low fire crackled in the hearth. His dad’s reading glasses were perched on the arm of his favorite worn armchair. But Lando wasn’t in the chair. Ryn heard the gentle *tap-tap-tap* of a small hammer coming from his dad’s workshop, a small alcove off the main room.</p>
+
+<p>The sound pulled him forward. He padded across the woven rug, past the couch where he and his uncles piled on for story nights, and stopped in the doorway of the workshop.</p>
+
+<p>Lando was there, his back to the door, bent over his workbench. The setting sun slanted through the window, glinting off the tools neatly arranged on the wall and catching in the faint grey feathers beginning to show at his temples. He was a big raven, like Pako, but where Pako was all explosive energy, Lando was a steady, solid presence. He was carefully fitting a tiny, delicate hinge onto what looked like a music box shaped like a loftwing. His movements were precise, patient. The *tap-tap-tap* was the sound of him securing a pin.</p>
+
+<p>Seeing him, so normal, so *there*, made the confusion and the hollow feeling inside Ryn swell until it felt too big to contain. It pushed against his ribs, up his throat. The question, which had been a shapeless worry all afternoon, suddenly formed into words, hard and urgent.
+“Dad.”</p>
+
+<p>Lando started slightly, turning on his stool. A smile, warm and automatic, lit up his face, smoothing the lines of concentration. “Hey, chicklet. Didn’t hear you come in. How was —” He stopped. His dark eyes, so like Ryn’s own, flickered over his son’s face, reading the tension in his small frame, the unusual solemnity in his expression. The smile faded into a look of gentle concern. “Ryn? What’s wrong?”</p>
+
+<p>Ryn took a step into the workshop, the smell of linseed oil and sanded wood filling his nostrils. He looked up at his father, his anchor, his whole world. And he asked.</p>
+
+<p>“Dad, who’s my mommy?”</p>
+
+<p>The words, once released, seemed to suck all the sound from the room. The gentle crackle of the fire from the next room vanished. The distant clatter of Pako rummaging in the kitchen ceased abruptly.</p>
+
+<p>Lando froze. The small hammer slipped from his fingers, landing on the workbench with a dull *clunk* that was deafening in the silence. His wings, usually held relaxed at his sides, went stiff. Every line of his body radiate not anger, but a profound, stunned apprehension. His gaze, wide and suddenly vulnerable, shot over Ryn’s head.</p>
+
+<p>Pako had appeared in the main doorway, a half-peeled voltfruit in his claw. He was motionless, his usual boisterous energy completely gone, replaced by a mirror of Lando’s shock. His eyes locked with his brother’s. A whole silent conversation passed between them in an instant — a flash of *oh no*, a flicker of *it’s too early*, a surge of *we knew this would happen*, and finally, a grim, shared resolve.</p>
+
+<p>The air in the cozy home grew thick and heavy. Ryn, standing between the two towering figures of his father and his uncle, felt very, very small. The confusion was now edged with a new fear. He’d never seen this look on his dad’s face before. It was the look of someone facing a deep, long-dreaded chasm.</p>
+
+<p>Lando slowly let out a breath he seemed to have been holding for years. He swallowed, his Adam’s apple bobbing. He carefully set the tiny loftwing music box aside and stood up. He moved slowly, as if in a dream, and walked past Ryn into the living room. Pako, moving with an uncharacteristic quietness, followed.</p>
+
+<p>“Come here, buddy,” Lando said, his voice softer than Ryn had ever heard it. It was the voice he used when Ryn was sick with a fever. It scared him more than shouting would have.</p>
+
+<p>Lando sat down on the middle of the worn couch, the leather creaking under his weight. Pako sat on the other side, leaving a Ryn-sized space between them. They didn’t look at each other now. Their full, intense attention was on the small fledgling standing alone on the rug.</p>
+
+<p>“Come sit with us,” Pako said, his own voice stripped of its usual boom, leaving something raw and earnest underneath.</p>
+
+<p>Ryn climbed up onto the couch. The cushions dipped under him, and he sank into the space between the two large, warm bodies of the most important birds in his life. They were like sheltering cliffs on either side of him. But instead of feeling safe, he felt exposed. The question was out now, a living thing in the room.</p>
+
+<p>Lando placed a large, calloused wing gently around Ryn’s small shoulders. He took another deep breath, his chest rising and falling. He looked at Pako, one last, fleeting glance that held a universe of shared history and anxiety. Then he looked down at Ryn, his dark eyes filled with a love so fierce it was almost painful, and a nervousness Ryn couldn’t remember ever seeing.</p>
+
+<p>“That,” Lando began, his voice carefully measured, “is a really good question, buddy.”</p>
+
+<p>The space between them on the couch felt charged, like the air before a lightning strike. Lando’s wing was warm and heavy on Ryn’s shoulders, but the usual comfort it brought was tangled up in the new, serious texture of his dad’s voice. Ryn kept his eyes fixed on Lando’s face, watching the way his beak moved, the slight tremble at the corner of his eyes.</p>
+
+<p>“A really good question,” Lando repeated, as if buying time to find the right words in a language he’d never quite learned. “And… and the answer is that families, Ryn, they… they can be made in lots of different ways. There isn’t just one right way.”</p>
+
+<p>Pako, on Ryn’s other side, shifted. He leaned forward, resting his large forearms on his knees, bringing his face closer to Ryn’s level. “Yeah, chickadee. See, sometimes… the way it happens for lots of folks is a mommy and a daddy love each other so, so much that they decide they want to make a family. They want a little chick of their very own to love. And that’s how they get one.”</p>
+
+<p>Ryn processed this. This was the rule Kiba had stated. The universal law. *A mommy and a daddy.* He looked from Pako’s earnest, strained face back to Lando’s. “So… is that what happened?” he asked, his voice barely a whisper. He wanted it to be simple. He wanted the rule to apply, to slot his life neatly into the pattern the other chicks understood.</p>
+
+<p>Lando’s wing tightened around him for a second. He closed his eyes briefly. When he opened them, they were shiny. “For me, buddy… for us… it was a little different.”</p>
+
+<p>The words hung there. *Different.* The hollow feeling in Ryn’s chest widened. Different was what he’d felt all afternoon. Different was the shaky block.</p>
+
+<p>“Before you were born,” Lando began, choosing each word with the care of a jeweler setting a fragile gem, “a long time ago… I met a nice lady. A raven, like us.”</p>
+
+<p>An image flickered in Ryn’s mind. A stranger’s face, feather patterns he didn’t know. It was blurry, insubstantial.</p>
+
+<p>“We spent a little time together. We were friends.” Lando’s gaze was distant, looking at a memory on the far wall. “But we weren’t… in love. We weren’t going to be a family. It was just… a nice time.”</p>
+
+<p>Ryn frowned, his young brow furrowing. This was not following the story. The mommy and daddy in the story loved each other *first*. “Then how…?” he started.</p>
+
+<p>A small, almost helpless smile touched Lando’s beak. “Then… a wonderful surprise happened. The most wonderful surprise in the whole world.” He looked directly at Ryn now, and the love in his eyes was so bright it almost chased the confusion away. “I found out I was going to have a baby. *You.*”</p>
+
+<p>The world tilted again, but differently. Ryn’s mind scrabbled for purchase. *Dad… had a baby?* He knew daddies could have chicks, of course. But in the stories, they did it *with* the mommy. The mommy was there, being the mommy. The picture was incomplete, a puzzle with a piece stubbornly missing.</p>
+
+<p>“But… the lady?” Ryn asked, fixated on the blurry face.</p>
+
+<p>Pako couldn’t stay quiet any longer. He blurted out, his voice too loud for the hushed room, “She wasn’t ready, Rynny. She just… wasn’t ready to be a mom. It’s a huge, scary job. The biggest job there is.” He leaned in even closer, his scent of dust and hard work enveloping Ryn. “But your dad?” Pako’s voice cracked. “He was ready. He was so ready. From the very second he knew about you, he was absolutely, completely, one-hundred-percent ready to be a dad. He wanted you more than anything.”</p>
+
+<p>*Wanted you.* The words landed, solid and warm, in the hollow space. Ryn looked up at Lando. His dad’s eyes were overflowing now, a single tear tracing a path through the dark feathers on his cheek. He wasn’t sad. Ryn knew his dad’s sad face. This was something else. This was… too much feeling to hold inside.</p>
+
+<p>“It’s true,” Lando managed, his voice thick. “I wanted you. I was scared, too, because it was just me. But I wanted you so much it felt like my heart was going to burst.”</p>
+
+<p>The narrative was broken, a path leading into a fog. There was a lady, then there wasn’t. There was just Dad, and a baby coming. Ryn’s pragmatic five-year-old mind tried to stitch it together. “So… she didn’t want me?” The question was small and terribly vulnerable.</p>
+
+<p>“Oh, no, chicklet, no,” Lando said quickly, pulling him into a proper hug, tucking Ryn’s head under his chin. Ryn could feel the rapid, thumping beat of his father’s heart. “It wasn’t about *you*. It was about her. She wasn’t ready for the job. It’s like… it’s like if someone gave me a super complicated, beautiful clock to fix before I’d ever learned how to use a screwdriver. I might love clocks, but I’d know I wasn’t the right one to take care of that one. She knew she wasn’t the right one to take care of you. So she… she let me.”</p>
+
+<p>“She gave you to me,” Pako corrected, his bluntness slicing through the delicate metaphor. “Best gift anyone ever gave anybody. Even if she was a flaky, bird-brained…” He caught Lando’s warning look and cleared his throat. “…a nice lady who made a choice.”</p>
+
+<p>The front door of the roost banged open with enough force to rattle the hanging pots in the kitchen.</p>
+
+<p>“I’m telling you, Nate, the torque on that spindle was all wrong! A Goron could’ve told him it was — whoa.”</p>
+
+<p>Pengo stood in the doorway, a compact, sharp-beaked raven with perpetually ruffled chest feathers and a tool belt slung low on his hips. Nathan, taller and sleeker, with calm, intelligent eyes, was right behind him. They were both still in their work clothes from the machine shop.</p>
+
+<p>Pengo’s sharp eyes took in the scene in a microsecond: the three of them huddled on the couch, Lando’s tear-streaked face, Pako’s uncharacteristic solemnity, and Ryn peeking out from Lando’s embrace with wide, confused eyes.</p>
+
+<p>Nathan’s assessment was slower, more thorough. His gaze softened with immediate understanding.</p>
+
+<p>Pengo, never one for subtlety, marched into the living room and dropped onto the stuffed chair opposite the couch with a sigh. “Okay. What’s the crisis? Ryn flunk out of block-building? Did someone finally tell him his drawings look nothing like horses?”</p>
+
+<p>“Pengo,” Nathan said quietly, a gentle warning. He remained standing, his posture relaxed but attentive.</p>
+
+<p>“It’s… we’re…” Lando began, wiping his cheek with the back of his wing. He seemed utterly drained, the words spent.</p>
+
+<p>Pako tried to rally. “We’re just having a… a family talk. About, you know. Origins.”</p>
+
+<p>Pengo’s eyebrows shot up. “Origins?” Then it clicked. His eyes darted to Ryn, then back to the brothers. A slow, knowing smirk spread across his beak. “Oh. *Oh.* You’re finally telling him about the donor bird.”</p>
+
+<p>The term was like a splash of cold water. *Donor bird.* It sounded clinical, impersonal. Like a part, not a person. Ryn flinched.</p>
+
+<p>“Pengo, for the love of Hylia,” Pako hissed.</p>
+
+<p>“What?” Pengo shrugged, unrepentant. “That’s what she was. An egg donor. No point wrapping it in poetry and making it confusing.” He looked straight at Ryn. “Your dad wanted a kid. He needed an egg to make it happen. He found a lady who was willing to provide the egg. Biology happened. She flew off. He stayed. End of story.” He crossed his wings. “See? Simple.”</p>
+
+<p>It wasn’t simple. It was a cold, mechanical version of the warm, scary, emotional story Lando and Pako had been trying to tell. Ryn felt a fresh wave of confusion, and a strange sense of loss for the blurry-faced “nice lady” who had just been reduced to a function.</p>
+
+<p>Nathan moved then. He didn’t sit in the other chair. He walked over to the couch and, with a quiet grace, lowered himself to sit on the woven rug at Ryn’s feet, putting himself below the fledgling’s eye level. He was close enough that Ryn could see the fine, silvery streaks in his navy-blue feathers.</p>
+
+<p>“Pengo has the subtlety of a wrecking ball,” Nathan said, his voice a low, calming murmur that seemed to slow the frantic spinning of Ryn’s thoughts. “But he’s not wrong about the most important part.” He reached out and very gently tapped a claw against Ryn’s knee. “Look at me, kid.”</p>
+
+<p>Ryn did. Nathan’s eyes were kind and clear, like the deep water of the lake.</p>
+
+<p>“All that other stuff — the how, the who, the biology — that’s just… machinery,” Nathan said. “The *story*, the real one, is about choice. And love.” He glanced up at Lando, a look of profound respect passing between them. “Your dad *chose* you. Before you were even here, he chose the path that would lead to you. He chose the early mornings feeling sick, he chose the weird cravings for pickled eggs at midnight, he chose the scary silence when it was just him and a future he couldn’t quite see yet. He chose every single hard, wonderful, terrifying part of it. Because he wanted *you*.”</p>
+
+<p>He then looked at Pako, and his expression warmed into fond exasperation. “And this big lug? The second he found out, he chose you too. Chose to be there for every check-up, to build your crib with his own two clumsy wings, to learn how to warm a bottle. He chose to be your uncle, in every way that counts.”</p>
+
+<p>Nathan’s gaze swept to include Pengo, who was now studying a loose thread on the armchair, a faint, uncharacteristic blush on his cheeks. “Even Grumpy over there. He chose to be the uncle who teaches you how a carburetor works and pretends he hates your sticky fingerprints on his tools.” Finally, Nathan looked back at Ryn, his voice dropping to a near-whisper, intimate and sure. “Foreman Harlan chose you. I chose you. We all saw this amazing, tiny chick that Lando brought into the world, and we all looked at each other and said, ‘Yep. He’s ours.’ The ‘how’ doesn’t matter, Ryn. The ‘who’ that was there at the very, very beginning… she doesn’t matter. What matters is the who that was there after. The who that stayed. The who that chose you, and keeps choosing you, every single day.”</p>
+
+<p>He placed his wing over Ryn’s small foot, a grounding weight. “*We’re* your family. This noisy, messy, loving pile of birds right here in this room. That’s the story.”</p>
+
+<p>Silence descended again, but it was a different silence. The thick, apprehensive air had been pierced by Nathan’s calm certainty. The cold, mechanical puzzle of “donor bird” was swept away, replaced by the living, breathing reality of the four adults surrounding him.</p>
+
+<p>Ryn looked around. At Lando, whose face was now a map of relief and aching love. At Pako, who was nodding vigorously, his eyes also suspiciously bright. At Pengo, who was pretending to be intensely interested in a smudge on his claw. At Nathan, who just waited, patient and solid.</p>
+
+<p>The confusion didn’t vanish, but it lost its sharp, frightening edges. It melted into a tangle of simpler, stronger feelings. He felt the *want* Nathan spoke of. He remembered the way Lando always kissed the top of his head before bed. The way Pako always saved the crust of his sweet roll for him. The way Nathan would explain things without ever making him feel small. The way Pengo let him “help” in the shop.</p>
+
+<p>He had a dad who had wanted him so much his heart hurt.</p>
+
+<p>He had uncles who had decided he was theirs.</p>
+
+<p>The blurry-faced lady receded, not with sadness, but with irrelevance. She was a shadowy figure at the very start of a long, sunlit road. The road was crowded with the people who mattered.</p>
+
+<p>He took a deep, shuddering breath, the first full one he’d taken since he asked the question. He wriggled out from under Lando’s wing and turned to face his father on the couch.</p>
+
+<p>“So,” Ryn said, his little voice firmer now, testing the new shape of his understanding. “I don’t have a mommy.” It was a statement, not a question.</p>
+
+<p>Lando held his breath, then slowly nodded. “No, chicklet. You don’t.”</p>
+
+<p>Ryn nodded back, a mirror of his father’s gesture. He cataloged his world. “I have a Dad.” He pointed a claw at Lando. He swiveled. “An Uncle Pako.” He pointed at Nathan on the floor. “An Uncle Nathan.” He pointed at the chair. “An Uncle Pengo. And… an Uncle Harlan.”</p>
+
+<p>“That’s right,” Pako said, his voice gruff with emotion. “That’s your crew.”</p>
+
+<p>Ryn sat with that for a moment, the list feeling complete, whole, and more than enough. The hollow feeling was gone, filled to the brim with a warm, buzzing certainty. He had a family. It looked different from Kiba’s, or Lem’s. But it was his. And it was big, and loud, and it had chosen him.</p>
+
+<p>He didn’t have any more questions. The ‘why’ and the ‘how’ were adult mysteries, foggy and distant. The ‘who’ was here, solid and real, in the fading light of the living room.</p>
+
+<p>Ryn looked at the four of them — his dad, his three uncles in the room — and the list felt complete. More than complete. It felt like a fortress. The silence now was comfortable, filled only with the soft evening sounds of the roost settling: the distant coo of a pigeon, the hum of the icebox in the kitchen, the creak of Pako shifting his weight on the couch cushions.</p>
+
+<p>He didn’t need to say anything else. Words were too big and clumsy for the feeling swelling inside his chest, a warm, bright balloon that made him feel light and safe all at once. He simply turned, scrambled up onto his knees on the couch, and launched himself at Lando.</p>
+
+<p>It wasn’t a graceful move. It was a five-year-old’s full-body commitment. He wrapped his wings as far as they would go around his father’s neck, burying his face in the familiar scent of soap and the faint, always-present hint of engine grease that clung to Lando’s feathers from his work at the garage. He felt Lando’s initial shock, a slight stiffening, before his dad’s arms came up and enveloped him completely, crushing him in a hug so tight it squeezed a little squeak out of him. But Ryn didn’t mind. He could feel the tremble in Lando’s frame, not from sadness anymore, but from a relief so profound it was physical.</p>
+
+<p>“Oh, buddy,” Lando whispered into the top of his head, his voice cracking. “My sweet chick.”</p>
+
+<p>Ryn held on until his arms ached. When he finally pulled back, Lando’s face was wet again, but he was smiling, a real, wide, unburdened smile that made his eyes crinkle at the corners. Ryn smiled back, a toothy, gap-filled grin of his own.</p>
+
+<p>Then, without a word, he pivoted on the couch and threw himself at Pako. Pako, who was already leaning forward, caught him with an “Oof!” and then a booming laugh that rattled Ryn’s bones. Pako’s hugs were different — less about containment and more about exuberant absorption. He lifted Ryn clear off the couch, squeezing him in a bear hug that made Ryn giggle breathlessly, before setting him back down and ruffling the feathers on his head so vigorously they stood on end.</p>
+
+<p>“That’s my boy,” Pako said, his own eyes suspiciously shiny. “Knew you’d get it. Sharp as a tack, this one.”</p>
+
+<p>From his chair, Pengo snorted. “Took you long enough to spit it out, is what it took.” But there was no bite in his words. He stood up, stretched his wings with a series of small pops, and walked over. He didn’t go for a hug. Instead, he reached out and gently flicked Ryn’s earhole with a claw. “Don’t go getting a big head about it. Family’s just family. Now, who’s hungry? All this emotional labor’s given me an appetite. I’m fixing noodles.”</p>
+
+<p>The mundane declaration was like a spell breaking the last of the solemnity. Nathan rose from the floor with a soft chuckle. “I’ll help. We can use the rest of those mushrooms from the market.” He gave Ryn’s shoulder a gentle squeeze as he passed, a silent communication of solidarity and pride.</p>
+
+<p>The kitchen soon filled with the clatter of pots, the hiss of water, and Pengo’s running commentary on the proper way to slice a scallion. Lando stayed on the couch, pulling Ryn back against his side. They sat in quiet companionship, watching the chaotic, familiar dance of their family making dinner. The low sun streamed through the window, painting long, golden bars across the floor. The fear, the hollow ache, the strange sense of being a puzzle piece from the wrong box — it had all dissolved. In its place was a deep, quiet knowing. He was Ryn. He lived here. These were his people.</p>
+
+<p>Dinner was louder than usual. Pako kept telling silly stories about Ryn as a hatchling, like the time he’d tried to hide a worm in his diaper for later. Pengo argued with Nathan about the correct spice blend for the noodle sauce. Lando just watched it all, a soft, contented look on his face, his wing resting on the back of Ryn’s chair. Ryn ate every bite of his food, his appetite returned. The noodles tasted like safety. Like home.</p>
+
+<hr />
+
+<p>The next morning dawned bright and clear. Ryn woke up in his nest-bed, the events of the previous evening resting in his mind not as a turbulent storm, but as a settled fact, as fundamental as the color of his feathers. He heard the deep rumble of Pako’s voice in the kitchen, already arguing with Lando about the structural integrity of a new bridge project.</p>
+
+<p>After a breakfast of sweet grains and sliced fruit, Lando knelt to give him a goodbye nuzzle. “You be good for Uncle Pako today, okay?”</p>
+
+<p>“I’m always good,” Ryn stated, which made Pako bark a laugh.</p>
+
+<p>“C’mon, trouble,” Pako said, scooping him up and settling him onto his broad shoulders. “We’ve got a site to inspect.”</p>
+
+<p>The construction site was a kingdom of dust and noise, a place Ryn loved. It was a half-built stone structure near the town’s edge, all scaffolding and shouted instructions and the rhythmic *clang* of hammers. Ravens in hard hats and tool belts moved with purposeful energy. The air smelled of crushed rock, wet mortar, and sawdust.</p>
+
+<p>Foreman Harlan was easy to spot. He was the largest raven on site, his feathers a dusty charcoal grey, his voice a carrying bass that cut through the din. He was poring over a large parchment blueprint spread across a makeshift table of planks and sawhorses, his brow furrowed in concentration.</p>
+
+<p>Pako set Ryn down and gave him a little push forward. “Go on. Say hi to your other uncle.”</p>
+
+<p>Ryn trotted over, his small claws kicking up little puffs of dust. Harlan didn’t look up immediately, his claw tracing a line on the parchment. “I don’t care what the spec says, Kova, if we pour that foundation before the gravel compact — oh!” His tone shifted abruptly as he noticed Ryn at his side. The stern foreman mask melted away, replaced by a wide, genuine smile that made the feathers around his eyes crinkle. “Well, look what the Cucco dragged in! If it isn’t my favorite site inspector!”</p>
+
+<p>He abandoned the blueprint entirely, bending down so he was at Ryn’s level. “Heard you had quite the family meeting last night.” His eyes, wise and kind, searched Ryn’s face. “Your dad and uncles… they tell you everything okay?”</p>
+
+<p>Ryn nodded. “Uh-huh. I don’t have a mommy. I have a dad and uncles. You’re my uncle.”</p>
+
+<p>Harlan’s expression softened further. He reached out a massive, calloused wing and very carefully cupped the side of Ryn’s head, his touch surprisingly gentle. “That’s right, chickadee. And don’t you ever forget it.” Then, with a theatrical flourish, he straightened up and raised his voice to a bellow that echoed across the site. “HEY! EVERYBIRD! LISTEN UP!”</p>
+
+<p>The rhythmic clanging slowed. Heads turned from scaffolds and mixing troughs.</p>
+
+<p>Harlan placed a wing on Ryn’s back. “This here is Ryn. He’s my nephew. My *favorite* nephew. And he’s come to inspect our work today. So I expect everything to be up to code! And!” He reached into a pocket of his heavy work vest and pulled out a small, slightly squashed honeycake wrapped in wax paper. It was clearly his own mid-morning snack. “All site inspectors require proper sustenance.” He presented it to Ryn with a solemn air.</p>
+
+<p>Ryn took the honeycake, beaming. A few of the workers chuckled fondly. One old-timer raven with a missing tail feather tipped his hard hat. “Lookin’ sharp, Inspector!”</p>
+
+<p>For the next hour, Ryn was royalty. Harlan carried him around on his shoulders, pointing out different parts of the construction. “See those beams? Uncle Pako forged the brackets for those.” He was given a tiny, useless scrap of blueprint to “study.” One worker presented him with a perfectly smooth, round pebble she’d found, “for your rock collection, sir.” It was a symphony of unspoken affirmation. No one said, “We know about your family.” They just showed him, in a hundred small ways, that he belonged, that he was known and loved. The message was absorbed through his skin, through the sun-warmed stone dust, through the solid, dependable presence of Harlan beneath him.</p>
+
+<p>When Pako finally retrieved him, Ryn was dusty, slightly sticky from the honeycake, and utterly happy. He waved goodbye to Harlan, who waved back before turning back to his crew, his foreman bark already returning. “Alright, the show’s over! Back to work! That lintel isn’t going to set itself!”</p>
+
+<hr />
+
+<p>The walk to kindergarten the next day felt different. Ryn held Pako’s claw, not with the anxious grip of before, but with a steady, confident hold. He remembered the question now not as a threat, but as a puzzle he had solved. He knew his answer.</p>
+
+<p>The classroom was its usual hive of subdued chaos. Chicks were at the various play stations — some at the water table, some with the wooden blocks, some leafing through picture books. Ryn went straight to the block corner. Kiba was already there, meticulously constructing a tall, precarious tower.</p>
+
+<p>For a while, they built in parallel, Ryn working on a sprawling, low fortress. The morning sun slanted through the high windows, filled with dancing dust motes. Then, as Ryn was carefully balancing a triangular roof piece on his structure, Kiba spoke without looking up from his tower.</p>
+
+<p>“So,” Kiba said, his voice casual, conversational. “Did you ask? About your mommy?”</p>
+
+<p>Ryn’s claw stilled for a second on the wooden block. He took a quiet breath, the way he’d seen Nathan do when he was thinking. He put the roof piece down, turned, and faced Kiba fully. The other chick finally looked at him, curiosity in his bright eyes.</p>
+
+<p>The memory of the living room, of Harlan’s shoulders, of Lando’s tight hug, flashed through him. The warm, bright balloon in his chest expanded.</p>
+
+<p>He puffed out his little chest, the feathers on his neck ruffling slightly with the effort. He didn’t shout. He said it clearly, with a certainty that felt as solid as the blocks around them.</p>
+
+<p>“I don’t have a mommy,” Ryn declared.</p>
+
+<p>Kiba blinked, his tower forgotten. “You… don’t?”</p>
+
+<p>“Nope.” Ryn shook his head. “I have a daddy.” He said the word with immense pride. “And I have a whole bunch of uncles. Uncle Pako, and Uncle Nathan, and Uncle Pengo, and Uncle Harlan.” He counted them off on his claws. “They’re my family.”</p>
+
+<p>Silence fell between them. Kiba’s beak opened, then closed. He looked genuinely perplexed, his concept of the world challenged. “But… who cooks your dinner?” he finally asked, seizing on a practical, kindergarten-level concern.</p>
+
+<p>“My dad does. Or Uncle Nathan. Sometimes Uncle Pengo makes noodles.” Ryn said it as if it were the most normal thing in the world. Because it was. *His* normal.</p>
+
+<p>“Oh,” Kiba said. He looked at his tower, then back at Ryn. The confusion in his eyes slowly cleared, replaced by a simple acceptance. A five-year-old’s worldview was flexible. A new fact had been presented. It didn’t match his own picture, but it clearly made Ryn happy and sure. That was enough. “Okay. Wanna help me with the top? It keeps falling.”</p>
+
+<p>And just like that, it was over. The great, looming Question had been asked and answered. The sky did not fall. The blocks did not crumble. Kiba just scooted over, making room for him. Ryn felt a final, tiny knot inside him loosen and vanish, carried away on the stream of ordinary life. He spent the rest of the day building, and painting, and listening to story time, his heart light and unburdened. When he told Teacher Nima during craft time that he was making a picture for his Uncle Harlan, she just smiled and handed him another glue stick.</p>
+
+<hr />
+
+<p>That night, after a bath that washed away the last of the construction site dust, Ryn sat in his soft sleep tunic on the edge of his nest-bed. Lando was tidying the room, folding a stray tunic, smoothing the blankets.</p>
+
+<p>“Dad?” Ryn said.</p>
+
+<p>Lando turned. “Yeah, chicklet?”</p>
+
+<p>The words were there, simple and true. They didn’t need the preamble of the big question anymore. They were just a fact, to be stated before sleep, like saying the sky was dark or the moons were out.</p>
+
+<p>“I’m glad you’re my dad.”</p>
+
+<p>Lando froze. For a second, he didn’t seem to breathe. The room was very quiet. Then he crossed the space in two strides and sank to his knees beside the bed, so their faces were level. In the soft glow of the lumastone lamp, Ryn could see every detail of his father’s beloved face — the small scar over his eyebrow from a long-ago accident with a wrench, the gentle weariness at the corners of his eyes, the overwhelming love shining from them now.</p>
+
+<p>Lando didn’t hug him again. He just reached out and placed his wing over Ryn’s small one where it rested on the blanket. His touch was warm and steady.</p>
+
+<p>“Ryn,” he said, and his voice was thick with an emotion so vast and deep there were no words for it. “My wonderful, amazing boy. I am so glad, every single second of every single day, that I am your dad. And that you are my son.”</p>
+
+<p>He leaned forward and pressed his forehead gently against Ryn’s, a traditional raven gesture of ultimate closeness, of shared breath and spirit. They stayed like that for a long moment, in the quiet, lamplit room.</p>
+
+<p>Then Lando pulled back, kissed Ryn on the brow, and tucked the blankets snugly around him. “Sweet dreams, my heart.”</p>
+
+<p>“Sweet dreams, Dad.”</p>
+
+<p>Lando turned down the lamp and padded softly to the door. He paused in the doorway, a tall, silhouetted figure looking back at the small lump in the bed.</p>
+
+<p>Ryn closed his eyes. He could hear the familiar, comforting sounds of the roost at night: the low murmur of adult voices from the living room, the clink of a cup being set down, Pengo’s distinctive cackle at something. He felt the softness of his own nest, the weight of his blankets. He saw in his mind’s eye not a blurry-faced stranger, but a gallery of clear, loving faces: Lando’s smile, Pako’s booming laugh, Nathan’s calm eyes, Pengo’s faux grumpiness, Harlan’s proud bearing.</p>
+
+<p>He didn’t have a mommy. He had a story, one that began with a choice and was written every day with love, laughter, tool belts, and honeycakes. He had a family. It was his. And it was more than enough.</p>
+
+<p>With that final, peaceful certainty cradling him like a second set of wings, Ryn drifted into a deep, untroubled sleep, safe in the knowledge of his place in the world, and in the unwavering hearts of those who had chosen him.</p>
+
+<code>##### END AI-ASSISTED/GENERATED CONTENT #####</code>
+<br>
+<hr>
+<h3>Comments</h3>
+
+None.
+
+
+</div>
+
+Want to comment? <a href="mailto:lets-talk@arden-chan.party" title="email">Send an email.</a>
+
+		</div>
+
+	</div>
+</div>
+
+<div class="modal fade" id="settings_modal" tabindex="-1" aria-labelledby="modal_lbl" aria-hidden="true" style="z-index:10000">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="modal_lbl">UI Settings</h5>
+		  &nbsp;<a class="toggle_note" data-target="#localStorage_note" href="#" style="font-size: x-small;">toggle note</a>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<div id="localStorage_note" class="alert alert-warning">
+				This uses the localStorage API to store your customisations. This means that:
+				<ul>
+					<li>No data will be saved if your browser does not support the localStorage API.</li>
+					<li>When you change browsers, switch to Incognito mode, or clear your browser's data, all of your customisations will be gone.</li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div><b>How to open links:</b> (Samples: <a href="https://arden-chan.party/faq.html">internal</a>, <a href="https://example.com/">external</a>)
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_in_same_tab" id="op1">
+					<label class="form-check-label" for="op1">Open all links in same tab (default)</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_int_same_tab_ext_other_tab" id="op2">
+					<label class="form-check-label" for="op2">Open internal links in same tab but open external ones in another tab</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_other_tab" id="op3">
+					<label class="form-check-label" for="op3">Open all links in separate tabs</label>
+				</div>
+				</div>
+			</div>
+			<div class="row">
+				<div><b>Theme Color Mode</b>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="theme_color_mode" value="light" id="tcm-op1">
+					<label class="form-check-label" for="tcm-op1">☀️ Lighter</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="theme_color_mode" value="dark" id="tcm-op2">
+					<label class="form-check-label" for="tcm-op2">🌘 Darker (default)</label>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+</body>
+</html>
