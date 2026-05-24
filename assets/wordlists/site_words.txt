@@ -11331,6 +11331,7 @@ pampabilis
 pampalit
 pampalubag-loob
 pampanga
+pampapayat
 pampatulog
 pampering
 pamunas
@@ -13713,6 +13714,7 @@ sell
 seller
 sellers
 selling
+semaglutide
 semester
 semestral
 semi-programming
