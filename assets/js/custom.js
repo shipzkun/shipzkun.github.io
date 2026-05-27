@@ -178,7 +178,13 @@ $(function() {
 			return
 		}
 
-		$("#site_search_results").prepend("<i style='font-size: x-small; position: sticky; top:0; opacity: 0.8' class='bg-secondary'>[Escape] to dismiss<span id='site_search_results_num' style='display:none'>; N found</span></i>")
+		$("#site_search_results").prepend(
+			"<i style='font-size: x-small; position: sticky; top:0; opacity: 0.8' class='bg-secondary'>"+
+				"[Escape] to dismiss"+
+				"<span id='site_search_results_num' style='display:none'>; N found</span>"+
+				"<br/>You can also visit <a href='/search'>the site index page</a>."+
+			"</i>"
+		)
 
 		filter = filter.trim().toLowerCase()
 

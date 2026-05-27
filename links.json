@@ -2989,7 +2989,7 @@
 	"label": "ilokosoft",
 	"categories": "",
 	"tags": "",
-	"date": "2024-11-18T20:30:00+08:00"
+	"date": "2026-05-27T21:00:00+08:00"
 },
 
 
@@ -5390,6 +5390,19 @@
 {
 	"url": "https://arden-chan.party/resume",
 	"title": "Résumé",
+	"label": "",
+	"categories": "",
+	"tags": "",
+	"date": "1970-01-01T00:00:00+08:00"
+},
+
+
+
+	
+	
+{
+	"url": "https://arden-chan.party/search",
+	"title": "Strings Index",
 	"label": "",
 	"categories": "",
 	"tags": "",

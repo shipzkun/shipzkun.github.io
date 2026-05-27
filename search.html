@@ -152,15 +152,89 @@
 		</div>
 
 		<div id="content" class="container-fluid" tabindex="-1">
-			<div class="p-5 mb-4 bg-dark text-white rounded-3">
-  <div class="container-fluid">
-	<h1 class="display-5 fw-bold"><span title="Welcome!" lang="ja">ようこそ！</span></h1>
-	<p class="col-md-8 fs-5">🡔 Browse through my personal projects, follies and foibles.</p>
-  </div>
-</div>
+			<h1 id="strings-index">Strings Index</h1>
 
-<p>Recent updates
-<ul id="recent_updates"><li style='list-style:none'><span class="badge bg-primary" style="font-size: xx-small;">ilokosoft</span> <a href='/ilokosoft/agsao.html'>Agsao</a> <span style='font-size: xx-small'>2026-05-27 21:00:00</span></li><li style='list-style:none'><span class="badge bg-primary" style="font-size: xx-small;">verse</span> <a href='/verse/2026-05-27-Turismo.html'>Turismo</a> <span style='font-size: xx-small'>2026-05-27 13:40:00</span></li><li style='list-style:none'><span class="badge bg-primary" style="font-size: xx-small;">verse</span> <a href='/verse/2026-05-24-Pampapayat.html'>Pampapayat</a> <span style='font-size: xx-small'>2026-05-24 13:10:00</span></li><li style='list-style:none'><span class="badge bg-primary" style="font-size: xx-small;">salawikain</span> <a href='/salawikain/2026-05-17-Salawikain-053.html'>Salawikain 53</a> <span style='font-size: xx-small'>2026-05-17</span></li><li style='list-style:none'><span class="badge bg-primary" style="font-size: xx-small;">salawikain</span> <a href='/salawikain/2026-05-15-Salawikain-052.html'>Salawikain 52</a> <span style='font-size: xx-small'>2026-05-15</span></li><li style='list-style:none'><span class="badge bg-primary" style="font-size: xx-small;">ai</span> <a href='/ai/2026-04-26-Where-is-Mommy.html'>Where is Mommy?</a> <span style='font-size: xx-small'>2026-04-26 17:10:00</span></li><li style='list-style:none'><span class="badge bg-primary" style="font-size: xx-small;">salawikain</span> <a href='/salawikain/2026-04-23-Salawikain-051.html'>Salawikain 51</a> <span style='font-size: xx-small'>2026-04-23</span></li><li style='list-style:none'><span class="badge bg-primary" style="font-size: xx-small;">salawikain</span> <a href='/salawikain/2026-04-11-Salawikain-050.html'>Salawikain 50</a> <span style='font-size: xx-small'>2026-04-11</span></li><li style='list-style:none'><span class="badge bg-primary" style="font-size: xx-small;">salawikain</span> <a href='/salawikain/2026-04-10-Salawikain-049.html'>Salawikain 49</a> <span style='font-size: xx-small'>2026-04-10</span></li><li style='list-style:none'><span class="badge bg-primary" style="font-size: xx-small;">commentary</span> <a href='/commentary/2026-04-10-Panghihingi.html'>Panghihingi</a> <span style='font-size: xx-small'>2026-04-10 18:30:00</span></li></ul></p>
+<p>Hi! You’re in the special search page. These all contain page content strings that satisfy the following pseudocode:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">strings</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sr">/\p{Space}/</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span>
+	<span class="k">if</span> <span class="n">word</span> <span class="o">=~</span> <span class="sr">/\p{Hiragana}|\p{Katakana}|\p{Han}/</span> <span class="k">then</span>
+		<span class="n">add_to_corpus</span><span class="p">(</span><span class="n">get_jp_words</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
+	<span class="k">else</span>
+		<span class="n">word</span><span class="p">.</span><span class="nf">sub!</span><span class="p">(</span><span class="sr">/\A[\p{Pi}\p{Ps}\p{Po}]+/</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+		<span class="n">word</span><span class="p">.</span><span class="nf">sub!</span><span class="p">(</span><span class="sr">/[\p{Pf}\p{Pe}\p{Po}]+\z/</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+
+		<span class="k">if</span> <span class="n">word</span> <span class="o">=~</span> <span class="sr">/[\p{Word}]+/</span> <span class="k">then</span>
+			<span class="n">add_to_corpus</span><span class="p">(</span><span class="n">word</span><span class="p">.</span><span class="nf">downcase</span><span class="p">)</span>
+		<span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>To avoid unnecessary total count inflation for some words, the header and sidebar contents are not considered. <a href="https://github.com/6/tiny_segmenter">TinySegmenter</a> is used to extract the Japanese “words” properly.</p>
+
+<p>This page is also excluded to avoid double-counting. As proof, this string should not appear below: <code class="can-copy">ABCDEFGHIJKLMNÑNGOPQRSTUVWXYZ1234567890₱</code></p>
+
+<!-- Show loading by default -->
+<div id="search-loading" class="alert alert-info">Loading...</div>
+
+<style>
+#table-index {
+	table-layout: fixed;
+}
+
+#table-index td:nth-child(1), #table-index td:nth-child(3) {
+	width: 45%;
+}
+
+#table-index td:nth-child(2) {
+	width: 10%;
+}
+
+.scroll-contents {
+	max-height: 10em;
+	overflow: auto;
+}
+</style>
+
+<!-- Prefill table above -->
+<script>
+$(function() {
+	const INDEX_FILE = "https://arden-chan.party/assets/wordlists/site_index.json"
+	let replacement = ""
+
+	$.getJSON(INDEX_FILE, function(data) {
+		replacement = $("<table id='table-index' class='table table-striped table-bordered table-hover'>")
+		replacement.append("<thead><th>String</th><th>Total Count</th><th>Appears In</th></thead>")
+
+		let tbody = $("<tbody>")
+		Object.keys(data).sort().forEach(key => {
+			// Assemble the links
+			let links_cell = "<td>"
+			Object.entries(data[key].sites).sort((a, b) => {
+				const titleA = (a[1].title || '').toString();
+				const titleB = (b[1].title || '').toString();
+				return titleA.localeCompare(titleB, undefined, { sensitivity: 'base', numeric: true });
+			}).forEach(([url, info]) => {
+				links_cell += '<span class="badge bg-primary" style="font-size: xx-small;">'+info.label+'</span>' +
+					" <a href='"+url+"'>"+info.title+"</a> "+
+					// "<span style='font-size: xx-small'>"+parts[0]+"</span>"+
+				"<br/>"
+			})
+			links_cell += "</td>"
+			links_cell = $("<div class='scroll-contents'>"+links_cell+"</div>")
+
+			let tr = $("<tr>")
+			tr.append("<td><div class='scroll-contents'>"+key+"</div></td>"+"<td>"+data[key].count+"</td>").append(links_cell)
+			tbody.append(tr)
+		})
+		replacement.append(tbody)
+	}).fail(function() {
+			replacement = $("<div class='alert alert-danger'>Cannot fetch index file! <a href='mailto:lets-talk@arden-chan.party'>Contact the developer!</div>")
+	}).always(function() {
+		$(replacement).replaceAll("#search-loading")
+	})
+})
+</script>
+
 
 		</div>
 

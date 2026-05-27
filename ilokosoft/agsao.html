@@ -193,7 +193,7 @@ $(function() {
 		
 		"site_words": {
 			"name": "Words from this website",
-			"desc": "Words scraped from this website",
+			"desc": "Word-like strings that match [A-Za-z'][A-Za-z'-]",
 			"url": "https://arden-chan.party/assets/wordlists/site_words.txt"
 		},
 		
@@ -337,7 +337,7 @@ Select wordlist:<br />
 
 <div class="form-check"><label class="form-check-label" title="Words scraped from the Filipino Wikipedia" style="border-bottom: 1px dotted"><input class="form-check-input" type="checkbox" name="wordlists" value="tl_uniq" />Words from Filipino Wikipedia</label></div>
 
-<div class="form-check"><label class="form-check-label" title="Words scraped from this website" style="border-bottom: 1px dotted"><input class="form-check-input" type="checkbox" name="wordlists" value="site_words" />Words from this website</label></div>
+<div class="form-check"><label class="form-check-label" title="Word-like strings that match [A-Za-z'][A-Za-z'-]" style="border-bottom: 1px dotted"><input class="form-check-input" type="checkbox" name="wordlists" value="site_words" />Words from this website</label></div>
 
 <span class="text text-danger" id="v_wordlists" style="display:none"></span>
 <br />
@@ -471,13 +471,17 @@ Cannot generate passphrase. Please check your selections.
 <p><em>Agsao</em> <code>[ɐg.sɐ.'o]</code> means <em>to speak</em> in Ilocano. Given the nature of the service, it’s close enough, don’t you think?</p>
 
 <hr />
-<p>UPDATES</p>
+<p>UPDATES (from latest to oldest)</p>
 <ul>
-  <li>04 Dec 2022:
+  <li>27 May 2026:
     <ul>
-      <li>Hidden generated passwords</li>
-      <li>Updated max limits to realistic values</li>
-      <li>Added new reference link</li>
+      <li>Changed order of changelog entries: now from latest to oldest</li>
+      <li>Updated algo for wordlist of “words being extracted from this website”</li>
+    </ul>
+  </li>
+  <li>27 Dec 2024:
+    <ul>
+      <li>Fixed copying problem (hopefully) in MS Edge</li>
     </ul>
   </li>
   <li>18 Nov 2024:
@@ -485,9 +489,11 @@ Cannot generate passphrase. Please check your selections.
       <li>Added new wordlist: words from this website</li>
     </ul>
   </li>
-  <li>27 Dec 2024:
+  <li>04 Dec 2022:
     <ul>
-      <li>Fixed copying problem (hopefully) in MS Edge</li>
+      <li>Hidden generated passwords</li>
+      <li>Updated max limits to realistic values</li>
+      <li>Added new reference link</li>
     </ul>
   </li>
 </ul>
