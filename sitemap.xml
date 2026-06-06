@@ -5556,7 +5556,7 @@
 	<url>
 		<loc>https://arden-chan.party/salawikain/2026-06-03-Salawikain-054.html</loc>
 		<lastmod>
-				2026-06-03T00:00:00+08:00
+				2026-06-06T00:00:00+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -7344,7 +7344,25 @@
 	<url>
 		<loc>https://arden-chan.party/verse/2026-05-27-Turismo.html</loc>
 		<lastmod>
-				2026-05-27T13:40:00+08:00
+				2026-06-06T15:20:00+08:00
+			
+		</lastmod>
+		<changefreq>
+									monthly
+			
+		</changefreq>
+		<priority>
+								0.5
+			
+		</priority>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://arden-chan.party/verse/2026-06-06-Pugad.html</loc>
+		<lastmod>
+				2026-06-06T15:20:00+08:00
 			
 		</lastmod>
 		<changefreq>

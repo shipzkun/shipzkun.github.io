@@ -11922,6 +11922,10 @@ turismo
 hipag
 bohol
 masagwa
+limbag
+pugad
+maatim-atim
+nakalimlim
 spakol
 mabayaran
 hanap
@@ -12010,8 +12014,9 @@ pagsha-shopee
 nakamura
 napamura
 maghirap
-magmkuhang
+magmukhang
 lubog
+baybay
 biyernes
 aning
 ingat
