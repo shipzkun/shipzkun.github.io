@@ -176,6 +176,7 @@
 <!-- Show loading by default -->
 <div id="search-loading" class="alert alert-info">Loading...</div>
 
+<!-- The dynamic vtabs -->
 <style>
 #table-index {
 	table-layout: fixed;
@@ -193,29 +194,118 @@
 	max-height: 10em;
 	overflow: auto;
 }
+
+#vtabs {
+	max-height: 70vh;
+	overflow: visible;
+	width: 100%;
+}
+
+#gtabs {
+	align-content: end;
+	display: block;
+	max-width: 4em;
+	max-height: inherit;
+	overflow-y: auto;
+}
+
+#gtabs a {
+	display: list-item;
+}
+
+.tab-content {
+	max-height: inherit;
+	overflow-y: auto;
+}
 </style>
+
+<!-- Hide this at first -->
+<div id="div-words" style="display: none !important" class="d-flex align-items-start">
+	<div id="vtabs" class="nav flex-column nav-pills me-3" role="tablist" aria-orientation="vertical">
+		<nav id="gtabs" class="col-1 ntabs nav flex-column nav-pills me-3"></nav>
+		<div class="col-11 tab-content">
+			<div class="tab-pane active border rounded p-3" role="tabpanel">
+				Sample tab body
+			</div>
+		</div>
+	</div>
+</div>
 
 <!-- Prefill table above -->
 <script>
 $(function() {
 	const INDEX_FILE = "https://arden-chan.party/assets/wordlists/site_index.json"
-	let replacement = ""
+	let wordGroups = {}
 
 	$.getJSON(INDEX_FILE, function(data) {
-		replacement = $("<table id='table-index' class='table table-striped table-bordered table-hover'>")
-		replacement.append("<thead><th>String</th><th>Total Count</th><th>Appears In</th></thead>")
+		const seg = new Intl.Segmenter(undefined, { granularity: 'grapheme' });
 
-		let tbody = $("<tbody>")
-		Object.keys(data).sort().forEach(key => {
+		// group the words into their first characters
+		Object.keys(data).forEach(word => {
+			if (!word || word.length == 0) return
+
+			// get the first grapheme
+			let grapheme = Array.from(seg.segment(word))[0].segment
+
+			// push word to the proper bucket
+			if (!wordGroups[grapheme]) {
+				wordGroups[grapheme] = []
+			}
+			wordGroups[grapheme].push({[word]: data[word]})
+		})
+
+		// Generate tabs in visual sorted order
+		Object.keys(wordGroups).sort().forEach(grapheme => {
+			$("#gtabs").append("<a class='a-grapheme' href='/search#"+grapheme+"'>"+grapheme+"</a>")
+		})
+
+		$('.tab-content').text("⬅️ Choose a grapheme on the left")
+		$("#div-words").show()
+		$("#search-loading").remove()
+	}).fail(function() {
+		$("#search-loading").replaceWith("<div class='alert alert-danger'>Cannot fetch index file! <a href='mailto:lets-talk@arden-chan.party'>Contact the developer!</div>")
+	})
+
+	// handle grapheme click
+	let prev_selected = null
+	$("body").on('click', '.a-grapheme', function(e) {
+		e.preventDefault()
+
+		let href = $(this).attr('href')
+		let grapheme = href.substr(href.indexOf('#')+1)
+		if (grapheme == prev_selected) {
+			console.log("Early exit: grapheme stats already shown")
+			return
+		}
+
+		let grapheme_table = $(
+			"<table id='table-index' class='table table-striped table-bordered table-hover'>" +
+			"<thead><th>String</th><th>Total Count</th><th>Appears In</th></thead>" +
+			"<tbody></tbody>" +
+			"</table>"
+		)
+
+		if (!wordGroups[grapheme]) {
+			$(".tab-content").empty().append("<span>Words not found with grapheme: <code>"+grapheme+"</code></span>")
+			return
+		}
+
+		prev_selected = grapheme
+
+		// render the words with that grapheme
+		wordGroups[grapheme].sort().forEach(word_info => {
+			let word = Object.keys(word_info)[0]
+			let info = word_info[word]
+
 			// Assemble the links
 			let links_cell = "<td>"
-			Object.entries(data[key].sites).sort((a, b) => {
+			Object.entries(info.sites).sort((a, b) => {
 				const titleA = (a[1].title || '').toString();
 				const titleB = (b[1].title || '').toString();
 				return titleA.localeCompare(titleB, undefined, { sensitivity: 'base', numeric: true });
-			}).forEach(([url, info]) => {
-				links_cell += '<span class="badge bg-primary" style="font-size: xx-small;">'+info.label+'</span>' +
-					" <a href='"+url+"'>"+info.title+"</a> "+
+			}).forEach(([url, inf]) => {
+				links_cell += '<span class="badge bg-primary" style="font-size: xx-small;">'+inf.label+'</span>' +
+					" <a href='"+url+"'>"+inf.title+"</a> "+
 					// "<span style='font-size: xx-small'>"+parts[0]+"</span>"+
 				"<br/>"
 			})
@@ -223,14 +313,11 @@ $(function() {
 			links_cell = $("<div class='scroll-contents'>"+links_cell+"</div>")
 
 			let tr = $("<tr>")
-			tr.append("<td><div class='scroll-contents'>"+key+"</div></td>"+"<td>"+data[key].count+"</td>").append(links_cell)
-			tbody.append(tr)
+			let td_word = $("<td>").append("<div>").text(word)
+			tr.append(td_word).append("<td>"+info.count+"</td>").append(links_cell)
+			grapheme_table.find("tbody").append(tr)
 		})
-		replacement.append(tbody)
-	}).fail(function() {
-			replacement = $("<div class='alert alert-danger'>Cannot fetch index file! <a href='mailto:lets-talk@arden-chan.party'>Contact the developer!</div>")
-	}).always(function() {
-		$(replacement).replaceAll("#search-loading")
+		$(".tab-content").empty().append("<span>Words with grapheme: <code>"+grapheme+"</code></span><br/>").append(grapheme_table)
 	})
 })
 </script>
