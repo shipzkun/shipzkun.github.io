@@ -304,8 +304,9 @@ $(function() {
 				const titleB = (b[1].title || '').toString();
 				return titleA.localeCompare(titleB, undefined, { sensitivity: 'base', numeric: true });
 			}).forEach(([url, inf]) => {
+				let qp = (new URLSearchParams({q: word})).toString()
 				links_cell += '<span class="badge bg-primary" style="font-size: xx-small;">'+inf.label+'</span>' +
-					" <a href='"+url+"'>"+inf.title+"</a> "+
+					" <a href='"+url+"?"+qp+"'>"+inf.title+"</a> "+
 					// "<span style='font-size: xx-small'>"+parts[0]+"</span>"+
 				"<br/>"
 			})

@@ -43,15 +43,19 @@ $(function() {
 	$(".can-copy").hover(
 		// hover in: show copy button
 		function() {
+			if ($(this).data('isHovering')) return
+			$(this).data('isHovering', true)
 			let id = 'i-'+Math.random()
 			let txt = $("<span class='cp-text' id='"+id+"'>").text($(this).text())
-			let btn = $("<button class='btn-copy' title='Copy to clipboard' type='button' data-target='"+id+"'>🗒</button>");
-			$(this).empty().append(txt).append(btn);
+			let btn = $("<button class='btn-copy' title='Copy to clipboard' type='button' data-target='"+id+"'>🗒</button>")
+			$(this).data('old_content', $(this).html())
+			$(this).empty().append(txt).append(btn)
 		},
 		// hover out: remove copy button
 		function() {
-			let txt = $(".cp-text").text();
-			$(this).empty().text(txt);
+			$(this).data('isHovering', false)
+			let txt = $(".cp-text").text()
+			$(this).empty().html($(this).data('old_content'))
 		}
 	);
 
@@ -106,6 +110,57 @@ $(function() {
 	$('.carousel').carousel({
 		interval: false,
 	});
+
+	// search for website content: a given page
+	let qps = new URLSearchParams(window.location.search)
+	console.log(qps)
+	if (qps.has("q")) {
+		let tw = document.createTreeWalker(
+			document.getElementById("content"),
+			NodeFilter.SHOW_TEXT,
+			function (node) {
+				// skip empty/whitespace-only nodes
+				if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+
+				// reject if inside any of these tags
+				const skipTag = node.parentNode && node.parentNode.closest &&
+				node.parentNode.closest("script, style, noscript, textarea");
+				if (skipTag) return NodeFilter.FILTER_REJECT;
+
+				return NodeFilter.FILTER_ACCEPT;
+			}
+		)
+
+
+		const qp = qps.get('q').toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+		console.log(qp)
+		// Incantations as suggested by Copilot:
+		// (?<!\p{L}) ensures the match is not immediately preceded by a Unicode letter.
+		// (term) captures the literal, escaped search term.
+		// (?!\p{L}) ensures the match is not immediately followed by a Unicode letter.
+		// Flags u and i: u enables Unicode property escapes; i makes it case‑insensitive.
+		const testRegex = new RegExp('(?<!\\p{L})(' + qp + ')(?!\\p{L})', 'iu');
+		const replaceAllRegex = new RegExp('(?<!\\p{L})(' + qp + ')(?!\\p{L})', 'giu');
+
+		let node
+		let nodeMatches = []
+		while ((node = tw.nextNode())) {
+			if (testRegex.test(node.nodeValue)) {
+				nodeMatches.push(node)
+			}
+		}
+
+		// Replace the nodes
+		nodeMatches.forEach((node) => {
+			const span = document.createElement("span");
+			span.innerHTML = node.nodeValue.replaceAll(replaceAllRegex, "<mark>$1</mark>");
+			node.parentNode.replaceChild(span, node);
+		})
+
+		// scroll to the FIRST INSTANCE of the element
+		document.querySelector("mark").scrollIntoView({ behavior: 'instant', block: 'center', inline: 'nearest' })
+	}
+
 
 	// search for website content
 	$("#site_search").on('input', delay(function(e){
