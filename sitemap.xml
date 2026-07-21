@@ -5448,7 +5448,7 @@
 	<url>
 		<loc>https://arden-chan.party/salawikain/2026-03-01-Salawikain-048.html</loc>
 		<lastmod>
-				2026-03-01T00:00:00+08:00
+				2026-07-21T00:00:00+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -5557,6 +5557,24 @@
 		<loc>https://arden-chan.party/salawikain/2026-06-03-Salawikain-054.html</loc>
 		<lastmod>
 				2026-06-06T00:00:00+08:00
+			
+		</lastmod>
+		<changefreq>
+									monthly
+			
+		</changefreq>
+		<priority>
+								0.5
+			
+		</priority>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://arden-chan.party/salawikain/2026-07-21-Salawikain-055.html</loc>
+		<lastmod>
+				2026-07-21T00:00:00+08:00
 			
 		</lastmod>
 		<changefreq>
