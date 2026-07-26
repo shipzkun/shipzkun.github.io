@@ -1418,7 +1418,7 @@
 	<url>
 		<loc>https://arden-chan.party/blog/notes.html</loc>
 		<lastmod>
-							1970-01-01T00:00:00+08:00
+				2026-07-26T00:00:00+08:00
 			
 		</lastmod>
 		<changefreq>
@@ -4580,7 +4580,25 @@
 	<url>
 		<loc>https://arden-chan.party/notes/2023-05-01-Webdev-notes.html</loc>
 		<lastmod>
-				2023-05-01T00:00:00+08:00
+				2026-07-26T00:00:00+08:00
+			
+		</lastmod>
+		<changefreq>
+									monthly
+			
+		</changefreq>
+		<priority>
+								0.5
+			
+		</priority>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://arden-chan.party/notes/2026-07-26-Articles.html</loc>
+		<lastmod>
+				2026-07-26T00:00:00+08:00
 			
 		</lastmod>
 		<changefreq>
