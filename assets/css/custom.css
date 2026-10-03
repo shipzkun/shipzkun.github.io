@@ -33,10 +33,25 @@ body {
 	/* z-index: 9999; */
 	overflow: auto;
 	padding-left: 10px;
+
+}
+
+#sidebar-links {
+	flex: 1;
+	min-height: 0;
+	overflow-y: auto;
+}
+
+#sidebar-footer {
+	flex-shrink: 0;
+	position: static;
+	border-top: 1px solid gray;
+	padding-top: 1em;
 }
 
 #sidebar.show {
-	display:inline ;
+	display: flex;
+	flex-direction: column;
 }
 
 #sidebar li {
