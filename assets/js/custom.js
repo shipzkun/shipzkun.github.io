@@ -60,8 +60,6 @@ $(function() {
 	);
 
 	$("body").on("click", ".btn-copy", function() {
-		let isIOS = navigator.platform.indexOf('Mac') > -1
-
 		let btn_parent = $(this).parent();
 		let text = $(this).siblings('.cp-text').text();
 
@@ -76,20 +74,31 @@ $(function() {
 			$(info).fadeOut(1000, function() {$(this).remove()})
 		}
 
-		if (isIOS) {
+
+		if (navigator.clipboard && window.isSecureContext) {
+			navigator.clipboard.writeText(text).then(flash_success, flash_error)
+		} else {
 			let textarea = document.createElement('textarea')
 			textarea.value = text
+
+			// Suggested by AI
+			// Prevent keyboard popup, scrolling, and layout shift on iOS/iPadOS Safari
+			textarea.style.position = 'fixed'
+			textarea.style.top = '0'
+			textarea.style.left = '-9999px'
+			textarea.setAttribute('readonly', '')
+
 			document.body.appendChild(textarea)
-			let range = document.createRange()
-			range.selectNodeContents(textarea)
-			let selection = window.getSelection()
-			selection.removeAllRanges()
-			selection.addRange(range)
-			textarea.setSelectionRange(0, Number.MAX_SAFE_INTEGER)
-			document.execCommand('copy') ? flash_success() : flash_error()
-			document.body.removeChild(textarea)
-		} else {
-			navigator.clipboard.writeText(text).then(flash_success, flash_error);
+			textarea.select()
+			textarea.setSelectionRange(0, 999999) // Required for iOS selection
+
+			try {
+				document.execCommand('copy') ? flash_success() : flash_error('Copy command unsuccessful')
+			} catch (err) {
+				flash_error(err)
+			} finally {
+				document.body.removeChild(textarea);
+			}
 		}
 	});
 
