@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+	<meta charset="utf-8">
+	<title>Arden's Corner</title>
+	<base href="https://arden-chan.party">
+
+	<link rel="shortcut icon" href="/assets/images/favicon.png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/darkly.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/theme.dark.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/jquery.tablesorter.pager.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/custom.css">
+
+	<!-- JS -->
+	<script src="https://arden-chan.party/assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/jquery.hotkeys.js"></script>
+	<script src="https://arden-chan.party/assets/js/bootstrap.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.widgets.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/extras/jquery.tablesorter.pager.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/custom.js"></script>
+	<script src="https://arden-chan.party/assets/js/kbd_shortcuts.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Cloudflare Web Analytics -->
+	<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ea4a87ef1fe248acbeb17b17abda5207"}'></script>
+	<!-- End Cloudflare Web Analytics -->
+</head>
+
+<body>
+<div class="wrapper">
+	<!-- Header navbar-expand-lg -->
+	<div id="topbar" class="navbar navbar-dark bg-primary">
+	<div class="float-left">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="https://arden-chan.party">🏠 Arden's Corner</a>
+	</div>
+	<div id="search_div" class="float-right me-3">
+		<div class="input-group">
+			<input class="form-control" id="site_search" type="search" placeholder="Search [Ctrl+Alt+Shift+S]">
+			<button id="settings" class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#settings_modal">⚙</button>
+		</div>
+		<div id="site_search_results" class="bg-secondary"></div>
+	</div>
+</div>
+
+	<div id="container">
+		<!-- Sidebar -->
+		<div class="navbar-collapse collapse navbar-toggleable-md navbar navbar-dark bg-secondary" id="sidebar" >
+
+			<div id="sidebar-links">
+			
+				<span class='links-header'>🖦 IlokoSoft</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/agsao.html" title="Passphrase Generator">Agsao</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/basaem.html" title="Read Random Articles">Basaem</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/relos.html" title="Picture Clock">Relos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>📋 Other Projects</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/amazfitbip_watchface" title="">Amazfit Bip Watch Faces</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/common_unicode_chars" title="">Common Unicode Characters</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/public_file_repos" title="Public file repositories.">Public File Repos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>🎉 Fun Stuff</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/faq" title="">Q&A</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/resume" title="">Résumé</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/blog" title="Let the cringe flow">Blog</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>▶ YouTube</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ" title="Cringe TV">Main</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSFPCZew2ed5M9DFOv8RigO" title="Finding Revali">Birding</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSQDK6RwqEreCiRK_oZTfye" title="Companion, Avian Offering">Superworms</a></li>
+						
+					
+				</ul>
+			
+			</div>
+
+			<div id="sidebar-footer">
+				<div>
+					<small>Not properly seeing all characters? <a href="/notes/2026-10-04-Unicode-Fonts-Installation.html">You might need additional Unicode fonts.</a></small>
+				</div>
+				<br>
+				<div id="copyright">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a> <br>
+					This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+				</div>
+				<br>
+				<div>🚩 <a href="https://arden-chan.party/privacy-policy">Privacy Policy</a></div>
+				<br>
+				<div><a href="https://ko-fi.com/Z8Z133PAX" title="Buy Me a Coffee at ko-fi.com"><img height='36' style='border:0px;height:2em' src='https://arden-chan.party/assets/images/kofi.png' alt='Buy Me a Coffee at ko-fi.com'></a></div>
+			</div>
+		</div>
+
+		<div id="content" class="container-fluid" tabindex="-1">
+			<style>
+.ntabs {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background-color: #222;
+}
+.nav-link:hover {
+	background-color: var(--bs-dark);
+}
+
+
+/* sticky table headers */
+/* resource: https://css-tricks.com/position-sticky-and-table-headers/ */
+th {
+	position: sticky;
+	top: 0rem;
+	border-bottom: 1px solid white;
+	background-color: #222 !important;
+	z-index: 100;
+	margin: 0 !important;
+}
+</style>
+
+<h1>Blog</h1>
+
+For comments, violent reactions, etc, feel free to <a href="mailto:lets-talk@arden-chan.party" title="email">shoot an email</a>. If it's good enough, I might even feature it here.
+
+<br/><br/>
+<div class="d-flex align-items-start">
+	<nav class="ntabs nav flex-column nav-pills me-3">
+	
+	
+
+	
+
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/commentary.html" class="nav-link" role="tab">Commentary</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/art.html" class="nav-link" role="tab">Art</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/music.html" class="nav-link" role="tab">Music</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/verse.html" class="nav-link" role="tab">Verse</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/salawikain.html" class="nav-link" role="tab">Salawikain</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/biyernes_santo.html" class="nav-link" role="tab">Biyernes Santo</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/travels.html" class="nav-link" role="tab">Travels</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/public_transit_routes.html" class="nav-link active" role="tab">Public Transportation Routes</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/birding.html" class="nav-link" role="tab">Birding</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/insecting.html" class="nav-link" role="tab">Insecting</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/cooking-recipes.html" class="nav-link" role="tab">Cooking Recipes</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/notes.html" class="nav-link" role="tab">Notes</a>
+	
+		
+
+		
+		
+
+		<a href="https://arden-chan.party/blog/ai.html" class="nav-link" role="tab">AI</a>
+	
+		
+			
+	</nav>
+
+	<div class="tab-content">
+		<div class="tab-pane active" role="tabpanel">
+			<p>A collection of routes I’ve personally taken using public transportation throughout time (or until I get tired of logging).</p>
+
+<p>This is organised in terms of “segments”.</p>
+<ul>
+  <li>It consists of a start and end destination.</li>
+  <li>It may be taken using different modes, like jeepneys, buses, taxis, or planes.</li>
+  <li>It may be taken through a different route.
+    <ul>
+      <li>For example, a Manila to Dasmariñas segment might pass through town A, an another to town B.</li>
+      <li>But since the start and destinations are the same, they will be grouped together under the Manila-Dasmariñas segment.</li>
+    </ul>
+  </li>
+  <li>It might have a map.</li>
+  <li>It might have fares associated with it.</li>
+  <li>It might have a date and/or time.</li>
+</ul>
+
+<p>Please do not use this as an financial guide. This is for entertainment purposes only.</p>
+
+<p>Also in Philippine English, “commute” specifically means taking public transportation to travel from one place to another.</p>
+
+<p><a href="https://www.reddit.com/r/todayIlearnedPH/comments/1tvggm2/til_that_commuting_doesnt_necessarily_mean_public/">TIL that commuting doesn’t necessarily mean public transportation</a> <a href="https://web.archive.org/web/20261025095929/https://www.reddit.com/r/todayIlearnedPH/comments/1tvggm2/til_that_commuting_doesnt_necessarily_mean_public/?solution=9060ca6c6399eeed9060ca6c6399eeed&amp;js_challenge=1&amp;jsc_token=2824be10929bdc604753c70a67a1c33149f8493846d903562973f79eed7f33bf&amp;jsc_orig_r=" title="backup link">🗃</a></p>
+
+<table class="table table-striped table-bordered table-hover tablesorter">
+<thead>
+<tr>
+	<th>Segment</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr>
+	<td><a href="/public_transit_routes/Boni_to_Taft.html">Boni to Taft</a></td>
+</tr>
+
+</tbody>
+</table>
+
+		</div>
+	</div>
+</div>
+
+		</div>
+
+	</div>
+</div>
+
+<div class="modal fade" id="settings_modal" tabindex="-1" aria-labelledby="modal_lbl" aria-hidden="true" style="z-index:10000">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="modal_lbl">UI Settings</h5>
+		  &nbsp;<a class="toggle_note" data-target="#localStorage_note" href="#" style="font-size: x-small;">toggle note</a>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<div id="localStorage_note" class="alert alert-warning">
+				This uses the localStorage API to store your customisations. This means that:
+				<ul>
+					<li>No data will be saved if your browser does not support the localStorage API.</li>
+					<li>When you change browsers, switch to Incognito mode, or clear your browser's data, all of your customisations will be gone.</li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div><b>How to open links:</b> (Samples: <a href="https://arden-chan.party/faq.html">internal</a>, <a href="https://example.com/">external</a>)
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_in_same_tab" id="op1">
+					<label class="form-check-label" for="op1">Open all links in same tab (default)</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_int_same_tab_ext_other_tab" id="op2">
+					<label class="form-check-label" for="op2">Open internal links in same tab but open external ones in another tab</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_other_tab" id="op3">
+					<label class="form-check-label" for="op3">Open all links in separate tabs</label>
+				</div>
+				</div>
+			</div>
+			<div class="row">
+				<div><b>Theme Color Mode</b>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="theme_color_mode" value="light" id="tcm-op1">
+					<label class="form-check-label" for="tcm-op1">☀️ Lighter</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="theme_color_mode" value="dark" id="tcm-op2">
+					<label class="form-check-label" for="tcm-op2">🌘 Darker (default)</label>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+</body>
+</html>

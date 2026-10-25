@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+	<meta charset="utf-8">
+	<title>Arden's Corner</title>
+	<base href="https://arden-chan.party">
+
+	<link rel="shortcut icon" href="/assets/images/favicon.png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/darkly.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/theme.dark.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/tablesorter/jquery.tablesorter.pager.min.css">
+	<link rel="stylesheet" href="https://arden-chan.party/assets/css/custom.css">
+
+	<!-- JS -->
+	<script src="https://arden-chan.party/assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/jquery.hotkeys.js"></script>
+	<script src="https://arden-chan.party/assets/js/bootstrap.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/jquery.tablesorter.widgets.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/tablesorter/extras/jquery.tablesorter.pager.min.js"></script>
+	<script src="https://arden-chan.party/assets/js/custom.js"></script>
+	<script src="https://arden-chan.party/assets/js/kbd_shortcuts.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Cloudflare Web Analytics -->
+	<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ea4a87ef1fe248acbeb17b17abda5207"}'></script>
+	<!-- End Cloudflare Web Analytics -->
+</head>
+
+<body>
+<div class="wrapper">
+	<!-- Header navbar-expand-lg -->
+	<div id="topbar" class="navbar navbar-dark bg-primary">
+	<div class="float-left">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="https://arden-chan.party">🏠 Arden's Corner</a>
+	</div>
+	<div id="search_div" class="float-right me-3">
+		<div class="input-group">
+			<input class="form-control" id="site_search" type="search" placeholder="Search [Ctrl+Alt+Shift+S]">
+			<button id="settings" class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#settings_modal">⚙</button>
+		</div>
+		<div id="site_search_results" class="bg-secondary"></div>
+	</div>
+</div>
+
+	<div id="container">
+		<!-- Sidebar -->
+		<div class="navbar-collapse collapse navbar-toggleable-md navbar navbar-dark bg-secondary" id="sidebar" >
+
+			<div id="sidebar-links">
+			
+				<span class='links-header'>🖦 IlokoSoft</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/agsao.html" title="Passphrase Generator">Agsao</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/basaem.html" title="Read Random Articles">Basaem</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/ilokosoft/relos.html" title="Picture Clock">Relos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>📋 Other Projects</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/amazfitbip_watchface" title="">Amazfit Bip Watch Faces</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/common_unicode_chars" title="">Common Unicode Characters</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/public_file_repos" title="Public file repositories.">Public File Repos</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>🎉 Fun Stuff</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://arden-chan.party/faq" title="">Q&A</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/resume" title="">Résumé</a></li>
+						
+					
+						
+							<li><a href="https://arden-chan.party/blog" title="Let the cringe flow">Blog</a></li>
+						
+					
+				</ul>
+			
+				<span class='links-header'>▶ YouTube</span>
+				<ul class='list-unstyled components'>
+					
+						
+							<li><a href="https://www.youtube.com/channel/UCAvpUdUDHbS_bjwGTTgBUEQ" title="Cringe TV">Main</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSFPCZew2ed5M9DFOv8RigO" title="Finding Revali">Birding</a></li>
+						
+					
+						
+							<li><a href="https://youtube.com/playlist?list=PLtu3A2FZLIDSQDK6RwqEreCiRK_oZTfye" title="Companion, Avian Offering">Superworms</a></li>
+						
+					
+				</ul>
+			
+			</div>
+
+			<div id="sidebar-footer">
+				<div>
+					<small>Not properly seeing all characters? <a href="/notes/2026-10-04-Unicode-Fonts-Installation.html">You might need additional Unicode fonts.</a></small>
+				</div>
+				<br>
+				<div id="copyright">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a> <br>
+					This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+				</div>
+				<br>
+				<div>🚩 <a href="https://arden-chan.party/privacy-policy">Privacy Policy</a></div>
+				<br>
+				<div><a href="https://ko-fi.com/Z8Z133PAX" title="Buy Me a Coffee at ko-fi.com"><img height='36' style='border:0px;height:2em' src='https://arden-chan.party/assets/images/kofi.png' alt='Buy Me a Coffee at ko-fi.com'></a></div>
+			</div>
+		</div>
+
+		<div id="content" class="container-fluid" tabindex="-1">
+			<div id="pagination">
+
+	
+
+	
+
+	
+	
+	<a href="https://arden-chan.party/blog/public_transit_routes.html">⤴ Back to list</a>
+
+</div>
+
+
+
+
+
+
+
+<h2 >Boni to Taft</h2>
+<div style="font-size: x-small;">Posted on: 25 Oct 2026 21:35:00 PST</div>
+
+<div style="font-size: x-small;">Updated on: 25 Oct 2026 21:35:00 PST</div>
+
+
+
+
+
+
+
+<div style="font-size: x-small;">Categories:
+	
+	<span class="badge bg-secondary">public transportation</span>
+	
+</div>
+
+
+
+<div style="font-size: x-small;">Tags:
+	
+	<span class="badge bg-secondary">boni</span>
+	
+	<span class="badge bg-secondary">taft</span>
+	
+	<span class="badge bg-secondary">mrt</span>
+	
+</div>
+
+
+<br/>
+
+<div >
+	<br><br>
+
+<style>
+
+#map-display {
+    position: relative;
+    top: 0em;
+}
+
+@media (min-width: 1024px) {
+  	#map-display {
+		position: absolute;
+        top: 20em;
+        left: 55em;
+	}
+}
+
+</style>
+
+<link rel="stylesheet" href="assets/leaflet/leaflet.css" />
+
+<script src="assets/leaflet/leaflet.js"></script>
+
+<script>
+// will be assigned onload
+var MAP = null
+
+async function loadGeoJsonTracks(tracks) {
+	if (!tracks || tracks.length === 0) return
+	if (MAP == null) return
+
+	// FeatureGroup aggregates bounds across all individual layers automatically
+	const trackGroup = L.featureGroup().addTo(MAP)
+	const fitOptions = { padding: [50, 50], maxZoom: 16 }
+
+	try {
+		// Fetch all GeoJSON files concurrently for high performance
+		const fetchPromises = tracks.map(async (trackConfig) => {
+			const response = await fetch(trackConfig.file);
+			if (!response.ok) {
+				throw new Error(`Failed to load ${trackConfig.file}: ${response.statusText}`)
+			}
+
+			const data = await response.json();
+			return { data, config: trackConfig };
+		})
+
+		const results = await Promise.all(fetchPromises);
+
+		// Add each dataset with its specific configurable style
+		results.forEach(({ data, config }) => {
+			// Two L.geoJSON calls for a casing line effect
+			// For easier visibility in bright maps
+			L.geoJSON(data, {
+				filter: function(feature) {
+					return feature.geometry.type !== 'Point';
+				},
+				style: {
+					color: '#000000',                     // Dark black outline
+					weight: (config.weight || 4) + 7,
+				},
+				interactive: false                        // Let clicks pass straight through the casing
+			}).addTo(trackGroup);
+
+			L.geoJSON(data, {
+				// to filter out points
+				filter: function(feature) {
+					return feature.geometry.type !== 'Point';
+				},
+				style: {
+					color: config.color || '#3b82f6',     // Fallback color if omitted
+					weight: config.weight || 6,           // Fallback weight
+				},
+				onEachFeature: function(feature, layer) {
+					const tooltipText = config.label || feature.properties.name || 'GPS Track';
+
+					// 1. Bind a permanent tooltip so it's always visible by default
+					layer.bindTooltip(tooltipText, {
+						permanent: true,
+						direction: 'center',
+						className: 'track-permanent-label'
+					});
+
+					// 2. Track visibility state and toggle on click
+					layer._trackVisible = true;
+
+					// Shared toggle function
+					const toggleVisibility = (e) => {
+                        if (e && e.originalEvent) {
+                            L.DomEvent.stopPropagation(e.originalEvent);
+                        } else if (e && e.stopPropagation) {
+                            e.stopPropagation();
+                        }
+
+                        if (layer._trackVisible) {
+                            layer.closeTooltip();
+                            layer._trackVisible = false;
+                        } else {
+                            layer.openTooltip();
+                            layer._trackVisible = true;
+                        }
+                    };
+
+					// Toggle when clicking the polyline itself
+					layer.on('click', toggleVisibility);
+
+					// Toggle when clicking the tooltip DOM element itself
+					layer.on('tooltipopen', function(e) {
+						const tooltipEl = e.tooltip.getElement();
+						if (tooltipEl) {
+							// Clear any old listeners to prevent stacking
+                            tooltipEl.onclick = null;
+                            tooltipEl.onclick = function(ev) {
+                                ev.stopPropagation();
+                                toggleVisibility(ev);
+                            };
+						}
+					});
+				}
+			}).addTo(trackGroup);
+
+			// CONDITIONAL START/END MARKERS
+			// Only render markers if config.showMarkers is explicitly set to true
+			if (config.showMarkers === true) {
+				L.geoJSON(data, {
+					filter: (f) => f.geometry && (f.geometry.type === 'LineString' || f.geometry.type === 'MultiLineString'),
+					style: {color: 'transparent', weight: 0},
+					onEachFeature: function(feature, layer) {
+						const coords = feature.geometry.coordinates;
+						if (!coords || coords.length === 0) return;
+
+						// Flatten coordinates if it's a MultiLineString
+						const lineCoords = feature.geometry.type === 'MultiLineString'
+							? coords.flat()
+							: coords;
+
+						const trackColor = config.markerColor || '#3b82f6';
+
+						// Drop an arrow every N points (adjust step size based on track length/density)
+						const step = Math.max(1, Math.floor(lineCoords.length / 8));
+
+						for (let i = 0; i < lineCoords.length - 1; i += step) {
+							const p1 = lineCoords[i];     // [lng, lat]
+							const p2 = lineCoords[i + 1]; // [lng, lat]
+
+							// Calculate angle between points for the arrow rotation
+							const lat1 = p1[1], lng1 = p1[0];
+							const lat2 = p2[1], lng2 = p2[0];
+							const angle = Math.atan2(lat2 - lat1, lng2 - lng1) * (180 / Math.PI);
+
+							// Create a small rotated HTML/SVG arrow marker
+							const arrowIcon = L.divIcon({
+								className: 'track-direction-arrow',
+								html: `<div style="transform: rotate(${90 - angle}deg); color: ${trackColor}; font-weight: bold; font-size: 15px; text-shadow: 0px 0px 2px #000;">▲</div>`,
+								iconSize: [12, 12],
+								iconAnchor: [6, 6]
+							});
+
+							L.marker([lat1, lng1], {
+								icon: arrowIcon,
+								interactive: false, // Let clicks pass right through to the line below,
+								pane: 'shadowPane',
+							}).addTo(trackGroup);
+						}
+					}
+				}).addTo(trackGroup);
+			}
+		});
+
+		// Auto-focus map viewport to encompass all loaded tracks
+		if (trackGroup.getLayers().length > 0) {
+			MAP.fitBounds(trackGroup.getBounds(), fitOptions);
+		}
+	} catch (error) {
+		console.error("Error loading multiple GeoJSON tracks:", error);
+	}
+}
+
+function getHex(index = 0) {
+	let hex_colors = ['#D82626', '#ED652A', '#C38222', '#EBD613', '#BCDC3B', '#72D411', '#49D826', '#2AED3E', '#22C362', '#13EBAA', '#3BDCDC', '#1199D4', '#266DD8', '#2A3EED', '#4222C3', '#7F13EB', '#BC3BDC', '#D411C0', '#D82691', '#ED2A65']
+
+	return hex_colors[index]
+}
+
+$(function() {
+	MAP = L.map('map-display').setView([51.505, -0.09], 13);
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(MAP);
+})
+</script>
+
+<style>
+#map-display {
+	height: 40em;
+	width: 50em;
+	filter: brightness(0.75) contrast(1.1);
+}
+
+.track-permanent-label {
+	pointer-events: auto;
+	cursor: pointer;
+}
+.leaflet-marker-icon.track-direction-arrow {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+.track-direction-arrow,
+.track-direction-arrow * {
+    pointer-events: none !important;
+    background: transparent !important;
+}
+</style>
+
+<div id="map-display"></div>
+
+<h2 id="fares">Fares</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date, <a href="&quot;https://en.wikipedia.org/wiki/Philippine_Standard_Time&quot;" title="Philippine Standard Time">PST</a> <a href="https://web.archive.org/web/20261003174056/https://en.wikipedia.org/wiki/Philippine_Standard_Time" title="backup link">🗃</a></th>
+      <th>Cost, <a href="https://en.wikipedia.org/wiki/Philippine_peso" title="Philippine peso">₱</a> <a href="https://web.archive.org/web/20261024074945/https://en.wikipedia.org/wiki/Philippine_peso" title="backup link">🗃</a></th>
+      <th>Mode</th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17 Oct 2026</td>
+      <td>10.00</td>
+      <td>MRT</td>
+      <td><a href="https://www.philstar.com/business/2026/03/19/2515413/commuters-given-50-discount-mrt-3-lrt-2">Discounted</a> <a href="https://web.archive.org/web/20261024100121/https://www.philstar.com/business/2026/03/19/2515413/commuters-given-50-discount-mrt-3-lrt-2" title="backup link">🗃</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+// Load our map
+$(function() {
+    let mrt_boni_taft = {
+        file: "https://arden-chan.party/assets/gpslocs/20261017.MRT_BONI_TAFT.cleaned.geojson",
+        label: "MRT Line 3: Boni to Taft",
+        color: getHex(0),
+        weight: 5,
+        showMarkers: true,
+        markerColor: "white"
+    }
+
+    loadGeoJsonTracks([mrt_boni_taft])
+})
+</script>
+
+
+
+<br><br>
+</div>
+
+Want to comment? <a href="mailto:lets-talk@arden-chan.party" title="email">Send an email.</a>
+
+		</div>
+
+	</div>
+</div>
+
+<div class="modal fade" id="settings_modal" tabindex="-1" aria-labelledby="modal_lbl" aria-hidden="true" style="z-index:10000">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="modal_lbl">UI Settings</h5>
+		  &nbsp;<a class="toggle_note" data-target="#localStorage_note" href="#" style="font-size: x-small;">toggle note</a>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<div id="localStorage_note" class="alert alert-warning">
+				This uses the localStorage API to store your customisations. This means that:
+				<ul>
+					<li>No data will be saved if your browser does not support the localStorage API.</li>
+					<li>When you change browsers, switch to Incognito mode, or clear your browser's data, all of your customisations will be gone.</li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div><b>How to open links:</b> (Samples: <a href="https://arden-chan.party/faq.html">internal</a>, <a href="https://example.com/">external</a>)
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_in_same_tab" id="op1">
+					<label class="form-check-label" for="op1">Open all links in same tab (default)</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_int_same_tab_ext_other_tab" id="op2">
+					<label class="form-check-label" for="op2">Open internal links in same tab but open external ones in another tab</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="links_handling" value="open_all_other_tab" id="op3">
+					<label class="form-check-label" for="op3">Open all links in separate tabs</label>
+				</div>
+				</div>
+			</div>
+			<div class="row">
+				<div><b>Theme Color Mode</b>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="theme_color_mode" value="light" id="tcm-op1">
+					<label class="form-check-label" for="tcm-op1">☀️ Lighter</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="theme_color_mode" value="dark" id="tcm-op2">
+					<label class="form-check-label" for="tcm-op2">🌘 Darker (default)</label>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+</body>
+</html>

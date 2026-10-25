@@ -1,0 +1,946 @@
+{
+    "type": "FeatureCollection",
+    "generator": "JOSM",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.07",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.81",
+                "gpx:time": "2026-10-17T03:28:03Z",
+                "gpx:hdop": "0.7",
+                "gpx:ele": "-3.200000000000003",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.01730020899,
+                    14.54070041853
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.94",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.66",
+                "gpx:time": "2026-10-17T03:20:38Z",
+                "gpx:hdop": "0.67",
+                "gpx:ele": "-13.5",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04128284292,
+                    14.56031342713
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.87",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.63",
+                "gpx:time": "2026-10-17T03:18:40Z",
+                "gpx:hdop": "0.59",
+                "gpx:ele": "5.600000000000001",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04566333333,
+                    14.56738500000
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.27",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.81",
+                "gpx:time": "2026-10-17T03:20:06Z",
+                "gpx:hdop": "0.97",
+                "gpx:ele": "0.6000000000000014",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04432330919,
+                    14.56357817219
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.31",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.78",
+                "gpx:time": "2026-10-17T03:19:55Z",
+                "gpx:hdop": "1.06",
+                "gpx:ele": "20.9",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04504666667,
+                    14.56532166667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.91",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.64",
+                "gpx:time": "2026-10-17T03:29:57Z",
+                "gpx:hdop": "0.64",
+                "gpx:ele": "-31.8",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.00438000000,
+                    14.53793166667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.0",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.71",
+                "gpx:time": "2026-10-17T03:18:05Z",
+                "gpx:hdop": "0.71",
+                "gpx:ele": "-1.8999999999999986",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04649549570,
+                    14.57034384863
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.88",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.65",
+                "gpx:time": "2026-10-17T03:30:59Z",
+                "gpx:hdop": "0.6",
+                "gpx:ele": "-13.2",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.00278495172,
+                    14.53776430592
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.92",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.65",
+                "gpx:time": "2026-10-17T03:29:06Z",
+                "gpx:hdop": "0.66",
+                "gpx:ele": "-24.4",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.00886471329,
+                    14.53851843405
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "4.1",
+                "gpx:src": "gps",
+                "gpx:vdop": "1.0",
+                "gpx:time": "2026-10-17T03:23:19Z",
+                "gpx:hdop": "3.98",
+                "gpx:ele": "-14.899999999999999",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.02869677381,
+                    14.54972769335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.1",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.83",
+                "gpx:time": "2026-10-17T03:28:11Z",
+                "gpx:hdop": "0.72",
+                "gpx:ele": "-5.799999999999997",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.01641013128,
+                    14.54029195942
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "13.48",
+                "gpx:src": "gps",
+                "gpx:vdop": "1.0",
+                "gpx:time": "2026-10-17T03:23:27Z",
+                "gpx:hdop": "13.44",
+                "gpx:ele": "-13.8",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.02825708466,
+                    14.54934262862
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.9",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.61",
+                "gpx:time": "2026-10-17T03:28:39Z",
+                "gpx:hdop": "0.67",
+                "gpx:ele": "-13.399999999999999",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.01276630225,
+                    14.53908638193
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.88",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.65",
+                "gpx:time": "2026-10-17T03:32:11Z",
+                "gpx:hdop": "0.59",
+                "gpx:ele": "-13.2",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.00128752909,
+                    14.53756658443
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.69",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.78",
+                "gpx:time": "2026-10-17T03:26:19Z",
+                "gpx:hdop": "1.5",
+                "gpx:ele": "-3.5",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.01917971329,
+                    14.54183227087
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "3.62",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.87",
+                "gpx:time": "2026-10-17T03:19:39Z",
+                "gpx:hdop": "3.51",
+                "gpx:ele": "8.300000000000004",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04549927116,
+                    14.56680170581
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.13",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.74",
+                "gpx:time": "2026-10-17T03:20:02Z",
+                "gpx:hdop": "0.86",
+                "gpx:ele": "6.600000000000001",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04459120040,
+                    14.56403433129
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.61",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.85",
+                "gpx:time": "2026-10-17T03:19:51Z",
+                "gpx:hdop": "1.36",
+                "gpx:ele": "21.300000000000004",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04520705523,
+                    14.56577362530
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.0",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.72",
+                "gpx:time": "2026-10-17T03:18:01Z",
+                "gpx:hdop": "0.69",
+                "gpx:ele": "-4.199999999999996",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04664560284,
+                    14.57093070726
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.11",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.91",
+                "gpx:time": "2026-10-17T03:25:01Z",
+                "gpx:hdop": "0.64",
+                "gpx:ele": "-19.3",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.02393833333,
+                    14.54569333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.53",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.86",
+                "gpx:time": "2026-10-17T03:17:50Z",
+                "gpx:hdop": "1.27",
+                "gpx:ele": "-7.699999999999999",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04770288293,
+                    14.57313846536
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "14.73",
+                "gpx:src": "gps",
+                "gpx:vdop": "1.0",
+                "gpx:time": "2026-10-17T03:23:15Z",
+                "gpx:hdop": "14.7",
+                "gpx:ele": "-15.3",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.02906078241,
+                    14.55002522473
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.8",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.57",
+                "gpx:time": "2026-10-17T03:28:47Z",
+                "gpx:hdop": "0.56",
+                "gpx:ele": "-16.8",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.01160398446,
+                    14.53889231164
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "2.01",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.98",
+                "gpx:time": "2026-10-17T03:22:39Z",
+                "gpx:hdop": "1.75",
+                "gpx:ele": "-21.0",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.03300617097,
+                    14.55333006432
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "2.13",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.9",
+                "gpx:time": "2026-10-17T03:19:47Z",
+                "gpx:hdop": "1.93",
+                "gpx:ele": "16.0",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04530059226,
+                    14.56617433212
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.38",
+                "gpx:src": "gps",
+                "gpx:vdop": "1.11",
+                "gpx:time": "2026-10-17T03:17:57Z",
+                "gpx:hdop": "0.81",
+                "gpx:ele": "-7.5",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04685001587,
+                    14.57150514321
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.13",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.9",
+                "gpx:time": "2026-10-17T03:25:37Z",
+                "gpx:hdop": "0.68",
+                "gpx:ele": "-11.0",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.02044992229,
+                    14.54274631470
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.14",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.85",
+                "gpx:time": "2026-10-17T03:20:17Z",
+                "gpx:hdop": "0.75",
+                "gpx:ele": "-4.200000000000003",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04343166667,
+                    14.56225666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.01",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.72",
+                "gpx:time": "2026-10-17T03:22:47Z",
+                "gpx:hdop": "0.71",
+                "gpx:ele": "-17.3",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.03226810020,
+                    14.55270724360
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.23",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.8",
+                "gpx:time": "2026-10-17T03:20:53Z",
+                "gpx:hdop": "0.93",
+                "gpx:ele": "-19.7",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.03962128340,
+                    14.55889301183
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.98",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.7",
+                "gpx:time": "2026-10-17T03:18:47Z",
+                "gpx:hdop": "0.68",
+                "gpx:ele": "8.5",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04563653538,
+                    14.56727304981
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.19",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.79",
+                "gpx:time": "2026-10-17T03:20:13Z",
+                "gpx:hdop": "0.89",
+                "gpx:ele": "-4.5",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04378666667,
+                    14.56269500000
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.5",
+                "gpx:src": "gps",
+                "gpx:vdop": "1.19",
+                "gpx:time": "2026-10-17T03:17:54Z",
+                "gpx:hdop": "0.92",
+                "gpx:ele": "-7.0",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04724471031,
+                    14.57237866909
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.12",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.73",
+                "gpx:time": "2026-10-17T03:22:57Z",
+                "gpx:hdop": "0.85",
+                "gpx:ele": "-18.6",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.03108247321,
+                    14.55172419850
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.01",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.71",
+                "gpx:time": "2026-10-17T03:15:45Z",
+                "gpx:hdop": "0.72",
+                "gpx:ele": "-6.299999999999997",
+                "gpx:geoidheight": "39.4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04849811376,
+                    14.57422317132
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.51",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.93",
+                "gpx:time": "2026-10-17T03:24:39Z",
+                "gpx:hdop": "1.2",
+                "gpx:ele": "-19.8",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.02637708466,
+                    14.54772727655
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:name": "20261017111341"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        121.04849811376,
+                        14.57422317132
+                    ],
+                    [
+                        121.04813843697,
+                        14.57374778276
+                    ],
+                    [
+                        121.04770288293,
+                        14.57313846536
+                    ],
+                    [
+                        121.04724471031,
+                        14.57237866909
+                    ],
+                    [
+                        121.04685001587,
+                        14.57150514321
+                    ],
+                    [
+                        121.04664560284,
+                        14.57093070726
+                    ],
+                    [
+                        121.04656666249,
+                        14.57064565114
+                    ],
+                    [
+                        121.04649549570,
+                        14.57034384863
+                    ],
+                    [
+                        121.04566333333,
+                        14.56738500000
+                    ],
+                    [
+                        121.04563653538,
+                        14.56727304981
+                    ],
+                    [
+                        121.04549927116,
+                        14.56680170581
+                    ],
+                    [
+                        121.04530059226,
+                        14.56617433212
+                    ],
+                    [
+                        121.04520705523,
+                        14.56577362530
+                    ],
+                    [
+                        121.04504666667,
+                        14.56532166667
+                    ],
+                    [
+                        121.04459120040,
+                        14.56403433129
+                    ],
+                    [
+                        121.04432330919,
+                        14.56357817219
+                    ],
+                    [
+                        121.04378666667,
+                        14.56269500000
+                    ],
+                    [
+                        121.04343166667,
+                        14.56225666667
+                    ],
+                    [
+                        121.04239314526,
+                        14.56124294036
+                    ],
+                    [
+                        121.04128284292,
+                        14.56031342713
+                    ],
+                    [
+                        121.04047000140,
+                        14.55964116860
+                    ],
+                    [
+                        121.03962128340,
+                        14.55889301183
+                    ],
+                    [
+                        121.03300617097,
+                        14.55333006432
+                    ],
+                    [
+                        121.03226810020,
+                        14.55270724360
+                    ],
+                    [
+                        121.03108247321,
+                        14.55172419850
+                    ],
+                    [
+                        121.02906078241,
+                        14.55002522473
+                    ],
+                    [
+                        121.02869677381,
+                        14.54972769335
+                    ],
+                    [
+                        121.02825708466,
+                        14.54934262862
+                    ],
+                    [
+                        121.02637708466,
+                        14.54772727655
+                    ],
+                    [
+                        121.02393833333,
+                        14.54569333333
+                    ],
+                    [
+                        121.02044992229,
+                        14.54274631470
+                    ],
+                    [
+                        121.01932531085,
+                        14.54193118193
+                    ],
+                    [
+                        121.01917971329,
+                        14.54183227087
+                    ],
+                    [
+                        121.01825326413,
+                        14.54123942993
+                    ],
+                    [
+                        121.01730020899,
+                        14.54070041853
+                    ],
+                    [
+                        121.01641013128,
+                        14.54029195942
+                    ],
+                    [
+                        121.01544499129,
+                        14.53988935486
+                    ],
+                    [
+                        121.01448260450,
+                        14.53952638181
+                    ],
+                    [
+                        121.01361840695,
+                        14.53927662575
+                    ],
+                    [
+                        121.01276630225,
+                        14.53908638193
+                    ],
+                    [
+                        121.01160398446,
+                        14.53889231164
+                    ],
+                    [
+                        121.01022809476,
+                        14.53869505080
+                    ],
+                    [
+                        121.00886471329,
+                        14.53851843405
+                    ],
+                    [
+                        121.00438000000,
+                        14.53793166667
+                    ],
+                    [
+                        121.00355276521,
+                        14.53785051990
+                    ],
+                    [
+                        121.00278495172,
+                        14.53776430592
+                    ],
+                    [
+                        121.00128752909,
+                        14.53756658443
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.91",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.63",
+                "gpx:time": "2026-10-17T03:28:27Z",
+                "gpx:hdop": "0.65",
+                "gpx:ele": "-9.399999999999999",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.01448260450,
+                    14.53952638181
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "1.91",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.94",
+                "gpx:time": "2026-10-17T03:26:15Z",
+                "gpx:hdop": "1.66",
+                "gpx:ele": "-3.8999999999999986",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.01932531085,
+                    14.54193118193
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "gpx:pdop": "0.93",
+                "gpx:src": "gps",
+                "gpx:vdop": "0.74",
+                "gpx:time": "2026-10-17T03:30:13Z",
+                "gpx:hdop": "0.57",
+                "gpx:ele": "-19.4",
+                "gpx:geoidheight": "39.5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.00355276521,
+                    14.53785051990
+                ]
+            }
+        }
+    ]
+}
