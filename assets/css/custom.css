@@ -20,10 +20,11 @@ body {
 	height: 5em;
 	padding-left: 10px;
 }
+
 #sidebar {
-	/* position: fixed; */
-	max-width: 200px;
-	max-height: calc(100vh - 5em);
+	position: fixed;
+	width: 200px;
+	height: calc(100vh - 5em);
 	top: 5em;
 	left:0;
 	/* display: block; */
@@ -107,6 +108,11 @@ body {
 	margin-top:5.5em;
 	height: calc(100vh - 5.5em);
 	overflow: auto;
+	margin-left: 200px;
+}
+
+#content.sidebar-closed {
+	margin-left: 0;
 }
 
 @media (max-width: 768px) {

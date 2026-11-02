@@ -164,7 +164,7 @@
 <h2 >Boni to Taft</h2>
 <div style="font-size: x-small;">Posted on: 25 Oct 2026 21:35:00 PST</div>
 
-<div style="font-size: x-small;">Updated on: 25 Oct 2026 21:35:00 PST</div>
+<div style="font-size: x-small;">Updated on: 02 Nov 2026 19:30:00 PST</div>
 
 
 
@@ -197,14 +197,14 @@
 	<br><br>
 
 <style>
-
-#map-display {
+.floating-dashboard {
     position: relative;
     top: 0em;
+    left: 0em;
 }
 
 @media (min-width: 1024px) {
-  	#map-display {
+  	.floating-dashboard {
 		position: absolute;
         top: 20em;
         left: 55em;
@@ -217,201 +217,453 @@
 
 <script src="assets/leaflet/leaflet.js"></script>
 
+<script src="assets/js/chart.umd.min.js"></script>
+
+<!-- VIBE CODED. DAMN IT TO HELL. -->
 <script>
-// will be assigned onload
-var MAP = null
+// Global variables for dashboard state & sync control
+var MAP = null;
+var elevationChart = null;
+var activeTrackData = null; // Stores latLngs, elevations, and distances for synchronization
+var hoverMarker = null;
+var isSyncingFromMap = false;
+var isSyncingFromChart = false;
 
-async function loadGeoJsonTracks(tracks) {
-	if (!tracks || tracks.length === 0) return
-	if (MAP == null) return
+async function loadGpxTracks(tracks) {
+	if (!tracks || tracks.length === 0) return;
+	if (MAP == null) return;
 
-	// FeatureGroup aggregates bounds across all individual layers automatically
-	const trackGroup = L.featureGroup().addTo(MAP)
-	const fitOptions = { padding: [50, 50], maxZoom: 16 }
+	const trackGroup = L.featureGroup().addTo(MAP);
+	const fitOptions = { padding: [50, 50], maxZoom: 16 };
 
 	try {
-		// Fetch all GeoJSON files concurrently for high performance
 		const fetchPromises = tracks.map(async (trackConfig) => {
 			const response = await fetch(trackConfig.file);
 			if (!response.ok) {
-				throw new Error(`Failed to load ${trackConfig.file}: ${response.statusText}`)
+				throw new Error(`Failed to load ${trackConfig.file}: ${response.statusText}`);
 			}
+			const xmlText = await response.text();
+			const parser = new DOMParser();
+			const xmlDoc = parser.parseFromString(xmlText, "text/xml");
 
-			const data = await response.json();
+			// Convert Viking GPX XML into a GeoJSON FeatureCollection on the fly
+			const data = gpxToGeoJSON(xmlDoc, trackConfig.label);
+			console.log(data)
 			return { data, config: trackConfig };
-		})
+		});
 
 		const results = await Promise.all(fetchPromises);
 
-		// Add each dataset with its specific configurable style
-		results.forEach(({ data, config }) => {
-			// Two L.geoJSON calls for a casing line effect
-			// For easier visibility in bright maps
+		results.forEach(({ data, config }, index) => {
+			// 1. EXTRACT COORDINATES & ELEVATION FOR CHART (Using the first or primary track)
+			const coordinates = extractCoordinates(data);
+			if (coordinates.length > 0 && index === 0) {
+				activeTrackData = parseTrackData(coordinates);
+				initElevationChart(activeTrackData);
+
+				// Create the hover marker on the map for sync
+				hoverMarker = L.circleMarker(activeTrackData.latLngs[0], {
+					radius: 7,
+					color: '#ffffff',
+					fillColor: '#f43f5e',
+					fillOpacity: 1,
+					weight: 2,
+					pane: 'markerPane'
+				}).addTo(MAP);
+			}
+
+			// 2. CASING LINE
 			L.geoJSON(data, {
-				filter: function(feature) {
-					return feature.geometry.type !== 'Point';
-				},
+				filter: (f) => f.geometry.type !== 'Point',
 				style: {
-					color: '#000000',                     // Dark black outline
+					color: '#000000',
 					weight: (config.weight || 4) + 7,
 				},
-				interactive: false                        // Let clicks pass straight through the casing
+				interactive: false
 			}).addTo(trackGroup);
 
+			// 3. MAIN POLYLINE WITH TOGGLE LABELS
 			L.geoJSON(data, {
-				// to filter out points
-				filter: function(feature) {
-					return feature.geometry.type !== 'Point';
-				},
+				filter: (f) => f.geometry.type !== 'Point',
 				style: {
-					color: config.color || '#3b82f6',     // Fallback color if omitted
-					weight: config.weight || 6,           // Fallback weight
+					color: config.color || '#3b82f6',
+					weight: config.weight || 6,
 				},
 				onEachFeature: function(feature, layer) {
 					const tooltipText = config.label || feature.properties.name || 'GPS Track';
 
-					// 1. Bind a permanent tooltip so it's always visible by default
 					layer.bindTooltip(tooltipText, {
 						permanent: true,
 						direction: 'center',
 						className: 'track-permanent-label'
 					});
 
-					// 2. Track visibility state and toggle on click
 					layer._trackVisible = true;
-
-					// Shared toggle function
 					const toggleVisibility = (e) => {
-                        if (e && e.originalEvent) {
-                            L.DomEvent.stopPropagation(e.originalEvent);
-                        } else if (e && e.stopPropagation) {
-                            e.stopPropagation();
-                        }
+						if (e && e.originalEvent) L.DomEvent.stopPropagation(e.originalEvent);
+						else if (e && e.stopPropagation) e.stopPropagation();
 
-                        if (layer._trackVisible) {
-                            layer.closeTooltip();
-                            layer._trackVisible = false;
-                        } else {
-                            layer.openTooltip();
-                            layer._trackVisible = true;
-                        }
-                    };
+						if (layer._trackVisible) {
+							layer.closeTooltip();
+							layer._trackVisible = false;
+						} else {
+							layer.openTooltip();
+							layer._trackVisible = true;
+						}
+					};
 
-					// Toggle when clicking the polyline itself
 					layer.on('click', toggleVisibility);
-
-					// Toggle when clicking the tooltip DOM element itself
 					layer.on('tooltipopen', function(e) {
 						const tooltipEl = e.tooltip.getElement();
 						if (tooltipEl) {
-							// Clear any old listeners to prevent stacking
-                            tooltipEl.onclick = null;
-                            tooltipEl.onclick = function(ev) {
-                                ev.stopPropagation();
-                                toggleVisibility(ev);
-                            };
+							tooltipEl.onclick = null;
+							tooltipEl.onclick = function(ev) {
+								ev.stopPropagation();
+								toggleVisibility(ev);
+							};
 						}
 					});
 				}
 			}).addTo(trackGroup);
 
-			// CONDITIONAL START/END MARKERS
-			// Only render markers if config.showMarkers is explicitly set to true
+			// 4. DIRECTIONAL ARROWS
 			if (config.showMarkers === true) {
 				L.geoJSON(data, {
 					filter: (f) => f.geometry && (f.geometry.type === 'LineString' || f.geometry.type === 'MultiLineString'),
-					style: {color: 'transparent', weight: 0},
+					style: { color: 'transparent', weight: 0 },
 					onEachFeature: function(feature, layer) {
 						const coords = feature.geometry.coordinates;
 						if (!coords || coords.length === 0) return;
 
-						// Flatten coordinates if it's a MultiLineString
-						const lineCoords = feature.geometry.type === 'MultiLineString'
-							? coords.flat()
-							: coords;
-
+						const lineCoords = feature.geometry.type === 'MultiLineString' ? coords.flat() : coords;
 						const trackColor = config.markerColor || '#3b82f6';
-
-						// Drop an arrow every N points (adjust step size based on track length/density)
 						const step = Math.max(1, Math.floor(lineCoords.length / 8));
 
 						for (let i = 0; i < lineCoords.length - 1; i += step) {
-							const p1 = lineCoords[i];     // [lng, lat]
-							const p2 = lineCoords[i + 1]; // [lng, lat]
-
-							// Calculate angle between points for the arrow rotation
+							const p1 = lineCoords[i], p2 = lineCoords[i + 1];
 							const lat1 = p1[1], lng1 = p1[0];
 							const lat2 = p2[1], lng2 = p2[0];
 							const angle = Math.atan2(lat2 - lat1, lng2 - lng1) * (180 / Math.PI);
 
-							// Create a small rotated HTML/SVG arrow marker
 							const arrowIcon = L.divIcon({
 								className: 'track-direction-arrow',
-								html: `<div style="transform: rotate(${90 - angle}deg); color: ${trackColor}; font-weight: bold; font-size: 15px; text-shadow: 0px 0px 2px #000;">▲</div>`,
+								html: `<div style="transform: rotate(${angle}deg); color: ${trackColor}; font-weight: bold; font-size: 15px; text-shadow: 0px 0px 2px #000;">▲</div>`,
 								iconSize: [12, 12],
 								iconAnchor: [6, 6]
 							});
 
 							L.marker([lat1, lng1], {
 								icon: arrowIcon,
-								interactive: false, // Let clicks pass right through to the line below,
+								interactive: false,
 								pane: 'shadowPane',
 							}).addTo(trackGroup);
 						}
 					}
 				}).addTo(trackGroup);
 			}
+
+			// Metadata
+			$("#map-meta-name").text(data.features[0].properties.name)
+			$("#map-meta-desc").html(parseMarkdownLinks(data.features[0].properties.description))
+			let time = data.features[0].properties.ts.replace('T', ' ').replace(/\.[\d]+\+08:00$/, ' PHT')
+			$("#map-meta-time").text("Collected on: " + time)
 		});
 
-		// Auto-focus map viewport to encompass all loaded tracks
 		if (trackGroup.getLayers().length > 0) {
 			MAP.fitBounds(trackGroup.getBounds(), fitOptions);
 		}
+
+		// 5. WIRE UP MAP MOUSEMOVE FOR REVERSE SYNC
+		setupMapSyncEvents();
 	} catch (error) {
-		console.error("Error loading multiple GeoJSON tracks:", error);
+		console.error("Error loading multiple GPX tracks:", error);
 	}
 }
 
-function getHex(index = 0) {
-	let hex_colors = ['#D82626', '#ED652A', '#C38222', '#EBD613', '#BCDC3B', '#72D411', '#49D826', '#2AED3E', '#22C362', '#13EBAA', '#3BDCDC', '#1199D4', '#266DD8', '#2A3EED', '#4222C3', '#7F13EB', '#BC3BDC', '#D411C0', '#D82691', '#ED2A65']
+// --- GPX TO GEOJSON CONVERTER HELPER ---
 
-	return hex_colors[index]
+function gpxToGeoJSON(xmlDoc, name = null) {
+	const trkpts = xmlDoc.getElementsByTagName("trkpt");
+	const coordinates = [];
+
+	for (let i = 0; i < trkpts.length; i++) {
+		const pt = trkpts[i];
+		const lat = parseFloat(pt.getAttribute("lat"));
+		const lon = parseFloat(pt.getAttribute("lon"));
+		const eleNode = pt.getElementsByTagName("ele")[0];
+		const ele = eleNode ? parseFloat(eleNode.textContent) : 0;
+
+		// GeoJSON standard format: [longitude, latitude, elevation]
+		coordinates.push([lon, lat, ele]);
+	}
+	return {
+		type: "FeatureCollection",
+		features: [{
+			type: "Feature",
+			geometry: {
+				type: "LineString",
+				coordinates: coordinates
+			},
+			// We assume GPX 1.0
+			properties: {
+				name: name || xmlDoc.getElementsByTagName('name')[0]?.textContent || 'GPS Tracks',
+				description: xmlDoc.getElementsByTagName('desc')[0]?.textContent || '',
+				ts: xmlDoc.getElementsByTagName('time')[0]?.textContent || '',
+			}
+		}]
+	};
 }
+
+// --- HELPER FUNCTIONS FOR COORDINATES & MATH ---
+
+function extractCoordinates(geojson) {
+	if (geojson.type === "FeatureCollection") {
+		const lineFeature = geojson.features.find(f => f.geometry.type === "LineString");
+		return lineFeature ? lineFeature.geometry.coordinates : [];
+	} else if (geojson.type === "LineString") {
+		return geojson.coordinates;
+	}
+	return [];
+}
+
+function parseTrackData(coordinates) {
+	const latLngs = [];
+	const elevations = [];
+	const distances = [];
+	let totalDistance = 0;
+	let prevPoint = null;
+
+	coordinates.forEach(coord => {
+		const lon = coord[0];
+		const lat = coord[1];
+		const ele = coord.length > 2 ? coord[2] : 0; // Elevation is 3rd index in GeoJSON array
+
+		latLngs.push([lat, lon]);
+		elevations.push(ele);
+
+		if (prevPoint) {
+			totalDistance += getHaversineDistance(prevPoint.lat, prevPoint.lon, lat, lon);
+		}
+		distances.push(parseFloat(totalDistance.toFixed(2)));
+		prevPoint = { lat, lon };
+	});
+
+	return { latLngs, elevations, distances };
+}
+
+function getHaversineDistance(lat1, lon1, lat2, lon2) {
+	const R = 6371000; // Meters
+	const dLat = (lat2 - lat1) * Math.PI / 180;
+	const dLon = (lon2 - lon1) * Math.PI / 180;
+	const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+			  Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+			  Math.sin(dLon/2) * Math.sin(dLon/2);
+	return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)));
+}
+
+// --- INITIALIZE CHART.JS ---
+
+function initElevationChart(data) {
+	const ctx = document.getElementById('elevationChart').getContext('2d');
+
+	elevationChart = new Chart(ctx, {
+		type: 'line',
+		data: {
+			labels: data.distances.map(d => (d / 1000).toFixed(2)), // X-axis: km
+			datasets: [{
+				label: 'Elevation (m)',
+				data: data.elevations,                     // Y-axis: meters
+				borderColor: '#38bdf8',
+				backgroundColor: 'rgba(56, 189, 248, 0.15)',
+				borderWidth: 2,
+				fill: true,
+				pointRadius: 0,
+				pointHoverRadius: 6
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: false,
+			interaction: { mode: 'index', intersect: false },
+			scales: {
+				x: { title: { display: true, text: 'Distance (km)', color: '#94a3b8' }, ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
+				y: { title: { display: true, text: 'Elevation (m)', color: '#94a3b8' }, ticks: { color: '#94a3b8' }, grid: { color: '#334155' } }
+			},
+			// FORWARD SYNC: Chart hover -> Move Map Marker
+			onHover: (event, activeElements) => {
+				if (isSyncingFromMap || !hoverMarker) return;
+				if (activeElements.length > 0) {
+					isSyncingFromChart = true;
+					const index = activeElements[0].index;
+					hoverMarker.setLatLng(activeTrackData.latLngs[index]);
+					setTimeout(() => { isSyncingFromChart = false; }, 50);
+				}
+			}
+		}
+	});
+}
+
+// --- REVERSE SYNC EVENTS ---
+
+function setupMapSyncEvents() {
+	if (!MAP || !activeTrackData) return;
+
+	MAP.on('mousemove', (e) => {
+		if (isSyncingFromChart || !elevationChart || !hoverMarker) return;
+
+		isSyncingFromMap = true;
+		const mousePoint = e.latlng;
+		let closestIndex = 0;
+		let minDistance = Infinity;
+
+		// Find closest coordinate point to mouse cursor
+		for (let i = 0; i < activeTrackData.latLngs.length; i++) {
+			const pt = activeTrackData.latLngs[i];
+			const dist = Math.pow(pt[0] - mousePoint.lat, 2) + Math.pow(pt[1] - mousePoint.lng, 2);
+			if (dist < minDistance) {
+				minDistance = dist;
+				closestIndex = i;
+			}
+		}
+
+		// Snap marker and update Chart.js active state
+		hoverMarker.setLatLng(activeTrackData.latLngs[closestIndex]);
+		elevationChart.setActiveElements([{ datasetIndex: 0, index: closestIndex }]);
+		elevationChart.tooltip.setActiveElements([{ datasetIndex: 0, index: closestIndex }]);
+		elevationChart.update('none');
+
+		setTimeout(() => { isSyncingFromMap = false; }, 50);
+	});
+}
+
+function getHex(index = 0) {
+	let hex_colors = [
+		'#D82626', '#ED652A', '#C38222', '#EBD613', '#BCDC3B',
+		'#72D411', '#49D826', '#2AED3E', '#22C362', '#13EBAA',
+		'#3BDCDC', '#1199D4', '#266DD8', '#2A3EED', '#4222C3',
+		'#7F13EB', '#BC3BDC', '#D411C0', '#D82691', '#ED2A65'
+	];
+	return hex_colors[index % hex_colors.length];
+}
+
+function parseMarkdownLinks(text) {
+    if (!text) return '';
+    // Matches [Link Text](URL) and converts it to <a href="URL" target="_blank">Link Text</a>
+    const markdownLinkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    return text.replace(markdownLinkRegex, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+}
+
+// --- DOCUMENT READY ---
 
 $(function() {
 	MAP = L.map('map-display').setView([51.505, -0.09], 13);
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		attribution: '&copy; OpenStreetMap'
 	}).addTo(MAP);
-})
+});
 </script>
 
+<!-- / VIBE CODED. DAMN IT TO HELL. -->
+
 <style>
-#map-display {
+/* #map-area {
 	height: 40em;
 	width: 50em;
-	filter: brightness(0.75) contrast(1.1);
 }
 
+#map-display {
+	filter: brightness(0.75) contrast(1.1);
+}
+*/
 .track-permanent-label {
 	pointer-events: auto;
 	cursor: pointer;
 }
 .leaflet-marker-icon.track-direction-arrow {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	padding: 0 !important;
 }
 .track-direction-arrow,
 .track-direction-arrow * {
-    pointer-events: none !important;
-    background: transparent !important;
+	pointer-events: none !important;
+	background: transparent !important;
+}
+
+/* Floating Right Dashboard Container (40em x 50em) */
+.floating-dashboard {
+	width: 40em;
+	height: 50em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	background-color: #0f172a; /* Slate dark background */
+	padding: 1em;
+	margin-left: 1.5em; /* Space between floating box and surrounding text */
+	margin-bottom: 1.5em;
+	border-radius: 8px;
+	border: 1px solid #334155;
+	box-sizing: border-box;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+	z-index: 100;
+	filter: brightness(0.75) contrast(1.1);
+}
+
+/* Top Map Section */
+.floating-map-card {
+	flex: 1.3; /* Takes up roughly 60% of vertical space */
+	display: flex;
+	flex-direction: column;
+	min-height: 0; /* Required for flex child sizing */
+}
+
+#map-display {
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	border: 1px solid #334155;
+}
+
+/* Bottom Chart Section */
+.floating-chart-card {
+	flex: 0.7; /* Takes up roughly 40% of vertical space */
+	display: flex;
+	flex-direction: column;
+	background-color: #1e293b;
+	border: 1px solid #334155;
+	border-radius: 6px;
+	padding: 10px;
+	min-height: 0;
+}
+
+.chart-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 </style>
 
-<div id="map-display"></div>
+<div class="floating-dashboard">
+	<!-- Map (Top) -->
+	<div class="floating-map-card">
+		<div id="map-display"></div>
+	</div>
+
+	<!-- Chart (Bottom) -->
+	<div class="floating-chart-card">
+		<div class="chart-container">
+			<canvas id="elevationChart"></canvas>
+		</div>
+	</div>
+
+	<div>
+		<small id="map-meta-name"></small><br />
+		<small id="map-meta-desc"></small><br />
+		<small id="map-meta-time"></small>
+	</div>
+</div>
 
 <h2 id="fares">Fares</h2>
 
@@ -438,7 +690,7 @@ $(function() {
 // Load our map
 $(function() {
     let mrt_boni_taft = {
-        file: "https://arden-chan.party/assets/gpslocs/20261017.MRT_BONI_TAFT.cleaned.geojson",
+        file: "https://arden-chan.party/assets/gpslocs/20261017.MRT_BONI_TAFT.cleaned.gpx",
         label: "MRT Line 3: Boni to Taft",
         color: getHex(0),
         weight: 5,
@@ -446,7 +698,7 @@ $(function() {
         markerColor: "white"
     }
 
-    loadGeoJsonTracks([mrt_boni_taft])
+    loadGpxTracks([mrt_boni_taft])
 })
 </script>
 

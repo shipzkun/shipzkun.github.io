@@ -32,11 +32,23 @@ $(function() {
 		if (window.innerWidth <= width_limit_px) {
 			$("#sidebar").removeClass('show');
 			$("#rightbar").hide();
+			$("#content").addClass('sidebar-closed')
 		} else {
 			$("#sidebar").addClass('show');
 			$("#rightbar").show();
+			$("#content").removeClass('sidebar-closed')
 		}
 	}
+
+    // Triggered when the sidebar finishes collapsing (closing)
+    $("#sidebar").on('hidden.bs.collapse', function() {
+        $('#content').addClass('sidebar-closed');
+    });
+
+    // Triggered when the sidebar finishes expanding (opening)
+    $("#sidebar").on('shown.bs.collapse', function() {
+        $('#content').removeClass('sidebar-closed');
+    });
 
 	$("#content").focus().css('outline', 'none');
 
