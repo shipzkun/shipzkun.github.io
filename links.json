@@ -3389,7 +3389,20 @@
 	"label": "public_transit_routes",
 	"categories": "",
 	"tags": "boni|taft|mrt",
-	"date": "2026-11-18T15:48:00+08:00"
+	"date": "2026-11-19T15:15:00+08:00"
+},
+
+
+
+	
+	
+{
+	"url": "https://arden-chan.party/public_transit_routes/EDSA_%E2%87%84_MIA_Road.html",
+	"title": "EDSA ⇄ MIA Road",
+	"label": "public_transit_routes",
+	"categories": "",
+	"tags": "edsa|mia road|lrt",
+	"date": "2026-11-19T15:15:00+08:00"
 },
 
 
